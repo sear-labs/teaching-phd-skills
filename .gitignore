@@ -1,0 +1,28 @@
+# Credentials — never commit. Rotate, do not amend, if one lands here.
+.env
+*.token
+*_token
+*secret*
+gurobi.lic
+
+# Canvas export artifacts (may contain student names)
+records/*.csv
+records/*.json
+!records/.gitkeep
+
+# Student artifacts awaiting permission
+exemplars/_pending/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
