@@ -1,20 +1,35 @@
 #!/usr/bin/env python3
-"""Push skill pages and milestone assignments from this repo into a Canvas course.
+"""Push the curriculum from this repo into a Canvas course.
 
-The repo is the source of truth. Canvas is a delivery copy. Edit the Markdown here,
-re-run this, and Canvas catches up. Never edit a generated page in Canvas directly --
-the next run will overwrite it.
+The repo is the source of truth. Canvas is a delivery copy, regenerated from here.
+Edit the Markdown, re-run this, and Canvas catches up. Never edit a generated page in
+Canvas directly -- the next run overwrites it.
 
-Idempotent: matches existing Canvas objects by title and updates them in place, so
-re-running does not create duplicates.
+What it creates
+---------------
+    1 overview page   the 24-skill tracking table, generated from skills/ and
+                      milestones/ so it cannot drift out of sync with them
+    24 skill pages    one lesson package each
+    6 assignments     the milestone gates, pass_fail, in their own group, no due dates
+    7 modules         Overview + M1..M6, each holding its four skill pages and its
+                      milestone assignment
 
-Everything is created UNPUBLISHED. Publishing is a human decision, made in Canvas.
+Modules are created UNGATED on purpose: no prerequisites, no completion requirements,
+no sequential progress. A student picks any skill in any order. Canvas modules default
+to linear gating, which would lock a fourth-year student behind an Excel lesson.
+
+Idempotent: matches by title and updates in place, so re-running never duplicates.
+
+Publishing
+----------
+Nothing is published unless you pass --publish. Without it everything is created or
+updated invisible to students, which is what you want while drafting.
 
 Usage
 -----
     python scripts/push_to_canvas.py --course 277913 --dry-run
     python scripts/push_to_canvas.py --course 277913
-    python scripts/push_to_canvas.py --course 277913 --only skills
+    python scripts/push_to_canvas.py --course 277913 --publish
 
 Requires
 --------
@@ -30,7 +45,6 @@ import re
 import subprocess
 import sys
 import urllib.error
-import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -38,6 +52,7 @@ REPO = Path(__file__).resolve().parent.parent
 HOST = "https://uta.instructure.com"
 MILESTONE_GROUP = "Competency Milestones"
 MILESTONE_POINTS = 5
+OVERVIEW_TITLE = "Research Competency Milestones"
 
 
 # --------------------------------------------------------------------------- token
@@ -79,7 +94,6 @@ def parse_front_matter(text):
 
 
 def md_to_html(md):
-    """Markdown -> HTML via pandoc. GFM in, Canvas-safe HTML out."""
     try:
         out = subprocess.run(
             ["pandoc", "--from=gfm", "--to=html", "--wrap=none"],
@@ -89,17 +103,27 @@ def md_to_html(md):
         sys.exit("pandoc not found on PATH. winget install JohnMacFarlane.Pandoc")
     except subprocess.CalledProcessError as e:
         sys.exit(f"pandoc failed: {e.stderr}")
-    # Canvas renders unchecked task-list items as literal brackets; make them checkboxes.
     return out.stdout.replace("[ ]", "&#9744;")
+
+
+def load(kind):
+    """Load skills/ or milestones/ as [(path, meta, body)], in filename order."""
+    out = []
+    for f in sorted((REPO / kind).glob("*.md")):
+        meta, body = parse_front_matter(f.read_text(encoding="utf-8"))
+        out.append((f, meta, body))
+    return out
 
 
 # --------------------------------------------------------------------------- api
 
 class Canvas:
-    def __init__(self, token, course, dry_run=False):
+    def __init__(self, token, course, dry_run=False, publish=False):
         self.token = token
         self.course = course
         self.dry_run = dry_run
+        self.publish = publish
+        self._cache = {}
 
     def _req(self, method, path, payload=None):
         url = f"{HOST}/api/v1/courses/{self.course}{path}"
@@ -142,23 +166,26 @@ class Canvas:
     # -- pages --
 
     def upsert_page(self, title, body):
+        """Create or update; returns the page slug so callers can link to it."""
         existing = {p["title"]: p for p in self.get_all("/pages")}
         payload = {"wiki_page": {
             "title": title, "body": body,
-            "published": False, "editing_roles": "teachers",
+            "published": self.publish, "editing_roles": "teachers",
         }}
         if title in existing:
+            slug = existing[title]["url"]
             if self.dry_run:
                 print(f"  [dry-run] would UPDATE page {title!r}")
-                return
-            r = self._req("PUT", f"/pages/{existing[title]['url']}", payload)
-            print(f"  updated page  {title}")
-        else:
-            if self.dry_run:
-                print(f"  [dry-run] would CREATE page {title!r}")
-                return
-            r = self._req("POST", "/pages", payload)
-            print(f"  created page  {title}  ->  {HOST}/courses/{self.course}/pages/{r['url']}")
+                return slug
+            self._req("PUT", f"/pages/{slug}", payload)
+            print(f"  page  {'PUB ' if self.publish else '    '} {title}")
+            return slug
+        if self.dry_run:
+            print(f"  [dry-run] would CREATE page {title!r}")
+            return re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+        r = self._req("POST", "/pages", payload)
+        print(f"  page  NEW  {title}")
+        return r["url"]
 
     # -- assignments --
 
@@ -171,66 +198,221 @@ class Canvas:
             "grading_type": "pass_fail",
             "points_possible": MILESTONE_POINTS,
             "assignment_group_id": group_id,
-            "published": False,
+            "published": self.publish,
             # No due date: milestones are self-paced by design.
         }}
         if name in existing:
+            aid = existing[name]["id"]
             if self.dry_run:
                 print(f"  [dry-run] would UPDATE assignment {name!r}")
+                return aid
+            self._req("PUT", f"/assignments/{aid}", payload)
+            print(f"  assn  {'PUB ' if self.publish else '    '} {name}")
+            return aid
+        if self.dry_run:
+            print(f"  [dry-run] would CREATE assignment {name!r}")
+            return None
+        a = self._req("POST", "/assignments", payload)
+        print(f"  assn  NEW  {name}")
+        return a["id"]
+
+    # -- modules --
+
+    def upsert_module(self, name, position, items):
+        """items: list of ('Page', slug, title) or ('Assignment', id, title).
+
+        Created ungated: no prerequisites, no completion requirements, no sequential
+        progress. Students choose order.
+        """
+        existing = {m["name"]: m for m in self.get_all("/modules")}
+        payload = {"module": {
+            "name": name,
+            "position": position,
+            "published": self.publish,
+            "require_sequential_progress": False,
+            "prerequisite_module_ids": [],
+        }}
+        if name in existing:
+            mid = existing[name]["id"]
+            if self.dry_run:
+                print(f"  [dry-run] would UPDATE module {name!r} ({len(items)} items)")
                 return
-            self._req("PUT", f"/assignments/{existing[name]['id']}", payload)
-            print(f"  updated assn  {name}")
+            self._req("PUT", f"/modules/{mid}", payload)
         else:
             if self.dry_run:
-                print(f"  [dry-run] would CREATE assignment {name!r}")
+                print(f"  [dry-run] would CREATE module {name!r} ({len(items)} items)")
                 return
-            a = self._req("POST", "/assignments", payload)
-            print(f"  created assn  {name}  ->  {HOST}/courses/{self.course}/assignments/{a['id']}")
+            mid = self._req("POST", "/modules", payload)["id"]
+
+        have = {i["title"] for i in self.get_all(f"/modules/{mid}/items")}
+        added = 0
+        for kind, ref, title in items:
+            if title in have:
+                continue
+            item = {"type": kind, "title": title, "indent": 1}
+            if kind == "Page":
+                item["page_url"] = ref
+            else:
+                item["content_id"] = ref
+            self._req("POST", f"/modules/{mid}/items", {"module_item": item})
+            added += 1
+        print(f"  mod   {'PUB ' if self.publish else '    '} {name}"
+              f"  ({len(items)} items, {added} new)")
+
+
+# ---------------------------------------------------------------- content assembly
+
+def overview_markdown(skills, milestones, slugs, course):
+    """Build the tracking table from the source files so it cannot drift."""
+    by_ms = {}
+    for _, meta, _ in skills:
+        by_ms.setdefault(meta["milestone"], []).append(meta)
+
+    out = [
+        "There are **24 skills**, grouped into **6 milestones** of four skills each. "
+        "You choose which skill to work on and when. Each skill is submitted as one of your "
+        "ordinary weekly log entries — Reading (WR), Writing (WW), or Arithmetic (WA). "
+        "**There is no extra weekly work.** The skill replaces that week's entry; it does not "
+        "stack on top of it.",
+        "",
+        "When all four skills in a milestone are in, you submit the **milestone assignment**. "
+        "That submission is an index, not new work: list which week each skill went in, and "
+        "link the artifact. Graded complete / redo. One demonstration and the skill is yours "
+        "permanently — it does not repeat in a later semester.",
+        "",
+        "**Click any skill name below for the full lesson** — why it exists, the external "
+        "reading, the mechanic, and the exact checklist it is graded against.",
+        "",
+        "## Rules",
+        "",
+        "- **Everything is performed on your own dissertation work.** Not a sample repo, not a "
+        "practice paper. Your actual thesis code, your actual draft, your actual data.",
+        "- **The four skills in a milestone must be submitted in four different weeks.** You "
+        "cannot bank them and dump them in week 14.",
+        "- **Target two milestones per semester.** At that pace the full set takes three to "
+        "four semesters.",
+        "- **Where a skill is governed by the lab code standard, the lesson cites the Part and "
+        "stops.** Go read the Part. The lesson will not summarise it for you, deliberately — a "
+        "summary reads as complete and stops you looking. Standard: "
+        "<https://github.com/sear-labs/code-standard>",
+        "- **Order is a suggestion, not a gate.** Nothing is locked. If your research needs M5 "
+        "in year one, take M5 in year one.",
+        "",
+        "---",
+        "",
+    ]
+
+    for _, mmeta, _ in milestones:
+        code = mmeta["milestone"]
+        out += [
+            f"## {code} — {mmeta['title']}",
+            "",
+            f"*{mmeta['tier']}*",
+            "",
+            "| Skill | Channel | Turn in as |",
+            "|---|---|---|",
+        ]
+        for s in by_ms.get(code, []):
+            link = f"{HOST}/courses/{course}/pages/{slugs[s['title']]}"
+            out.append(f"| [{s['title']}]({link}) | {s['channel']} | {s['submit_as']} |")
+        out.append("")
+    out += [
+        "---",
+        "",
+        "*The full handbook, including everything above, is public at "
+        "<https://github.com/sear-labs/teaching-phd-skills>. Every artifact that passes goes "
+        "into it, so the student after you starts from where you finished.*",
+    ]
+    return "\n".join(out)
+
+
+def skill_header(meta, course, milestone_titles):
+    code = meta.get("milestone", "?")
+    return (
+        f"*Milestone {code} — {milestone_titles.get(code, '')} &middot; "
+        f"{meta.get('channel','?')} channel &middot; {meta.get('tier','?')} &middot; "
+        f"{meta.get('time','?')}*\n\n"
+        f"**Turn in as:** {meta.get('submit_as','see below')}\n\n"
+        f"**Prerequisites:** {meta.get('prerequisites','none')}\n\n"
+        f"[&larr; All skills and milestones]"
+        f"({HOST}/courses/{course}/pages/research-competency-milestones)\n\n---\n\n"
+    )
+
+
+def milestone_links(mmeta, skills, slugs, course):
+    """The clickable lesson list injected into each milestone assignment."""
+    code = mmeta["milestone"]
+    rows = ["", "## The lessons", "",
+            "Each links to the full lesson, including the checklist it is graded against.", ""]
+    for _, s, _ in skills:
+        if s["milestone"] == code:
+            link = f"{HOST}/courses/{course}/pages/{slugs[s['title']]}"
+            rows.append(f"- [{s['title']}]({link}) — *{s['channel']}* — {s['submit_as']}")
+    rows.append("")
+    return "\n".join(rows)
 
 
 # -------------------------------------------------------------------------- main
-
-def push_skills(canvas):
-    files = sorted((REPO / "skills").glob("*.md"))
-    print(f"\nSkills ({len(files)}):")
-    for f in files:
-        meta, body = parse_front_matter(f.read_text(encoding="utf-8"))
-        title = meta.get("title", f.stem)
-        header = (
-            f"*Milestone {meta.get('milestone','?')} &middot; "
-            f"{meta.get('channel','?')} channel &middot; {meta.get('tier','?')} &middot; "
-            f"{meta.get('time','?')}*\n\n"
-            f"**Turn in as:** {meta.get('submit_as','see below')}\n\n"
-            f"**Prerequisites:** {meta.get('prerequisites','none')}\n\n---\n\n"
-        )
-        canvas.upsert_page(f"Skill: {title}", md_to_html(header + body))
-
-
-def push_milestones(canvas):
-    group_id = canvas.ensure_group(MILESTONE_GROUP)
-    files = sorted((REPO / "milestones").glob("*.md"))
-    print(f"\nMilestones ({len(files)}):")
-    for f in files:
-        meta, body = parse_front_matter(f.read_text(encoding="utf-8"))
-        name = f"{meta.get('milestone','M?')} — {meta.get('title', f.stem)}"
-        canvas.upsert_assignment(name, md_to_html(body), group_id)
-
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--course", required=True, help="Canvas course id")
     ap.add_argument("--dry-run", action="store_true", help="show what would change")
-    ap.add_argument("--only", choices=["skills", "milestones"], help="push just one kind")
+    ap.add_argument("--publish", action="store_true",
+                    help="publish everything (visible to students)")
     args = ap.parse_args()
 
-    canvas = Canvas(get_token(), args.course, args.dry_run)
-    print(f"Course {args.course}{'  [DRY RUN]' if args.dry_run else ''}")
-    if args.only != "milestones":
-        push_skills(canvas)
-    if args.only != "skills":
-        push_milestones(canvas)
-    print("\nEverything created unpublished. Publish from Canvas when you have read it.")
+    skills = load("skills")
+    milestones = load("milestones")
+    milestone_titles = {m["milestone"]: m["title"] for _, m, _ in milestones}
+
+    canvas = Canvas(get_token(), args.course, args.dry_run, args.publish)
+    print(f"Course {args.course}"
+          f"{'  [DRY RUN]' if args.dry_run else ''}"
+          f"{'  [PUBLISHING]' if args.publish else '  [unpublished]'}")
+
+    # 1. Skill pages first -- we need their real slugs to link everything else.
+    print(f"\nSkill pages ({len(skills)}):")
+    slugs = {}
+    for _, meta, body in skills:
+        title = meta["title"]
+        html = md_to_html(skill_header(meta, args.course, milestone_titles) + body)
+        slugs[title] = canvas.upsert_page(f"Skill: {title}", html)
+
+    # 2. Overview page, generated from the same data.
+    print("\nOverview page:")
+    canvas.upsert_page(
+        OVERVIEW_TITLE,
+        md_to_html(overview_markdown(skills, milestones, slugs, args.course)))
+
+    # 3. Milestone assignments, with clickable lesson lists.
+    print(f"\nMilestone assignments ({len(milestones)}):")
+    group_id = canvas.ensure_group(MILESTONE_GROUP)
+    assn_ids = {}
+    for _, meta, body in milestones:
+        name = f"{meta['milestone']} — {meta['title']}"
+        md = body + milestone_links(meta, skills, slugs, args.course)
+        assn_ids[meta["milestone"]] = canvas.upsert_assignment(name, md_to_html(md), group_id)
+
+    # 4. Modules -- ungated filing cabinets, appended after the existing ones.
+    print("\nModules:")
+    base_pos = max([m["position"] for m in canvas.get_all("/modules")] or [0])
+    canvas.upsert_module(
+        "Competency Milestones — Start Here", base_pos + 1,
+        [("Page", "research-competency-milestones", OVERVIEW_TITLE)])
+    for n, (_, meta, _) in enumerate(milestones, start=1):
+        code = meta["milestone"]
+        items = [("Page", slugs[s["title"]], f"Skill: {s['title']}")
+                 for _, s, _ in skills if s["milestone"] == code]
+        if assn_ids.get(code):
+            items.append(("Assignment", assn_ids[code], f"{code} — {meta['title']}"))
+        canvas.upsert_module(f"{code} — {meta['title']}", base_pos + 1 + n, items)
+
+    if args.publish:
+        print("\nPublished. Students can see all of it now.")
+    else:
+        print("\nUnpublished — students see none of this. Re-run with --publish when ready.")
 
 
 if __name__ == "__main__":
