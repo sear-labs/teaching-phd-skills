@@ -1,0 +1,516 @@
+<title>Twenty-Four Skills</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  :root {
+    --paper:      #FAFAF7;
+    --surface:    #F2F2EE;
+    --ink:        #101C24;
+    --body:       #2A3A44;
+    --muted:      #5A6B74;
+    --rule:       #D9DBD5;
+    --rule-soft:  #E8E9E4;
+    --accent:     #0E5A60;
+    --accent-dim: #4A858A;
+    --signal:     #B06A2C;
+
+    --display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --sans:    "IBM Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono:    "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #0B1418;
+      --surface:    #121F25;
+      --ink:        #EDF1F1;
+      --body:       #C2CFD4;
+      --muted:      #8A9BA3;
+      --rule:       #24343C;
+      --rule-soft:  #1A2930;
+      --accent:     #5FB3B8;
+      --accent-dim: #3E7D82;
+      --signal:     #D6944E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:      #0B1418;
+    --surface:    #121F25;
+    --ink:        #EDF1F1;
+    --body:       #C2CFD4;
+    --muted:      #8A9BA3;
+    --rule:       #24343C;
+    --rule-soft:  #1A2930;
+    --accent:     #5FB3B8;
+    --accent-dim: #3E7D82;
+    --signal:     #D6944E;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--body);
+    font-family: var(--sans);
+    font-size: 16.5px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding-inline: 22px;
+    padding-block: 0 72px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px 18px;
+    padding-block: 40px 22px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .lab {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .affil {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(2.1rem, 5.2vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.017em;
+    color: var(--ink);
+    text-wrap: balance;
+    margin: 38px 0 0;
+  }
+  .standfirst {
+    font-family: var(--display);
+    font-size: clamp(1.06rem, 2.1vw, 1.22rem);
+    line-height: 1.58;
+    color: var(--body);
+    max-width: 40rem;
+    margin: 20px 0 0;
+  }
+  .standfirst em { color: var(--ink); font-style: italic; }
+
+  /* ---------- sections ---------- */
+
+  section { margin-top: 62px; }
+
+  h2 {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 22px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.28rem;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  p { margin: 0 0 1em; max-width: 40rem; }
+  p:last-child { margin-bottom: 0; }
+  .lede { max-width: 42rem; }
+
+  /* ---------- the skill map ---------- */
+
+  .milestone {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 6px 26px;
+    padding-block: 26px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .milestone:first-of-type { border-top: 1px solid var(--rule-soft); }
+
+  .ms-code {
+    font-family: var(--mono);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--signal);
+    line-height: 1.1;
+  }
+  .ms-tier {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 5px;
+  }
+  .ms-body > p {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 7px 0 0;
+    max-width: 38rem;
+  }
+
+  .skills {
+    list-style: none;
+    margin: 15px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px 26px;
+  }
+  .skills li {
+    display: grid;
+    grid-template-columns: 2.1rem 1fr;
+    align-items: baseline;
+    gap: 2px;
+    font-size: 15px;
+    color: var(--body);
+  }
+  .skills .n {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--accent-dim);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- three channels ---------- */
+
+  .channels {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--rule-soft);
+    border: 1px solid var(--rule-soft);
+    margin-top: 24px;
+  }
+  .channel { background: var(--paper); padding: 20px 20px 22px; }
+  .channel h4 {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin: 0 0 8px;
+  }
+  .channel p { font-size: 14.5px; color: var(--muted); margin: 0; }
+
+  /* ---------- research areas ---------- */
+
+  .areas { list-style: none; margin: 20px 0 0; padding: 0; }
+  .areas li {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 4px 26px;
+    align-items: baseline;
+  }
+  .areas li:first-child { border-top: 1px solid var(--rule-soft); }
+  .areas strong {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--ink);
+  }
+  .areas span { font-size: 15px; color: var(--muted); }
+
+  /* ---------- looking-for list ---------- */
+
+  .looking { list-style: none; margin: 18px 0 0; padding: 0; max-width: 42rem; }
+  .looking li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 11px;
+    font-size: 15.5px;
+  }
+  .looking li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0.62em;
+    width: 8px; height: 1.5px;
+    background: var(--signal);
+  }
+  .looking strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- pull quote ---------- */
+
+  .pull {
+    margin: 30px 0 0;
+    padding: 22px 26px;
+    background: var(--surface);
+    border-left: 2px solid var(--signal);
+  }
+  .pull p {
+    font-family: var(--display);
+    font-size: 1.08rem;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0;
+    max-width: 38rem;
+  }
+
+  /* ---------- contact ---------- */
+
+  .contact {
+    margin-top: 62px;
+    padding-top: 30px;
+    border-top: 2px solid var(--ink);
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2.5px; }
+  a:hover { color: var(--signal); }
+  a:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 1px; }
+
+  footer {
+    margin-top: 44px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  @media (max-width: 720px) {
+    .milestone { grid-template-columns: 1fr; gap: 3px; }
+    .skills { grid-template-columns: 1fr; }
+    .channels { grid-template-columns: 1fr; }
+    .areas li { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <span class="lab">SEAR Lab</span>
+    <span class="affil">Industrial, Manufacturing &amp; Systems Engineering &middot; UT Arlington</span>
+  </header>
+
+  <h1>Twenty-four things you will be able to do, and prove you can.</h1>
+
+  <p class="standfirst">
+    Most doctoral programs leave research skills to osmosis. You are expected to absorb version
+    control, peer review, reproducibility and proposal writing from the air around you — and the
+    gaps surface at the worst possible moment. <em>A student who cannot reproduce their own
+    Chapter&nbsp;3. A submission that stalls on formatting.</em> Here, each of those skills is
+    explicit, demonstrated once on your own dissertation work, and then yours permanently.
+  </p>
+
+  <section>
+    <h2>The curriculum</h2>
+    <p class="lede">
+      Twenty-four skills in six milestones. You choose what to work on and when — nothing is
+      locked, and a first-year who needs the review cycle can take the review cycle. Each skill
+      is performed as one week's ordinary research-log entry, so it replaces work rather than
+      stacking on top of it. Two milestones a semester finishes the set in three to four
+      semesters, which lands around when you propose.
+    </p>
+
+    <div class="milestone">
+      <div>
+        <div class="ms-code">M1</div>
+        <div class="ms-tier">Year 1</div>
+      </div>
+      <div class="ms-body">
+        <h3>The Workbench</h3>
+        <p>Getting computation done in the tools you already have open — and the one habit that
+          makes AI assistance safe: checking the output against something you knew independently.</p>
+        <ul class="skills">
+          <li><span class="n">01</span><span>Basic Excel</span></li>
+          <li><span class="n">02</span><span>AI prompting</span></li>
+          <li><span class="n">03</span><span>Excel with AI assist</span></li>
+          <li><span class="n">04</span><span>Colab with AI assist</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div>
+        <div class="ms-code">M2</div>
+        <div class="ms-tier">Year 1</div>
+      </div>
+      <div class="ms-body">
+        <h3>Reproducible Code</h3>
+        <p>The test at the end is not a file listing. It is that another student ran your code on
+          their own machine and got your number.</p>
+        <ul class="skills">
+          <li><span class="n">05</span><span>Git and GitHub</span></li>
+          <li><span class="n">06</span><span>Code folder structure</span></li>
+          <li><span class="n">07</span><span>Reproducible environments</span></li>
+          <li><span class="n">08</span><span>CLI agents and Claude Code</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div>
+        <div class="ms-code">M3</div>
+        <div class="ms-tier">Year 2</div>
+      </div>
+      <div class="ms-body">
+        <h3>Reading and Citing</h3>
+        <p>Reading the literature for what it actually shows, finding where it stops, citing it
+          for claims it genuinely makes, and crediting people honestly.</p>
+        <ul class="skills">
+          <li><span class="n">09</span><span>Reading and critiquing papers</span></li>
+          <li><span class="n">10</span><span>Literature review and gap-finding</span></li>
+          <li><span class="n">11</span><span>Citation verification</span></li>
+          <li><span class="n">12</span><span>Research ethics and authorship</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div>
+        <div class="ms-code">M4</div>
+        <div class="ms-tier">Year 2</div>
+      </div>
+      <div class="ms-body">
+        <h3>The Manuscript</h3>
+        <p>Everything between having results and having a document somebody else can read —
+          including alt text and colour-independent figures, which this institution needs in
+          place by April 2027.</p>
+        <ul class="skills">
+          <li><span class="n">13</span><span>IMRAD structure</span></li>
+          <li><span class="n">14</span><span>LaTeX and Overleaf</span></li>
+          <li><span class="n">15</span><span>Figure and table design</span></li>
+          <li><span class="n">16</span><span>Accessibility</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div>
+        <div class="ms-code">M5</div>
+        <div class="ms-tier">Year 3+</div>
+      </div>
+      <div class="ms-body">
+        <h3>The Review Cycle</h3>
+        <p>You referee a labmate's draft and they referee yours; each of you then answers the
+          review you received. Nothing here is simulated.</p>
+        <ul class="skills">
+          <li><span class="n">17</span><span>Reviewing papers</span></li>
+          <li><span class="n">18</span><span>Response to reviewers</span></li>
+          <li><span class="n">19</span><span>Venue selection</span></li>
+          <li><span class="n">20</span><span>Conference talk and poster</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div>
+        <div class="ms-code">M6</div>
+        <div class="ms-tier">Year 3+</div>
+      </div>
+      <div class="ms-body">
+        <h3>Stewardship</h3>
+        <p>Four things that outlast you here: a citable deposit, a dataset somebody can still
+          find the terms for in four years, an idea written well enough to be funded, and a
+          person who learned to do research because you scoped their first task properly.</p>
+        <ul class="skills">
+          <li><span class="n">21</span><span>Zenodo deposit</span></li>
+          <li><span class="n">22</span><span>Research data management</span></li>
+          <li><span class="n">23</span><span>Proposal writing fragments</span></li>
+          <li><span class="n">24</span><span>Mentoring an undergraduate</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How the week runs</h2>
+    <p class="lede">
+      Every week you keep a research log in three channels, and it is graded every week. At the
+      end of a semester you read back across the whole thing — which is the point, because
+      progress in research is invisible at the scale of a single week and obvious at the scale
+      of fifteen.
+    </p>
+    <div class="channels">
+      <div class="channel">
+        <h4>Reading</h4>
+        <p>One paper, chapter, or set of conference papers. An annotated entry that goes past
+          summary to what the evidence actually supports.</p>
+      </div>
+      <div class="channel">
+        <h4>Writing</h4>
+        <p>A page. Draft prose, an outline, a plan, a reflection — anything that moves the
+          research forward on the page rather than in your head.</p>
+      </div>
+      <div class="channel">
+        <h4>Arithmetic</h4>
+        <p>What you computed, what broke, what you are doing next. Where the code, the models
+          and the solver work get written down.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we work on</h2>
+    <ul class="areas">
+      <li><strong>Energy systems optimization</strong><span>Capacity expansion and dispatch across ERCOT; ReEDS; large-scale MILP in GAMS, CPLEX and Gurobi.</span></li>
+      <li><strong>Battery materials and recycling</strong><span>Material flows, recovery pathways, and what recycling actually displaces.</span></li>
+      <li><strong>Critical minerals supply chains</strong><span>Mixed-integer models of sourcing, processing and vulnerability under disruption.</span></li>
+      <li><strong>Transportation decarbonization</strong><span>Fleet and freight transitions, and the grid consequences that follow them.</span></li>
+      <li><strong>Surrogate modeling</strong><span>Cheap stand-ins for expensive solves, and knowing when to distrust them.</span></li>
+    </ul>
+    <div class="pull">
+      <p>The lab runs three tiers — doctoral research, master's team projects, and undergraduate
+        REU and UROP students. By your third year you are supervising, which is why mentoring is
+        a graded skill here and not a thing you are assumed to pick up.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we look for</h2>
+    <ul class="looking">
+      <li><strong>You can say what you do not know.</strong> The single most useful thing in a first-year student, and the rarest.</li>
+      <li><strong>You finish things.</strong> A small finished study beats an ambitious unfinished one, every time.</li>
+      <li><strong>You use AI and check it.</strong> Not using it is a disadvantage. Trusting it without verification is worse.</li>
+      <li><strong>You write.</strong> Not well, necessarily. Regularly.</li>
+    </ul>
+    <p style="margin-top:20px">
+      What we do <em>not</em> require: prior optimization coursework, a background in energy
+      systems, or having touched a terminal before. Those are what the first two milestones are
+      for.
+    </p>
+  </section>
+
+  <section class="contact">
+    <h2>Getting in touch</h2>
+    <p>
+      Email <strong>Dr. Erick C. Jones Jr.</strong> with a paragraph about what you want to work
+      on and why here. A CV is welcome; a cover letter that could have been sent to any lab is
+      not useful to either of us.
+    </p>
+    <p>
+      The full curriculum — all twenty-four lessons, with the checklists each one is graded
+      against — is public at
+      <a href="https://github.com/sear-labs/teaching-phd-skills">github.com/sear-labs/teaching-phd-skills</a>.
+      Read it before you write. It will tell you more about how this lab works than this page can.
+    </p>
+  </section>
+
+  <footer>
+    SEAR Lab &middot; Industrial, Manufacturing &amp; Systems Engineering &middot; The University of Texas at Arlington
+  </footer>
+
+</div>
