@@ -11,11 +11,30 @@ the folder, send it, forget about it.
 
 ## 1. Pick code you already know works
 
-Something from a **finished project** — a published paper, a model you have since replaced, a
-study that is closed out. Not the pipeline you are working in now.
+**First choice: your own PyPSA work.** Something of yours that is done, that you already know
+produces a particular result. That is the whole qualification — you know what it does and you
+know what comes out.
 
-You already know what it produces. That is the whole qualification. Do not re-verify it, do
-not time yourself, do not clean it up. Messy is fine and honestly more useful.
+Do not re-verify it, do not time yourself, do not tidy it up. Messy is fine and honestly more
+useful: the point is to see how someone handles a real project rather than a prepared one.
+
+**Not** the pipeline you are working in now, and not anything feeding a paper under review.
+
+### If you would rather not use your own
+
+Borrow one of Jones's public repos instead. Download it, run it once so you know the answer,
+send it. These are already public and already cleaned, so **steps 3 and 4 below are done for
+you — skip straight to step 5.**
+
+- [`lithium-optsc-energies-2024`](https://github.com/sear-labs/lithium-optsc-energies-2024) —
+  the MILP behind Jones (2024), *Energies*. Reproduces the published objective, and it is
+  verifiable **without a commercial solver**, so the candidate does not need a Gurobi licence.
+- [`der-decomp-iise-2020`](https://github.com/sear-labs/der-decomp-iise-2020) — distributed
+  energy resource capacity expansion. Ships synthetic inputs rather than the licensed Pecan
+  Street data.
+
+They are also the **shape** to aim for if you use your own: a closed-out project, a known
+output, and data that can be handed to a stranger without anyone having to think about it.
 
 ## 2. Write down what it outputs
 
@@ -60,12 +79,31 @@ If you are reasoning toward "it is probably fine," ask Jones instead.
 
 ## 5. Send it
 
-The folder, the expected output, and `code-trial-candidate.md`. A couple of sentences from you
-about what the project was is welcome but not required.
+The folder, the expected output, and `code-trial-candidate.md`.
 
-Tell them plainly that **you will not be available for questions** — that is by design, not
-rudeness, and their brief already says so. If they email you anyway, a one-line "have a go and
-write down what you assumed" is a complete answer.
+Something like this — adjust it to sound like you:
+
+> Hi [name],
+>
+> I am a PhD student in Erick Jones's lab at UTA, working on power system modelling. Jones
+> mentioned you are considering joining us, so I thought it would be more useful to show you
+> what the work actually looks like than to describe it.
+>
+> Attached is code from a project of mine that is finished, along with a short brief. It should
+> take about four hours and the brief means that cap seriously — please stop at four even if
+> things are unfinished.
+>
+> One thing worth saying up front: **I will not be able to answer questions while you work.**
+> That is deliberate rather than unfriendly. Where something is unclear, make a call and write
+> down what you assumed — the brief asks for exactly that, and your assumptions are part of
+> what gets read.
+>
+> No rush, and it is completely fine to say this is not a good time.
+>
+> [your name]
+
+If they email you a question anyway, *"have a go and write down what you assumed"* is a
+complete answer.
 
 ---
 
