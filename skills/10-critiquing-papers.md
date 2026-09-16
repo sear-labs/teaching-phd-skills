@@ -1,7 +1,7 @@
 ---
 title: Reading and critiquing papers
 channel: reading
-tier: year 2
+tier: year 1-2
 milestone: M3
 time: 3 hours
 prerequisites: none

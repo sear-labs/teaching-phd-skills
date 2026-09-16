@@ -4,7 +4,7 @@ channel: arithmetic
 tier: year 3+
 milestone: M6
 time: 2 hours
-prerequisites: 05-git-github, 06-code-folder-structure
+prerequisites: 06-git-github, 07-code-folder-structure
 submit_as: Zenodo record URL
 ---
 

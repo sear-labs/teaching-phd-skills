@@ -4,7 +4,7 @@ channel: reading
 tier: year 3+
 milestone: M5
 time: 4 hours
-prerequisites: 09-critiquing-papers
+prerequisites: 10-critiquing-papers
 submit_as: structured referee report, PDF
 ---
 

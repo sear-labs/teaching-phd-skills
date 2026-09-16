@@ -2,7 +2,7 @@
 title: Research ethics and authorship
 channel: writing
 tier: year 2
-milestone: M3
+milestone: M4
 time: 2 hours
 prerequisites: none
 submit_as: text entry, CRediT-style, plus evidence it was circulated

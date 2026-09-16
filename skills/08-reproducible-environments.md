@@ -4,7 +4,7 @@ channel: arithmetic
 tier: year 1
 milestone: M2
 time: 4 hours (plus your partner's 1 hour)
-prerequisites: 06-code-folder-structure
+prerequisites: 07-code-folder-structure
 submit_as: repo URL plus your partner's signed run log
 ---
 

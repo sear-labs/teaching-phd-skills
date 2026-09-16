@@ -4,7 +4,7 @@ channel: writing
 tier: year 3+
 milestone: M5
 time: 3 hours
-prerequisites: 13-imrad
+prerequisites: 15-imrad
 submit_as: one-page memo plus draft cover letter
 ---
 

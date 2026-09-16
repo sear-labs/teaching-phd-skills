@@ -4,7 +4,7 @@ channel: arithmetic
 tier: year 3+
 milestone: M6
 time: 3 hours
-prerequisites: 21-zenodo
+prerequisites: 25-zenodo
 submit_as: one-page data statement
 ---
 

@@ -4,7 +4,7 @@ channel: arithmetic
 tier: year 1
 milestone: M2
 time: 4 hours
-prerequisites: 05-git-github
+prerequisites: 06-git-github
 submit_as: repo URL plus one paragraph on what moved where
 ---
 

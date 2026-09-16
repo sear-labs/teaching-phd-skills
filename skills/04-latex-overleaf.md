@@ -1,10 +1,10 @@
 ---
 title: LaTeX and Overleaf
 channel: writing
-tier: year 2
-milestone: M4
+tier: year 1
+milestone: M1
 time: 4 hours
-prerequisites: 13-imrad, 11-citation-verification
+prerequisites: 15-imrad, 16-citation-verification
 submit_as: Overleaf link plus compiled PDF
 ---
 
@@ -32,9 +32,11 @@ None.
 1. **The real journal's official template**, downloaded from the journal, named in your
    submission. Not a generic article class, not a template from a different journal that looks
    similar. IEEE, Elsevier, and INFORMS classes all differ in ways that matter.
-2. **Your actual draft** in it, not lorem ipsum.
-3. **BibTeX exported from your reference manager.** Not typed by hand — hand-typed entries are
-   where the failures from skill 11 reappear.
+2. **Your own writing** in it, not lorem ipsum — a draft, a proposal section, a chapter
+   fragment. It does not have to be finished.
+3. **BibTeX exported from your reference manager.** Not typed by hand. Hand-typed entries are
+   where citation errors breed, and the citation-verification skill in M4 is where you will go
+   looking for them.
 4. **Compile with zero errors.** Then read the warnings, which is the step everyone skips.
    Overfull hbox warnings are how you find out a table is wider than the column.
 5. Check the page count against the journal's stated limit.

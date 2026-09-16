@@ -4,7 +4,7 @@ channel: writing
 tier: year 3+
 milestone: M5
 time: 6 hours
-prerequisites: 13-imrad, 15-figures-tables
+prerequisites: 15-imrad, 18-figures-tables
 submit_as: slides PDF plus the three questions and revised answers
 ---
 

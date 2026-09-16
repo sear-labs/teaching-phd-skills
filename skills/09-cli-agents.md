@@ -4,7 +4,7 @@ channel: arithmetic
 tier: year 1
 milestone: M2
 time: 3 hours
-prerequisites: 05-git-github, 02-ai-prompting
+prerequisites: 06-git-github, 02-ai-prompting
 submit_as: transcript excerpt plus the accepted diff, in a WA entry
 ---
 

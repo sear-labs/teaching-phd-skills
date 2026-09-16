@@ -4,7 +4,7 @@ channel: writing
 tier: year 3+
 milestone: M6
 time: ongoing, plus 2 hours to write up
-prerequisites: 06-code-folder-structure
+prerequisites: 07-code-folder-structure
 submit_as: task brief plus retrospective
 ---
 

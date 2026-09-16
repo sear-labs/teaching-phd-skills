@@ -1,10 +1,10 @@
 ---
 title: Literature review and gap-finding
 channel: reading
-tier: year 2
+tier: year 1-2
 milestone: M3
 time: 8 hours
-prerequisites: 09-critiquing-papers
+prerequisites: 10-critiquing-papers
 submit_as: PDF: the map plus the gap paragraph
 ---
 
@@ -28,9 +28,14 @@ None.
 ## The mechanic
 
 1. **Fifteen papers.** Fewer and the empty regions are artefacts of your sample.
-2. **One axis.** Not a table of everything — one dimension along which the papers genuinely
-   differ and which matters for your question. Spatial resolution. System boundary. Time
-   horizon. Whether storage is co-optimised. Pick the one your contribution moves along.
+2. **Generate three candidate axes, then choose one.** Spatial resolution. System boundary.
+   Time horizon. Whether storage is co-optimised. Write all three down *before* you commit to
+   one, and write a sentence on why you rejected each of the other two.
+
+   The discarded two are not waste. **Choosing between framings is the creative half of critical
+   thinking**, and a student who only ever saw one framing did not choose it — they defaulted to
+   it. A committee will ask why you cut the field this way, and "it was the obvious axis" is not
+   an answer.
 3. **Plot them on it.** Literally. A scatter, a strip, a timeline — something with position.
 4. **Find the empty region, then say why it is empty.** This is the step that does the work.
    Sometimes the answer is "nobody had the data until ERCOT published it in 2024." Sometimes it
@@ -44,6 +49,7 @@ PDF containing the map, the fifteen citations, and the gap paragraph.
 ## Competency check
 
 - [ ] Fifteen papers, cited
+- [ ] **Three candidate axes written down before one was chosen**, each rejected one with a stated reason
 - [ ] One named axis, with units or categories stated
 - [ ] Every paper positioned on it
 - [ ] The empty region identified
@@ -52,4 +58,4 @@ PDF containing the map, the fifteen citations, and the gap paragraph.
 
 ## Log entry
 
-Reading. The axis you chose, and the one you rejected.
+Reading. The axis you chose, and what you would have seen through the two you rejected.

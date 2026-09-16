@@ -53,6 +53,7 @@ HOST = "https://uta.instructure.com"
 MILESTONE_GROUP = "Competency Milestones"
 MILESTONE_POINTS = 5
 OVERVIEW_TITLE = "Research Competency Milestones"
+PHANTOM_TITLE = "What We Don't Grade"
 
 
 # --------------------------------------------------------------------------- token
@@ -243,8 +244,14 @@ class Canvas:
                 print(f"  [dry-run] would CREATE module {name!r} ({len(items)} items)")
                 return
             mid = self._req("POST", "/modules", payload)["id"]
+            # Canvas ignores module[published] on create. Set it again explicitly,
+            # or a freshly created module stays invisible to students.
+            self._req("PUT", f"/modules/{mid}", payload)
 
-        have = {i["title"] for i in self.get_all(f"/modules/{mid}/items")}
+        existing_items = self.get_all(f"/modules/{mid}/items")
+        have = {i["title"] for i in existing_items}
+        wanted = {t for _, _, t in items}
+
         added = 0
         for kind, ref, title in items:
             if title in have:
@@ -256,8 +263,64 @@ class Canvas:
                 item["content_id"] = ref
             self._req("POST", f"/modules/{mid}/items", {"module_item": item})
             added += 1
+
+        # Prune items that are no longer part of this milestone. Without this, a
+        # retired skill stays visible in the module long after its lesson is gone.
+        pruned = 0
+        for i in existing_items:
+            if i["title"] not in wanted:
+                self._req("DELETE", f"/modules/{mid}/items/{i['id']}")
+                pruned += 1
+
+        tail = f", {pruned} removed" if pruned else ""
         print(f"  mod   {'PUB ' if self.publish else '    '} {name}"
-              f"  ({len(items)} items, {added} new)")
+              f"  ({len(items)} items, {added} new{tail})")
+
+    # -- retired content --
+
+    def retire_orphan_skill_pages(self, keep_titles):
+        """Unpublish skill pages whose lesson file no longer exists.
+
+        Unpublish rather than delete: a retired lesson may be worth reinstating, and
+        an unpublished page is already invisible to students.
+        """
+        orphans = [p for p in self.get_all("/pages")
+                   if p["title"].startswith("Skill: ") and p["title"] not in keep_titles]
+        for p in orphans:
+            if self.dry_run:
+                print(f"  [dry-run] would RETIRE page {p['title']!r}")
+                continue
+            self._req("PUT", f"/pages/{p['url']}",
+                      {"wiki_page": {"published": False}})
+            print(f"  retired  {p['title']}  (unpublished, not deleted)")
+        return len(orphans)
+
+    def retire_orphan_milestones(self, keep_names, group_id):
+        """Unpublish milestone assignments and modules left behind by a rename.
+
+        Renaming a milestone creates a new assignment and module; without this the old
+        pair stays published and students see the milestone twice.
+        """
+        n = 0
+        for a in self.get_all("/assignments"):
+            if a.get("assignment_group_id") == group_id and a["name"] not in keep_names:
+                if self.dry_run:
+                    print(f"  [dry-run] would RETIRE assignment {a['name']!r}")
+                else:
+                    self._req("PUT", f"/assignments/{a['id']}",
+                              {"assignment": {"published": False}})
+                    print(f"  retired  assignment  {a['name']}")
+                n += 1
+        for m in self.get_all("/modules"):
+            if re.match(r"^M\d+ — ", m["name"]) and m["name"] not in keep_names:
+                if self.dry_run:
+                    print(f"  [dry-run] would RETIRE module {m['name']!r}")
+                else:
+                    self._req("PUT", f"/modules/{m['id']}",
+                              {"module": {"published": False}})
+                    print(f"  retired  module      {m['name']}")
+                n += 1
+        return n
 
 
 # ---------------------------------------------------------------- content assembly
@@ -372,7 +435,19 @@ def main():
           f"{'  [DRY RUN]' if args.dry_run else ''}"
           f"{'  [PUBLISHING]' if args.publish else '  [unpublished]'}")
 
-    # 1. Skill pages first -- we need their real slugs to link everything else.
+    # 0. Retire first, publish second. Unpublishing a Canvas module cascades to the
+    # pages it contains -- so a skill that moved between milestones gets knocked down
+    # if retirement runs last. Doing it first means the publishing pass repairs it.
+    group_id = canvas.ensure_group(MILESTONE_GROUP)
+    keep_ms = {f"{m['milestone']} — {m['title']}" for _, m, _ in milestones}
+    keep_sk = {f"Skill: {m['title']}" for _, m, _ in skills}
+    print("\nRetiring superseded content:")
+    retired = canvas.retire_orphan_milestones(keep_ms, group_id)
+    retired += canvas.retire_orphan_skill_pages(keep_sk)
+    if not retired:
+        print("  (nothing superseded)")
+
+    # 1. Skill pages -- we need their real slugs to link everything else.
     print(f"\nSkill pages ({len(skills)}):")
     slugs = {}
     for _, meta, body in skills:
@@ -380,15 +455,22 @@ def main():
         html = md_to_html(skill_header(meta, args.course, milestone_titles) + body)
         slugs[title] = canvas.upsert_page(f"Skill: {title}", html)
 
-    # 2. Overview page, generated from the same data.
-    print("\nOverview page:")
+
+    # 2. Overview page, plus the ungraded reading list.
+    print("\nStandalone pages:")
     canvas.upsert_page(
         OVERVIEW_TITLE,
         md_to_html(overview_markdown(skills, milestones, slugs, args.course)))
 
+    phantom = REPO / "handbook" / "what-we-dont-grade.md"
+    phantom_slug = None
+    if phantom.exists():
+        body = phantom.read_text(encoding="utf-8")
+        body = body.split("\n", 1)[1] if body.startswith("# ") else body
+        phantom_slug = canvas.upsert_page(PHANTOM_TITLE, md_to_html(body))
+
     # 3. Milestone assignments, with clickable lesson lists.
     print(f"\nMilestone assignments ({len(milestones)}):")
-    group_id = canvas.ensure_group(MILESTONE_GROUP)
     assn_ids = {}
     for _, meta, body in milestones:
         name = f"{meta['milestone']} — {meta['title']}"
@@ -398,9 +480,11 @@ def main():
     # 4. Modules -- ungated filing cabinets, appended after the existing ones.
     print("\nModules:")
     base_pos = max([m["position"] for m in canvas.get_all("/modules")] or [0])
+    start_items = [("Page", "research-competency-milestones", OVERVIEW_TITLE)]
+    if phantom_slug:
+        start_items.append(("Page", phantom_slug, PHANTOM_TITLE))
     canvas.upsert_module(
-        "Competency Milestones — Start Here", base_pos + 1,
-        [("Page", "research-competency-milestones", OVERVIEW_TITLE)])
+        "Competency Milestones — Start Here", base_pos + 1, start_items)
     for n, (_, meta, _) in enumerate(milestones, start=1):
         code = meta["milestone"]
         items = [("Page", slugs[s["title"]], f"Skill: {s['title']}")
@@ -408,6 +492,7 @@ def main():
         if assn_ids.get(code):
             items.append(("Assignment", assn_ids[code], f"{code} — {meta['title']}"))
         canvas.upsert_module(f"{code} — {meta['title']}", base_pos + 1 + n, items)
+
 
     if args.publish:
         print("\nPublished. Students can see all of it now.")

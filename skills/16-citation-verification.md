@@ -2,7 +2,7 @@
 title: Reference manager and citation verification
 channel: reading
 tier: year 2
-milestone: M3
+milestone: M4
 time: 3 hours
 prerequisites: none
 submit_as: table, PDF or text entry, plus the updated draft

@@ -4,7 +4,7 @@ channel: writing
 tier: year 2
 milestone: M4
 time: 3 hours
-prerequisites: 15-figures-tables
+prerequisites: 18-figures-tables
 submit_as: repo URL
 ---
 

@@ -4,7 +4,7 @@ channel: writing
 tier: year 3+
 milestone: M5
 time: 4 hours
-prerequisites: 17-reviewing-papers
+prerequisites: 20-reviewing-papers
 submit_as: PDF response letter
 ---
 

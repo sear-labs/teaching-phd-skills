@@ -17,20 +17,30 @@ it rather than sitting beside it.
 A **skill** is performed as one week's ordinary log entry. There is no extra weekly work: the
 skill replaces that week's entry, it does not stack on top of it.
 
-A **milestone** is four related skills. When all four are in, the student submits an index
+A **milestone** is a group of related skills. When they are all in, the student submits an index
 saying which week each went in. Graded complete / redo. One demonstration and the skill is
 held permanently — it does not repeat in a later semester.
 
-| | | |
-|---|---|---|
-| **M1** | The Workbench | Excel · AI prompting · Excel+AI · Colab+AI |
-| **M2** | Reproducible Code | Git · Folder structure · Environments · CLI agents |
-| **M3** | Reading and Citing | Critique · Gap-finding · Citation audit · Authorship |
-| **M4** | The Manuscript | IMRAD · LaTeX · Figures · Accessibility |
-| **M5** | The Review Cycle | Refereeing · Rebuttal · Venue selection · Talk |
-| **M6** | Stewardship | Zenodo · Data management · Proposals · Mentoring |
+| | | | |
+|---|---|---|---|
+| **M1** | The Workbench | 5 | Spreadsheets · Notebooks+AI · Command line · LaTeX · Sanity checks |
+| **M2** | Reproducible Code | 4 | Git · Folder structure · Environments · CLI agents |
+| **M3** | Reading and Reasoning | 5 | Critique · Gap-finding · Logic · Claim/reason/evidence · Claim precision |
+| **M4** | The Manuscript | 5 | IMRAD · Citations · Authorship · Figures · Accessibility |
+| **M5** | The Review Cycle | 5 | Refereeing · Rebuttal · Venue · Talk · Defending |
+| **M6** | Stewardship | 4 | Zenodo · Data management · Proposals · Mentoring |
 
-Target two milestones per semester; the full set takes three to four semesters.
+Twenty-eight skills. Target two milestones per semester; the full set takes three to four
+semesters.
+
+Nothing is gated — no prerequisites, no completion requirements, no sequential progress. The
+tiers are advice about a sensible order, not locks, because the course runs every semester with
+a mixed cohort and any fixed schedule is wrong for most of the room.
+
+**Not graded:** [`handbook/what-we-dont-grade.md`](handbook/what-we-dont-grade.md) carries the
+material that is worth knowing but is not PhD-basic — philosophy of science, the normative
+content of modelling choices, policy literacy, field history, economics. It ships as a Canvas
+page with no assignment attached.
 
 ## Layout
 

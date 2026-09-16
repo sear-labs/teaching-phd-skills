@@ -4,7 +4,7 @@ channel: writing
 tier: year 3+
 milestone: M6
 time: 6 hours
-prerequisites: 10-lit-review-gap, 13-imrad
+prerequisites: 11-lit-review-gap, 15-imrad
 submit_as: PDF, to the call's stated page limits
 ---
 
