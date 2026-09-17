@@ -1,14 +1,23 @@
-# What we don't grade
+# What the model assumes
 
 Nothing on this page is assessed. There is no assignment, no checklist, no submission, and it
 will never appear in your milestone record.
 
-It is here because the twenty-eight graded skills are the ones every researcher needs, and these
-are the ones that would make you unusually good at this particular kind of work. They did not
-make the curriculum because they are not *PhD-basic* — a perfectly competent researcher can go a
-whole career without them. The best ones don't.
+It is here because every model carries commitments it does not state. A discount rate is a claim
+about how much future people matter. An objective function decides whose welfare counts. A system
+boundary decides whose costs are invisible. None of those are bugs — they are choices, they are
+defensible, and the difference between a competent researcher and a good one is largely whether
+they know they are making them.
 
-Read one when you are stuck, curious, or procrastinating on something worse.
+The twenty-eight graded skills are what every researcher needs. These are what would make you
+unusually good at this particular kind of work. A perfectly competent researcher can go a whole
+career without them. The best ones don't.
+
+Read one when you are stuck, curious, or procrastinating on something worse. **Read [Where We
+Work](where-we-work.md) first** — this page will land better once the domain has stopped feeling
+new.
+
+---
 
 ---
 
@@ -61,14 +70,10 @@ You will model constraints that exist because of a law passed in 1935.
 instrument rather than a moral statement. If your optimisation minimises cost, you have adopted
 a welfare framework — worth knowing which one, and what it does not capture.
 
-## Intercultural and global collaboration
-
-**Why it matters here:** this lab collaborates across countries and the supply chains you study
-cross a dozen jurisdictions with different rules, different data conventions, and different
-ideas about what a deadline means. This one is learned by doing and by paying attention, not by
-reading, which is exactly why it cannot be a graded skill.
-
 ---
 
 *If one of these turns out to matter for your actual work, tell me. Things move from this page
 into the curriculum when they stop being optional.*
+
+*See also [Where We Work](where-we-work.md) — the lab's own three layers and three areas, and
+which course goes deep on each.*

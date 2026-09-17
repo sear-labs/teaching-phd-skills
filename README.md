@@ -37,10 +37,15 @@ Nothing is gated — no prerequisites, no completion requirements, no sequential
 tiers are advice about a sensible order, not locks, because the course runs every semester with
 a mixed cohort and any fixed schedule is wrong for most of the room.
 
-**Not graded:** [`handbook/what-we-dont-grade.md`](handbook/what-we-dont-grade.md) carries the
-material that is worth knowing but is not PhD-basic — philosophy of science, the normative
-content of modelling choices, policy literacy, field history, economics. It ships as a Canvas
-page with no assignment attached.
+**Two ungraded companion pages**, narrowing from general to lab-specific. Both ship as Canvas
+pages with no assignment attached.
+
+- [`handbook/where-we-work.md`](handbook/where-we-work.md) — the lab. Infrastructure's three
+  layers, the three research areas laid against them, and which course goes deep on each.
+  **Read in week one**; surface level on purpose.
+- [`handbook/what-the-model-assumes.md`](handbook/what-the-model-assumes.md) — the questions
+  behind the methods. Philosophy of science, the normative content of modelling choices, policy
+  literacy, field history, economics. **Read later**, once the domain is familiar.
 
 ## Layout
 

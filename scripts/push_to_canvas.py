@@ -53,7 +53,17 @@ HOST = "https://uta.instructure.com"
 MILESTONE_GROUP = "Competency Milestones"
 MILESTONE_POINTS = 5
 OVERVIEW_TITLE = "Research Competency Milestones"
-PHANTOM_TITLE = "What We Don't Grade"
+
+# Ungraded companion pages, in the order a student should meet them: the lab's own
+# domain first, the questions behind the methods second. (file stem, Canvas title)
+COMPANION_PAGES = [
+    ("where-we-work", "Where We Work"),
+    ("what-the-model-assumes", "What the Model Assumes"),
+]
+
+# Titles this curriculum used to publish. Unpublished on every run so a rename does
+# not leave the old page live beside the new one.
+SUPERSEDED_PAGES = ["What We Don't Grade"]
 
 
 # --------------------------------------------------------------------------- token
@@ -295,6 +305,26 @@ class Canvas:
             print(f"  retired  {p['title']}  (unpublished, not deleted)")
         return len(orphans)
 
+    def retire_pages_by_title(self, titles):
+        """Unpublish named pages this curriculum no longer publishes.
+
+        Canvas has no rename that preserves a page, so a retitled page leaves the old
+        one live. Listing the dead title here retires it on the next run.
+        """
+        existing = {p["title"]: p for p in self.get_all("/pages")}
+        n = 0
+        for t in titles:
+            p = existing.get(t)
+            if not p or not p["published"]:
+                continue
+            if self.dry_run:
+                print(f"  [dry-run] would RETIRE page {t!r}")
+            else:
+                self._req("PUT", f"/pages/{p['url']}", {"wiki_page": {"published": False}})
+                print(f"  retired  page        {t}")
+            n += 1
+        return n
+
     def retire_orphan_milestones(self, keep_names, group_id):
         """Unpublish milestone assignments and modules left behind by a rename.
 
@@ -444,6 +474,7 @@ def main():
     print("\nRetiring superseded content:")
     retired = canvas.retire_orphan_milestones(keep_ms, group_id)
     retired += canvas.retire_orphan_skill_pages(keep_sk)
+    retired += canvas.retire_pages_by_title(SUPERSEDED_PAGES)
     if not retired:
         print("  (nothing superseded)")
 
@@ -462,12 +493,15 @@ def main():
         OVERVIEW_TITLE,
         md_to_html(overview_markdown(skills, milestones, slugs, args.course)))
 
-    phantom = REPO / "handbook" / "what-we-dont-grade.md"
-    phantom_slug = None
-    if phantom.exists():
-        body = phantom.read_text(encoding="utf-8")
+    companions = []
+    for stem, title in COMPANION_PAGES:
+        f = REPO / "handbook" / f"{stem}.md"
+        if not f.exists():
+            continue
+        body = f.read_text(encoding="utf-8")
+        # Drop the leading H1 -- Canvas renders the page title itself.
         body = body.split("\n", 1)[1] if body.startswith("# ") else body
-        phantom_slug = canvas.upsert_page(PHANTOM_TITLE, md_to_html(body))
+        companions.append((canvas.upsert_page(title, md_to_html(body)), title))
 
     # 3. Milestone assignments, with clickable lesson lists.
     print(f"\nMilestone assignments ({len(milestones)}):")
@@ -481,8 +515,7 @@ def main():
     print("\nModules:")
     base_pos = max([m["position"] for m in canvas.get_all("/modules")] or [0])
     start_items = [("Page", "research-competency-milestones", OVERVIEW_TITLE)]
-    if phantom_slug:
-        start_items.append(("Page", phantom_slug, PHANTOM_TITLE))
+    start_items += [("Page", slug, title) for slug, title in companions]
     canvas.upsert_module(
         "Competency Milestones — Start Here", base_pos + 1, start_items)
     for n, (_, meta, _) in enumerate(milestones, start=1):
