@@ -13,6 +13,10 @@ records/*.json
 # Student artifacts awaiting permission
 exemplars/_pending/
 
+# Student CVs and resumes. Personal data, and this repository is PUBLIC.
+# Never commit these, not even redacted -- git history is permanent.
+resumes/
+
 # Python
 __pycache__/
 *.pyc
