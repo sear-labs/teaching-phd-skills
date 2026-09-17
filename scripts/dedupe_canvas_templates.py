@@ -20,6 +20,7 @@ Usage
 
 import argparse
 import json
+import re
 import sys
 import urllib.error
 import urllib.request
@@ -65,10 +66,8 @@ def main():
     base = f"{HOST}/api/v1/courses/{args.course}"
 
     pages = get_all(token, base, "/pages")
-    dupes = [p for p in pages
-             if p["url"].rstrip("234").endswith("-") and not p["url"].startswith("skill-")]
-    # rstrip above is too loose; match the real suffix pattern instead
-    import re
+    # A re-imported course shell suffixes its duplicates "-2", "-3", "-4".
+    # Generated lesson pages are excluded: push_to_canvas.py owns those.
     dupes = [p for p in pages
              if re.search(r"-[234]$", p["url"]) and not p["url"].startswith("skill-")]
 
