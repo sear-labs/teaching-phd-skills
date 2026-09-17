@@ -59,6 +59,19 @@ scripts/       the Canvas generators
 docs/          design brief and background notes
 ```
 
+## Two skimmable HTML pages, both generated or hand-built in `handbook/`
+
+- [`curriculum.html`](handbook/curriculum.html) — **all 28 skills on one page**: purpose,
+  deliverable and grading checklist for each. For a student choosing what to do this week
+  without opening 28 files. **Generated** by `scripts/build_curriculum_page.py`; regenerate
+  after editing any lesson, and never edit it by hand.
+- [`prospective-students.html`](handbook/prospective-students.html) — the recruiting page. A
+  different job: it answers *should I join this lab*, not *what do I do this week*.
+
+```bash
+python scripts/build_curriculum_page.py
+```
+
 ## Regenerating Canvas
 
 ```bash

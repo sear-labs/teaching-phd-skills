@@ -34,6 +34,11 @@ semesters, which puts you finished around the time you are proposing.
 **Nothing is gated.** The tiers below are advice about a sensible order, not locks. If your
 research needs M5 in year one, take M5 in year one.
 
+**Choosing what to do this week?** [`curriculum.html`](curriculum.html) puts all twenty-eight on
+one scrollable page — what each is for, what you hand in, and the checklist it is graded
+against — so you can compare them without opening twenty-eight files. It is generated from the
+lessons, so it cannot go stale.
+
 ---
 
 ## M1 — The Workbench · *Year 1*
