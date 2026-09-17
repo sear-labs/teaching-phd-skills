@@ -39,6 +39,7 @@
   nav a:hover { border-color:var(--accent); color:var(--accent); }
   nav a:focus-visible { outline:2px solid var(--signal); outline-offset:2px; }
   nav .nc { color:var(--signal); font-weight:500; margin-right:6px; }
+  nav .nu { border-style:dashed; }
 
   section { margin-top:46px; scroll-margin-top:64px; }
   .mshead { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px;
@@ -71,6 +72,32 @@
   details ul { margin:8px 0 2px; padding-left:1.1rem; }
   details li { font-size:14px; margin-bottom:4px; color:var(--body); }
 
+  /* --- the two ungraded pages --- */
+  .companion { background:var(--surface); padding:2px 22px 24px; margin-top:52px;
+                border-top:2px solid var(--signal); }
+  .companion .mshead { border-bottom:1px solid var(--rule); }
+  .ungraded { font-family:var(--mono); font-size:10.5px; letter-spacing:.12em;
+               text-transform:uppercase; color:var(--signal); border:1px solid var(--signal);
+               border-radius:2px; padding:2px 6px; margin-right:9px;
+               vertical-align:middle; font-weight:500; }
+  .topics { list-style:none; margin:18px 0 0; padding:0;
+             display:grid; gap:14px 28px; }
+  .topics h4 { font-family:var(--display); font-weight:600; font-size:1rem;
+                color:var(--ink); margin:0 0 3px; }
+  .topics p { margin:0; font-size:14.5px; color:var(--body); max-width:38rem; }
+
+  .tablewrap { overflow-x:auto; margin:18px 0 4px; }
+  .grid3 { border-collapse:collapse; width:100%; min-width:40rem; font-size:13px; }
+  .grid3 th, .grid3 td { border:1px solid var(--rule); padding:8px 10px;
+                          vertical-align:top; text-align:left; }
+  .grid3 thead th { font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+                     text-transform:uppercase; color:var(--accent); font-weight:500; }
+  .grid3 thead th small { display:block; font-size:10px; letter-spacing:0;
+                           text-transform:none; color:var(--muted); margin-top:2px; }
+  .grid3 tbody th { font-family:var(--display); font-size:14px; color:var(--ink);
+                     white-space:nowrap; }
+  .grid3 td { color:var(--body); }
+
   code { font-family:var(--mono); font-size:.88em; background:var(--surface);
           padding:1px 4px; border-radius:2px; }
   a { color:var(--accent); text-underline-offset:2px; }
@@ -99,6 +126,8 @@
       <a href="#m4"><span class="nc">M4</span>The Manuscript</a>
       <a href="#m5"><span class="nc">M5</span>The Review Cycle</a>
       <a href="#m6"><span class="nc">M6</span>Stewardship</a>
+      <a href="#lab" class="nu"><span class="nc">&mdash;</span>SEAR Lab</a>
+      <a href="#discipline" class="nu"><span class="nc">&mdash;</span>Engineering Research</a>
   </nav>
 
     <section id="m1">
@@ -506,6 +535,26 @@
             <ul><li>Task brief contains a definition of done that names an artifact</li><li>Input and output paths specified, consistent with the repo archetype</li><li>A checkpoint date, before the deadline</li><li>Retrospective names at least two underspecified items</li><li>The mentee&#x27;s actual output is linked</li><li>If they used git, their <code>.gitignore</code> was verified before their first commit</li></ul></details>
         </div>
       </article>
+    </section>
+    <section id="lab" class="companion">
+      <div class="mshead">
+        <h2><span class="ungraded">ungraded</span> SEAR Lab Domain Knowledge</h2>
+        <p class="tier">read in week one</p>
+      </div>
+      <p class="blurb">What this lab actually studies. Infrastructure has three layers &mdash; physical, digital, institutional &mdash; and a study that addresses only one of them gets the answer wrong. Surface level on purpose: each area names the course that goes deep.</p>
+      <div class='tablewrap'><table class='grid3'><thead><tr><th scope='col'></th><th scope='col'><strong>Physical</strong> <br><small>systems, hardware, experiments</small></th><th scope='col'><strong>Digital</strong> <br><small>models, analytics, decision tools</small></th><th scope='col'><strong>Institutional</strong> <br><small>policy, programs, deployment</small></th></tr></thead><tbody><tr><th scope='row'><strong>Energy systems</strong></th><td>shipboard power and HESM · NAVSEA land-based testing · microgrids from repurposed EV batteries and solar</td><td>ReEDS and GCAM · data-centre and AI load growth · transmission expansion under renewable buildout · surrogate optimisation and DACE</td><td>Green Warriors weatherization in South Dallas · energy burden and DERs · Powerhouse Texas EPAC · cited in IPCC AR6 WGIII</td></tr><tr><th scope='row'><strong>Critical minerals</strong></th><td>500+ kWh of recovered EV batteries and motors · shred, grind, sieve · electrical, chemical and powder analysis · 3R-BET</td><td>global lithium supply chain optimisation · centralized vs. decentralized black mass · reverse logistics and recycling network design</td><td>trade and tariff policy · domestic supply chain security · NAATBatt Track and Trace · geothermal on tribal lands and HUBZones</td></tr><tr><th scope='row'><strong>RFID and asset tracking</strong></th><td>antennas, readers, printers · real-time location systems · circular conveyor and robotic arm · operational hospital beds</td><td>plant-level inventory systems · asset performance analytics · set-cover optimisation for reader placement · blockchain provenance</td><td>battery track-and-trace standards · community naloxone distribution · pharmaceutical anti-diversion · health asset management</td></tr></tbody></table></div>
+      <ul class="topics"><li><h4>The thesis: infrastructure has three layers</h4><p>Societies thrive or struggle on the infrastructure they build, and that infrastructure is never only physical. It spans three inseparable layers:</p></li><li><h4>1. Energy systems</h4><p>The system that keeps the lights on, and the system this lab models most.</p></li><li><h4>2. Critical mineral supply chains</h4><p><strong>End to end and back.</strong> This phrase is the lab&#x27;s central intellectual claim and it is worth understanding precisely.</p></li><li><h4>3. RFID and asset tracking</h4><p><strong>The short version.</strong> RFID tags carry an identifier that a reader can interrogate without line of sight. That single property — no line of sight — is what separates it from a barcode and is the reason it works for pallets, hospital beds, and battery packs moving through a facility.</p></li><li><h4>Numbers worth carrying</h4><p>Order-of-magnitude anchors for energy work. Not for precision — for catching a result that is wrong by a factor of a thousand, which is the failure that survives code review.</p></li><li><h4>Working across borders</h4><p>The supply chains here cross a dozen jurisdictions with different rules, different data conventions, and genuinely different ideas about what a deadline means. The lab collaborates internationally and most of its students trained somewhere other than the United States.</p></li></ul>
+      <p class="deliv"><a href="sear-lab-domain-knowledge.md">Read the full page &rarr;</a></p>
+    </section>
+    <section id="discipline" class="companion">
+      <div class="mshead">
+        <h2><span class="ungraded">ungraded</span> Engineering Research Domain Knowledge</h2>
+        <p class="tier">read later, once the domain is familiar</p>
+      </div>
+      <p class="blurb">The questions behind the methods rather than inside them. What counts as evidence when you cannot run an experiment, and why a discount rate is a claim about how much future people matter.</p>
+      
+      <ul class="topics"><li><h4>Philosophy of science</h4><p>You build models of systems you cannot run experiments on. You will never have a control group for the Texas grid.</p></li><li><h4>The normative content of your modelling choices</h4><p>A discount rate is a claim about how much future people matter. Three percent and seven percent are different moral positions, and the choice between them was argued out by economists and philosophers, not engineers.</p></li><li><h4>Policy and institutional literacy</h4><p>You model ERCOT. Somebody decided ERCOT would be an energy-only market with no capacity payment, and that decision was political, recent, and revisable.</p></li><li><h4>History of your own field</h4><p>The grid looks the way it does for reasons, and most of them are historical accidents that hardened. Rural electrification, PUHCA in 1935, the 1978 PURPA opening, restructuring in the 1990s, and Texas&#x27;s decision to stay outside the interconnections.</p></li><li><h4>The economics of what you model</h4><p>Externalities, market failure, and why a carbon price is a policy instrument rather than a moral statement. If your optimisation minimises cost, you have adopted a welfare framework — worth knowing which one, and what it does not capture.</p></li></ul>
+      <p class="deliv"><a href="engineering-research-domain-knowledge.md">Read the full page &rarr;</a></p>
     </section>
 
   <footer>

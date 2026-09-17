@@ -20,6 +20,21 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "handbook" / "curriculum.html"
 
+# (anchor, file stem, title, when to read it, one-line blurb)
+COMPANIONS = [
+    ("lab", "sear-lab-domain-knowledge", "SEAR Lab Domain Knowledge",
+     "read in week one",
+     "What this lab actually studies. Infrastructure has three layers &mdash; physical, digital, "
+     "institutional &mdash; and a study that addresses only one of them gets the answer wrong. "
+     "Surface level on purpose: each area names the course that goes deep."),
+    ("discipline", "engineering-research-domain-knowledge",
+     "Engineering Research Domain Knowledge",
+     "read later, once the domain is familiar",
+     "The questions behind the methods rather than inside them. What counts as evidence when you "
+     "cannot run an experiment, and why a discount rate is a claim about how much future people "
+     "matter."),
+]
+
 
 def front_matter(text):
     if not text.startswith("---"):
@@ -59,7 +74,69 @@ def inline_md(s):
     s = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", s)
     s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', s)
+    # Restore the handful of raw tags our own source uses inside table cells.
+    for tag in ("br", "small", "/small", "sup", "/sup"):
+        s = s.replace(f"&lt;{tag}&gt;", f"<{tag}>")
     return s
+
+
+def md_table(text):
+    """First GFM pipe table in `text` -> HTML. Returns '' if there is none."""
+    rows = []
+    for line in text.splitlines():
+        line = line.strip()
+        if line.startswith("|"):
+            rows.append([c.strip() for c in line.strip("|").split("|")])
+        elif rows:
+            break
+    if len(rows) < 3:
+        return ""
+    head, body = rows[0], rows[2:]          # rows[1] is the --- separator
+    th = "".join(f"<th scope='col'>{inline_md(c)}</th>" for c in head)
+    trs = []
+    for r in body:
+        cells = "".join(
+            (f"<th scope='row'>{inline_md(c)}</th>" if i == 0
+             else f"<td>{inline_md(c)}</td>")
+            for i, c in enumerate(r))
+        trs.append(f"<tr>{cells}</tr>")
+    return (f"<div class='tablewrap'><table class='grid3'>"
+            f"<thead><tr>{th}</tr></thead><tbody>{''.join(trs)}</tbody></table></div>")
+
+
+# Sections that are navigation rather than subject matter.
+SKIP_TOPICS = {"where to go deep", "three areas, three layers"}
+
+
+def is_prose(p):
+    """True for an ordinary paragraph. Excludes tables, quotes and list blocks --
+    but NOT a paragraph that merely opens in bold, which is most of ours."""
+    s = p.strip()
+    if not s or s.startswith(("|", ">")):
+        return False
+    if re.match(r"^([-*+]|\d+\.)\s", s):
+        return False
+    return True
+
+
+def companion_topics(body):
+    """Every '## heading' with the first sentence under it, skipping table sections."""
+    out = []
+    for m in re.finditer(r"^## (.+?)\s*$", body, re.M):
+        title = m.group(1).strip()
+        rest = body[m.end():]
+        nxt = re.search(r"^## ", rest, re.M)
+        chunk = (rest[:nxt.start()] if nxt else rest).strip()
+        para = next((p for p in chunk.split("\n\n") if is_prose(p)), "")
+        gist = first_sentences(para, 2)
+        # "Why it matters here:" is the useful half when a section leads with it.
+        stripped = re.sub(r"^\*\*Why it matters here:\*\*\s*", "", gist)
+        if stripped != gist and stripped:
+            # The remainder continued a sentence, so it starts lowercase.
+            gist = stripped[0].upper() + stripped[1:]
+        if gist and title.lower() not in SKIP_TOPICS:
+            out.append((title, gist))
+    return out
 
 
 def checklist(text):
@@ -127,6 +204,29 @@ def main():
 {chr(10).join(cards)}
     </section>""")
 
+    # The two ungraded pages. Listed after the milestones, marked as ungraded, in the
+    # order a student should meet them: this lab first, the wider discipline second.
+    for anchor, stem, title, when, blurb in COMPANIONS:
+        f = REPO / "handbook" / f"{stem}.md"
+        if not f.exists():
+            continue
+        body = f.read_text(encoding="utf-8")
+        nav.append(f'<a href="#{anchor}" class="nu"><span class="nc">&mdash;</span>'
+                   f'{html.escape(title.split(" Domain")[0])}</a>')
+        topics = "".join(
+            f"<li><h4>{inline_md(t)}</h4><p>{inline_md(g)}</p></li>"
+            for t, g in companion_topics(body))
+        sections.append(f"""    <section id="{anchor}" class="companion">
+      <div class="mshead">
+        <h2><span class="ungraded">ungraded</span> {html.escape(title)}</h2>
+        <p class="tier">{html.escape(when)}</p>
+      </div>
+      <p class="blurb">{blurb}</p>
+      {md_table(body)}
+      <ul class="topics">{topics}</ul>
+      <p class="deliv"><a href="{stem}.md">Read the full page &rarr;</a></p>
+    </section>""")
+
     page = TEMPLATE.format(
         count=len(skills),
         nav="\n      ".join(nav),
@@ -178,6 +278,7 @@ TEMPLATE = """<title>The Whole Curriculum</title>
   nav a:hover {{ border-color:var(--accent); color:var(--accent); }}
   nav a:focus-visible {{ outline:2px solid var(--signal); outline-offset:2px; }}
   nav .nc {{ color:var(--signal); font-weight:500; margin-right:6px; }}
+  nav .nu {{ border-style:dashed; }}
 
   section {{ margin-top:46px; scroll-margin-top:64px; }}
   .mshead {{ display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 16px;
@@ -209,6 +310,32 @@ TEMPLATE = """<title>The Whole Curriculum</title>
   summary:focus-visible {{ outline:2px solid var(--signal); outline-offset:2px; }}
   details ul {{ margin:8px 0 2px; padding-left:1.1rem; }}
   details li {{ font-size:14px; margin-bottom:4px; color:var(--body); }}
+
+  /* --- the two ungraded pages --- */
+  .companion {{ background:var(--surface); padding:2px 22px 24px; margin-top:52px;
+                border-top:2px solid var(--signal); }}
+  .companion .mshead {{ border-bottom:1px solid var(--rule); }}
+  .ungraded {{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em;
+               text-transform:uppercase; color:var(--signal); border:1px solid var(--signal);
+               border-radius:2px; padding:2px 6px; margin-right:9px;
+               vertical-align:middle; font-weight:500; }}
+  .topics {{ list-style:none; margin:18px 0 0; padding:0;
+             display:grid; gap:14px 28px; }}
+  .topics h4 {{ font-family:var(--display); font-weight:600; font-size:1rem;
+                color:var(--ink); margin:0 0 3px; }}
+  .topics p {{ margin:0; font-size:14.5px; color:var(--body); max-width:38rem; }}
+
+  .tablewrap {{ overflow-x:auto; margin:18px 0 4px; }}
+  .grid3 {{ border-collapse:collapse; width:100%; min-width:40rem; font-size:13px; }}
+  .grid3 th, .grid3 td {{ border:1px solid var(--rule); padding:8px 10px;
+                          vertical-align:top; text-align:left; }}
+  .grid3 thead th {{ font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+                     text-transform:uppercase; color:var(--accent); font-weight:500; }}
+  .grid3 thead th small {{ display:block; font-size:10px; letter-spacing:0;
+                           text-transform:none; color:var(--muted); margin-top:2px; }}
+  .grid3 tbody th {{ font-family:var(--display); font-size:14px; color:var(--ink);
+                     white-space:nowrap; }}
+  .grid3 td {{ color:var(--body); }}
 
   code {{ font-family:var(--mono); font-size:.88em; background:var(--surface);
           padding:1px 4px; border-radius:2px; }}
