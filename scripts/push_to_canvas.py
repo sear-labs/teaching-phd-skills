@@ -236,10 +236,12 @@ class Canvas:
         progress. Students choose order.
         """
         existing = {m["name"]: m for m in self.get_all("/modules")}
+        # Publishing is deliberately NOT set here. Publishing a module also publishes
+        # every item in it, so it must happen after stale items are pruned -- otherwise
+        # a page being retired gets re-published on its way out.
         payload = {"module": {
             "name": name,
             "position": position,
-            "published": self.publish,
             "require_sequential_progress": False,
             "prerequisite_module_ids": [],
         }}
@@ -254,9 +256,6 @@ class Canvas:
                 print(f"  [dry-run] would CREATE module {name!r} ({len(items)} items)")
                 return
             mid = self._req("POST", "/modules", payload)["id"]
-            # Canvas ignores module[published] on create. Set it again explicitly,
-            # or a freshly created module stays invisible to students.
-            self._req("PUT", f"/modules/{mid}", payload)
 
         existing_items = self.get_all(f"/modules/{mid}/items")
         have = {i["title"] for i in existing_items}
@@ -281,6 +280,11 @@ class Canvas:
             if i["title"] not in wanted:
                 self._req("DELETE", f"/modules/{mid}/items/{i['id']}")
                 pruned += 1
+
+        # Only now is it safe to publish: the stale items are gone, so publishing
+        # cascades onto exactly the content this milestone still owns. Canvas also
+        # ignores module[published] on create, so this doubles as that fix.
+        self._req("PUT", f"/modules/{mid}", {"module": {"published": self.publish}})
 
         tail = f", {pruned} removed" if pruned else ""
         print(f"  mod   {'PUB ' if self.publish else '    '} {name}"
