@@ -289,6 +289,20 @@ class Canvas:
                 self._req("DELETE", f"/modules/{mid}/items/{i['id']}")
                 pruned += 1
 
+        # Enforce order. Canvas appends new items, so a skill added to an existing
+        # module lands after the milestone assignment rather than before it.
+        #
+        # Setting one item's position makes Canvas shift every other item, so a
+        # cached position read before the loop is stale by the second iteration.
+        # Re-read each pass and set unconditionally rather than trying to skip
+        # items that "already look right" -- they do not stay that way.
+        for pos, (_, _, title) in enumerate(items, start=1):
+            current = {i["title"]: i for i in self.get_all(f"/modules/{mid}/items")}
+            it = current.get(title)
+            if it:
+                self._req("PUT", f"/modules/{mid}/items/{it['id']}",
+                          {"module_item": {"position": pos}})
+
         # Only now is it safe to publish: the stale items are gone, so publishing
         # cascades onto exactly the content this milestone still owns. Canvas also
         # ignores module[published] on create, so this doubles as that fix.
