@@ -149,19 +149,19 @@ research because you scoped their first task properly.
 The twenty-eight skills above are general — true of a PhD in almost any field. These two narrow
 from there, and neither is assessed. They differ in *when* you should read them.
 
-[**Where We Work**](where-we-work.md) — **read this in your first week.** The lab's organising
+[**SEAR Lab Domain Knowledge**](sear-lab-domain-knowledge.md) — **read this in your first week.** The lab's organising
 thesis that infrastructure has three layers, the three research areas laid against them, and
 which course goes deep on each. Surface level on purpose; the courses are where you learn it.
 Almost nothing else here makes sense until you have this.
 
-[**What the Model Assumes**](what-the-model-assumes.md) — **read this later**, once the domain
+[**Engineering Research Domain Knowledge**](engineering-research-domain-knowledge.md) — **read this later**, once the domain
 has stopped feeling new. Philosophy of science, the normative content of modelling choices,
 policy literacy, the history of your field, the economics underneath it. A discount rate is a
 claim about how much future people matter; this is the page about that sort of thing.
 
 ## If you are brand new
 
-1. Read [**Where We Work**](where-we-work.md). Half an hour, and everything else lands better.
+1. Read [**SEAR Lab Domain Knowledge**](sear-lab-domain-knowledge.md). Half an hour, and everything else lands better.
 2. Read the [code standard's](https://github.com/sear-labs/code-standard) `GETTING-STARTED.md`.
 3. Do [Git and GitHub](../skills/06-git-github.md) before you commit anything, anywhere. The
    ordering in that lesson is the point.

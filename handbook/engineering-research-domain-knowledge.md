@@ -1,4 +1,4 @@
-# What the model assumes
+# Engineering research domain knowledge
 
 Nothing on this page is assessed. There is no assignment, no checklist, no submission, and it
 will never appear in your milestone record.
@@ -14,7 +14,7 @@ unusually good at this particular kind of work. A perfectly competent researcher
 career without them. The best ones don't.
 
 Read one when you are stuck, curious, or procrastinating on something worse. **Read [Where We
-Work](where-we-work.md) first** — this page will land better once the domain has stopped feeling
+Work](sear-lab-domain-knowledge.md) first** — this page will land better once the domain has stopped feeling
 new.
 
 ---
@@ -75,5 +75,5 @@ a welfare framework — worth knowing which one, and what it does not capture.
 *If one of these turns out to matter for your actual work, tell me. Things move from this page
 into the curriculum when they stop being optional.*
 
-*See also [Where We Work](where-we-work.md) — the lab's own three layers and three areas, and
+*See also [SEAR Lab Domain Knowledge](sear-lab-domain-knowledge.md) — the lab's own three layers and three areas, and
 which course goes deep on each.*

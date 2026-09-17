@@ -1,6 +1,6 @@
 # PhD Research Skills — SEAR Lab
 
-Twenty-four research skills, grouped into six competency milestones, delivered through the
+Twenty-eight research skills, grouped into six competency milestones, delivered through the
 weekly research log in IE 6999. This repository is the **source of truth**; Canvas is a
 delivery copy, regenerated from here.
 
@@ -40,19 +40,19 @@ a mixed cohort and any fixed schedule is wrong for most of the room.
 **Two ungraded companion pages**, narrowing from general to lab-specific. Both ship as Canvas
 pages with no assignment attached.
 
-- [`handbook/where-we-work.md`](handbook/where-we-work.md) — the lab. Infrastructure's three
+- [`handbook/sear-lab-domain-knowledge.md`](handbook/sear-lab-domain-knowledge.md) — the lab. Infrastructure's three
   layers, the three research areas laid against them, and which course goes deep on each.
   **Read in week one**; surface level on purpose.
-- [`handbook/what-the-model-assumes.md`](handbook/what-the-model-assumes.md) — the questions
+- [`handbook/engineering-research-domain-knowledge.md`](handbook/engineering-research-domain-knowledge.md) — the questions
   behind the methods. Philosophy of science, the normative content of modelling choices, policy
   literacy, field history, economics. **Read later**, once the domain is familiar.
 
 ## Layout
 
 ```
-skills/        24 lesson packages, one per skill
+skills/        28 lesson packages, one per skill
 milestones/    6 milestone definitions and their gates
-handbook/      the public-facing entry point
+handbook/      the public-facing entry point, plus the two ungraded pages
 exemplars/     passed student artifacts, with permission
 records/       Canvas exports (gitignored — may contain student names)
 scripts/       the Canvas generators

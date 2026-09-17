@@ -1,4 +1,4 @@
-# Where we work
+# SEAR Lab domain knowledge
 
 **Read this first.** Not because it is graded — it is not — but because almost nothing else in
 the lab makes sense until you have it.
@@ -151,6 +151,6 @@ correctly. Go to the course, or ask.
 
 ---
 
-*See also [What the Model Assumes](what-the-model-assumes.md) — the questions that sit behind
+*See also [Engineering Research Domain Knowledge](engineering-research-domain-knowledge.md) — the questions that sit behind
 the methods rather than inside them. Read that one later, when this page has stopped feeling
 new.*

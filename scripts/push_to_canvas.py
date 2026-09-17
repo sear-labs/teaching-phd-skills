@@ -7,11 +7,12 @@ Canvas directly -- the next run overwrites it.
 
 What it creates
 ---------------
-    1 overview page   the 24-skill tracking table, generated from skills/ and
+    1 overview page   the 28-skill tracking table, generated from skills/ and
                       milestones/ so it cannot drift out of sync with them
-    24 skill pages    one lesson package each
+    28 skill pages    one lesson package each
+    2 companion pages the ungraded domain-knowledge pages, lab then discipline
     6 assignments     the milestone gates, pass_fail, in their own group, no due dates
-    7 modules         Overview + M1..M6, each holding its four skill pages and its
+    7 modules         Start Here + M1..M6, each holding its skill pages and its
                       milestone assignment
 
 Modules are created UNGATED on purpose: no prerequisites, no completion requirements,
@@ -55,15 +56,20 @@ MILESTONE_POINTS = 5
 OVERVIEW_TITLE = "Research Competency Milestones"
 
 # Ungraded companion pages, in the order a student should meet them: the lab's own
-# domain first, the questions behind the methods second. (file stem, Canvas title)
+# domain first, the wider discipline second. (file stem, Canvas title)
 COMPANION_PAGES = [
-    ("where-we-work", "Where We Work"),
-    ("what-the-model-assumes", "What the Model Assumes"),
+    ("sear-lab-domain-knowledge", "SEAR Lab Domain Knowledge"),
+    ("engineering-research-domain-knowledge", "Engineering Research Domain Knowledge"),
 ]
 
 # Titles this curriculum used to publish. Unpublished on every run so a rename does
-# not leave the old page live beside the new one.
-SUPERSEDED_PAGES = ["What We Don't Grade"]
+# not leave the old page live beside the new one -- Canvas has no rename that
+# preserves a page, so a retitle always creates a second one.
+SUPERSEDED_PAGES = [
+    "What We Don't Grade",
+    "What the Model Assumes",
+    "Where We Work",
+]
 
 
 # --------------------------------------------------------------------------- token
