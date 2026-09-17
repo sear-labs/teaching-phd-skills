@@ -65,6 +65,8 @@ COMPANION_PAGES = [
 # Titles this curriculum used to publish. Unpublished on every run so a rename does
 # not leave the old page live beside the new one -- Canvas has no rename that
 # preserves a page, so a retitle always creates a second one.
+# Skill pages need no entry here: retire_orphan_skill_pages() already catches any
+# "Skill: ..." page whose lesson title changed. This list is for standalone pages only.
 SUPERSEDED_PAGES = [
     "What We Don't Grade",
     "What the Model Assumes",

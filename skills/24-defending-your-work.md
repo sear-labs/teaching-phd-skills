@@ -60,6 +60,19 @@ Then answer each one, and **classify your answer honestly**:
 
 **Then deliver it live to the lab** and let them push back.
 
+### One objection must come from outside the academy
+
+At least one of the three should be the kind an employer or programme manager raises rather than
+a reviewer. They sound different and land harder, because nobody rehearses them:
+
+- *"This has only ever run in an academic setting."*
+- *"You have never had to operate under a deadline somebody else set."*
+- *"Who has actually used your result to decide something?"*
+
+Steelman them the same way. The three honest answers are the same three as above — it is wrong
+and here is why; it is right and here is what it costs me; it is right and I cannot fix it yet.
+Finding out which one you have before an interview, rather than during one, is the whole value.
+
 ## Deliverable
 
 The three steelmanned objections with responses, plus delivery to the lab group.
@@ -70,6 +83,7 @@ The three steelmanned objections with responses, plus delivery to the lab group.
 - [ ] Each steelman would be recognised as fair by someone who holds that view
 - [ ] Each response classified as one of the three types above
 - [ ] At least one objection conceded — if none are, the steelmen are too weak
+- [ ] At least one objection is the kind an employer raises, not a reviewer
 - [ ] Delivered live, with a note on which question the lab asked that you had not anticipated
 
 ## Log entry

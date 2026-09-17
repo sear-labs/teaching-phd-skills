@@ -102,7 +102,7 @@ Say that instead of the phrase. It is more impressive, and it is true.
 | [Literature review and gap-finding](../skills/11-lit-review-gap.md) | reading | three candidate axes, the map, the gap |
 | [Logic and its failures](../skills/12-logic-and-fallacies.md) | reading | three worked examples |
 | [Claim, reason, evidence](../skills/13-claim-reason-evidence.md) | writing | one page |
-| [Saying exactly what you claim](../skills/14-claim-precision.md) | writing | claim-verb audit plus revised draft |
+| [Saying exactly what you claim](../skills/14-claim-precision.md) | writing | claim-verb audit of a draft and your CV |
 
 ## M4 — The Manuscript · *Year 2*
 
@@ -127,7 +127,7 @@ Report Draft 1 and they referee yours; each of you then answers the review you r
 |---|---|---|
 | [Reviewing papers](../skills/20-reviewing-papers.md) | reading | structured referee report |
 | [Response to reviewers](../skills/21-response-to-reviewers.md) | writing | PDF response letter |
-| [Venue selection](../skills/22-venue-selection.md) | writing | one-page memo plus cover letter |
+| [Venue and audience selection](../skills/22-venue-selection.md) | writing | memo plus cover letter or outreach message |
 | [Conference talk and poster](../skills/23-talk-poster.md) | writing | slides plus three questions |
 | [Defending your work](../skills/24-defending-your-work.md) | writing | three steelmanned objections, delivered live |
 

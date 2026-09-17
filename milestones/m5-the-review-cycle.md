@@ -4,7 +4,7 @@ milestone: M5
 tier: Year 3+
 grading: complete / redo
 points: 5
-skills: Reviewing papers, Response to reviewers, Venue selection and submission mechanics, Conference talk and poster, Defending your work
+skills: Reviewing papers, Response to reviewers, Venue and audience selection, Conference talk and poster, Defending your work
 ---
 
 # M5 — The Review Cycle
@@ -20,13 +20,19 @@ reciprocal by design — **you referee a labmate's Report Draft 1 and they refer
 each of you then writes the response letter to the review you received. Nothing here is
 simulated.
 
+**A hiring group is one of those other people.** Two skills here carry an employer-facing half,
+because it is the same act with the audience swapped: choosing a venue and choosing a group to
+write to are both audience analysis, and an interview is a defence whose objections come from
+outside the academy. You are not learning a separate "job market" skill — you are pointing one
+you already have at a reader who pays salaries instead of publishing papers.
+
 ## The five skills
 
 | Skill | Channel | Turn in as |
 |---|---|---|
 | Reviewing papers | reading | structured referee report, PDF |
 | Response to reviewers | writing | PDF response letter |
-| Venue selection and submission mechanics | writing | one-page memo plus cover letter |
+| Venue and audience selection | writing | memo plus cover letter or outreach message |
 | Conference talk and poster | writing | slides PDF plus three questions |
 | Defending your work | writing | three steelmanned objections, delivered live |
 

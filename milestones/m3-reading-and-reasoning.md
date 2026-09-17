@@ -55,7 +55,7 @@ Say that instead of the phrase. It is more impressive, and it is true.
 | Literature review and gap-finding | reading | PDF: three candidate axes, the map, the gap |
 | Logic and its failures | reading | three worked examples |
 | Claim, reason, evidence | writing | one page |
-| Saying exactly what you claim | writing | claim-verb audit plus revised draft |
+| Saying exactly what you claim | writing | claim-verb audit of a draft and your CV |
 
 ### Order
 

@@ -1,11 +1,11 @@
 ---
-title: Venue selection and submission mechanics
+title: Venue and audience selection
 channel: writing
 tier: year 3+
 milestone: M5
 time: 3 hours
 prerequisites: 15-imrad
-submit_as: one-page memo plus draft cover letter
+submit_as: one-page memo plus draft cover letter or outreach message
 ---
 
 ## Why this exists
@@ -43,9 +43,35 @@ this paper. "Higher impact factor" is not a justification.
 Finally, draft the cover letter. First paragraph names the contribution, in the words from
 skill 13.
 
+## The same skill, pointed at an employer
+
+Everything above is audience analysis. A hiring group is an audience with a scope statement, a
+timeline, and things it requires — they are simply written somewhere other than an
+author-guidelines page. Once you are in your final two years, run the identical exercise on a
+place you might work.
+
+**Three candidate groups, not three companies.** "EPRI" is not a target; *"the Energy Systems and
+Climate Analysis group, which builds US-REGEN"* is. Name the group and the specific thing it
+builds. If you cannot, you have not done the reading, and the reader will know within a sentence.
+
+For each of the three, the same four attributes: **what they actually work on**, quoted from
+their own material; **their timeline** — posting cycles, when funding lands; **what they
+require** — degree stage, clearance, location; and **what they publish**, which tells you whether
+your record looks like the records of people they hire.
+
+Then pick one, justify it against the two you rejected — for your work, not in the abstract —
+and draft the message. **It is a cover letter with the labels changed:** the first paragraph
+names your contribution in the words from skill 13, and names the specific thing of theirs it
+connects to.
+
+**One check this exercise exists to catch.** Confirm the person you are writing to actually works
+on the thing you are writing about. Meeting somebody from an organisation is not the same as
+meeting the group you want. When they are not the same, **the ask is an introduction, not a job**
+— and that is a different message, usually a shorter one.
+
 ## Deliverable
 
-One-page memo plus the draft cover letter.
+One-page memo plus the draft cover letter or outreach message.
 
 ## Competency check
 
@@ -54,6 +80,8 @@ One-page memo plus the draft cover letter.
 - [ ] Choice justified against the two rejected, on grounds specific to this paper
 - [ ] Cover letter states the contribution in its first paragraph
 - [ ] AI-disclosure requirement identified and a draft disclosure written
+- [ ] If run on an employer: three named **groups**, not companies, each with the specific thing it builds
+- [ ] The recipient demonstrably works on the thing the message is about — or the ask is an introduction instead
 
 ## Log entry
 

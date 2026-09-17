@@ -5,7 +5,7 @@ tier: year 1-2
 milestone: M3
 time: 2 hours
 prerequisites: 13-claim-reason-evidence
-submit_as: claim-verb audit table plus the revised draft
+submit_as: claim-verb audit of a draft and of your own CV, plus both revised
 ---
 
 ## Why this exists
@@ -49,6 +49,23 @@ that makes the claim true, and it pre-empts the objection rather than waiting fo
 **Audit your own draft.** Every sentence making a claim about the world: the verb used, what
 your evidence actually licenses, and the revision. Then make the revisions.
 
+### Then run the same audit on your CV
+
+A CV is the same document type with a different audience: claims about the world, made in verbs,
+which a reader will check. The failure mode is identical and more common. *Led* is not
+*contributed to*. *Developed* is not *used*. *Designed* is not *ran*.
+
+Two questions per bullet:
+
+- **What does the verb claim, and can you evidence it?** If you were one of four people on a
+  thing, "led" is a claim somebody will test in an interview and you will lose.
+- **What is the scope condition?** "Built hourly load profiles" is stronger, not weaker, as
+  "built hourly load profiles from public end-use data for ERCOT" — the specificity is what makes
+  it checkable, and checkable is what makes it believed.
+
+Overclaiming on a CV fails the same way it fails in a paper. The reader who catches one stops
+believing the rest.
+
 ## Deliverable
 
 The audit table, plus a link to the revised draft.
@@ -60,7 +77,10 @@ The audit table, plus a link to the revised draft.
 - [ ] Every instance of *proves* is either removed or justified as genuine mathematics
 - [ ] At least one claim gains an explicit scope condition
 - [ ] The revised draft is linked and the changes are in it
+- [ ] The same audit run over every bullet of your own CV, with the revised CV attached
+- [ ] At least one CV verb downgraded to what the evidence actually supports
 
 ## Log entry
 
-Writing. How many claims you were making that your evidence did not support.
+Writing. How many claims you were making that your evidence did not support — in the paper,
+and in the CV.
