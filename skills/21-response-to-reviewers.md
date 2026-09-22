@@ -60,6 +60,14 @@ PDF response letter.
 - [ ] The revised draft actually contains the changes claimed — spot-checked against three rows
 - [ ] No unattached apologies
 
-## Log entry
+## Turning it in
 
-Writing. The point you disagreed with, and whether you still think you were right.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** the point you disagreed with, and whether you still think you were right.
+- **Include or attach:** PDF response letter
+
+You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
+an index saying which week each one went in.

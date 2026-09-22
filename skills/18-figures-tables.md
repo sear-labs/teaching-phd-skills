@@ -54,6 +54,14 @@ PDF showing before, after, and the caption.
 - [ ] Colour is never the only channel carrying meaning
 - [ ] Every plotted series is named in the caption
 
-## Log entry
+## Turning it in
 
-Writing. What the first version was hiding.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** what the first version was hiding.
+- **Include or attach:** PDF showing before, after, and the standalone caption
+
+You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
+an index saying which week each one went in.

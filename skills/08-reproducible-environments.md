@@ -53,6 +53,14 @@ Repo URL plus your partner's signed run log.
 - [ ] Every question the partner had to ask is listed as a README defect
 - [ ] README updated in response
 
-## Log entry
+## Turning it in
 
-Arithmetic. What your partner could not do without asking you.
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** what your partner could not do without asking you.
+- **Include or attach:** repo URL plus your partner's signed run log
+
+You do not submit anything to the milestone yet. When all four skills in **M2** are done, submit the **M2 — Reproducible Code** assignment, which is just
+an index saying which week each one went in.

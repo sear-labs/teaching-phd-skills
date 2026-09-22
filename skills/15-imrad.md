@@ -54,6 +54,14 @@ Overleaf link showing the claim sentence and the topic sentences, in the target 
 - [ ] Each topic sentence traceable to the claim in one step
 - [ ] Any section that failed the test is named, with the resolution stated
 
-## Log entry
+## Turning it in
 
-Writing. The claim sentence, and what you had to change after writing it.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** the claim sentence, and what you had to change after writing it.
+- **Include or attach:** Overleaf link
+
+You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
+an index saying which week each one went in.

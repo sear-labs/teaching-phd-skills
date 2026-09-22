@@ -63,6 +63,14 @@ One page: the claim sentence, the warrant stated explicitly, and three objection
 - [ ] Three objections, none of them trivial
 - [ ] For each objection, one line on whether the paper currently answers it
 
-## Log entry
+## Turning it in
 
-Writing. The warrant you did not know you were assuming.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** the warrant you did not know you were assuming.
+- **Include or attach:** text entry or PDF, one page
+
+You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
+an index saying which week each one went in.

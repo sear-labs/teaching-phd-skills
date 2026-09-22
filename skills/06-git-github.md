@@ -56,6 +56,14 @@ Repo URL plus the pasted `git check-ignore -v` output.
 - [ ] At least five commits whose messages state a reason
 - [ ] `git status` on a clean checkout is empty
 
-## Log entry
+## Turning it in
 
-Arithmetic. What you nearly committed and did not.
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** what you nearly committed and did not.
+- **Include or attach:** repo URL plus pasted git check-ignore -v output
+
+You do not submit anything to the milestone yet. When all four skills in **M2** are done, submit the **M2 — Reproducible Code** assignment, which is just
+an index saying which week each one went in.

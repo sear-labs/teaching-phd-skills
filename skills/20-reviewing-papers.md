@@ -54,6 +54,14 @@ Structured referee report as PDF: summary, strengths, weaknesses, recommendation
 - [ ] Must-fix and would-improve separated into distinct lists
 - [ ] An explicit recommendation
 
-## Log entry
+## Turning it in
 
-Reading. What you found that the author will not want to hear, and how you phrased it.
+**This replaces your reading entry for the week you do it.** Submit it to that week's
+**WR** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** what you found that the author will not want to hear, and how you phrased it.
+- **Include or attach:** structured referee report, PDF
+
+You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
+an index saying which week each one went in.

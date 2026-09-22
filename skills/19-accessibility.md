@@ -62,7 +62,15 @@ Repo URL.
 - [ ] Tables have header rows and are not images
 - [ ] Body text contrast measured at 4.5:1 or better, with the measurement stated
 
-## Log entry
+## Turning it in
 
-Writing. How long the alt text actually took, and your estimate of what retrofitting your whole
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** how long the alt text actually took, and your estimate of what retrofitting your whole
 repo would cost.
+- **Include or attach:** repo URL
+
+You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
+an index saying which week each one went in.

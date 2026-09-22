@@ -52,6 +52,14 @@ Transcript excerpt plus the diff you accepted, in that week's WA entry.
 - [ ] At least one thing the agent got wrong is recorded
 - [ ] Whatever check the repo already has (tests, an agreement assertion) still passes after the merge
 
-## Log entry
+## Turning it in
 
-Arithmetic. The one-sentence task, what it got wrong, and whether it actually saved time.
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** the one-sentence task, what it got wrong, and whether it actually saved time.
+- **Include or attach:** transcript excerpt plus the accepted diff, in a WA entry
+
+You do not submit anything to the milestone yet. When all four skills in **M2** are done, submit the **M2 — Reproducible Code** assignment, which is just
+an index saying which week each one went in.

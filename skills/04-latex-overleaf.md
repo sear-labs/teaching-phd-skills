@@ -53,6 +53,14 @@ Overleaf link plus the compiled PDF.
 - [ ] Bibliography generated from a `.bib` file, not hand-written
 - [ ] Page count stated against the journal's limit
 
-## Log entry
+## Turning it in
 
-Writing. Which journal's template, and how far over or under the limit you landed.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** which journal's template, and how far over or under the limit you landed.
+- **Include or attach:** Overleaf link plus compiled PDF
+
+You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
+an index saying which week each one went in.

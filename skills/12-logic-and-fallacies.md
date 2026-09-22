@@ -67,6 +67,14 @@ Text entry: three quoted passages, each with the fallacy named and a repair prop
 - [ ] A concrete repair for each — what evidence or qualifier would fix it
 - [ ] The one from your own draft is actually fixed, and the draft link shows it
 
-## Log entry
+## Turning it in
 
-Reading. The fallacy you found in your own writing.
+**This replaces your reading entry for the week you do it.** Submit it to that week's
+**WR** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** the fallacy you found in your own writing.
+- **Include or attach:** text entry, three worked examples
+
+You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
+an index saying which week each one went in.

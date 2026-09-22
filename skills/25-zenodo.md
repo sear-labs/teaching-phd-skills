@@ -52,6 +52,14 @@ Zenodo record URL.
 - [ ] `CITATION.cff` parses — the GitHub "Cite this repository" button appears
 - [ ] The paper's data-availability statement cites the correct one of the two
 
-## Log entry
+## Turning it in
 
-Arithmetic. Which DOI you would have used in the paper before reading the standard.
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** which DOI you would have used in the paper before reading the standard.
+- **Include or attach:** Zenodo record URL
+
+You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
+an index saying which week each one went in.

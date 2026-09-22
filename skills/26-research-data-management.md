@@ -54,6 +54,14 @@ One-page data statement, PDF.
 - [ ] Any restriction quoted from the agreement, with the agreement located
 - [ ] Withheld items named, with a reason and a location
 
-## Log entry
+## Turning it in
 
-Arithmetic. Which dataset's terms you could not find, and what you did about it.
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** which dataset's terms you could not find, and what you did about it.
+- **Include or attach:** one-page data statement
+
+You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
+an index saying which week each one went in.

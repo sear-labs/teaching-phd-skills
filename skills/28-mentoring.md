@@ -59,6 +59,14 @@ The task brief plus the retrospective, with the mentee's output linked.
 - [ ] The mentee's actual output is linked
 - [ ] If they used git, their `.gitignore` was verified before their first commit
 
-## Log entry
+## Turning it in
 
-Writing. What you thought was obvious and was not.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** what you thought was obvious and was not.
+- **Include or attach:** task brief plus retrospective
+
+You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
+an index saying which week each one went in.

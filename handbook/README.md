@@ -23,6 +23,44 @@ repeat it** — not this semester, not in year four.
 Target two milestones a semester. Twenty-eight skills across six milestones takes three to four
 semesters, which puts you finished around the time you are proposing.
 
+### What that looks like in practice
+
+The part that is easiest to get wrong is thinking a skill is something you hand in *separately*.
+It is not. Here is a whole milestone, start to finish.
+
+**Week 7.** You pick [Git and GitHub](../skills/06-git-github.md) from M2. You read the lesson,
+then spend an afternoon doing it **on your actual thesis repo** — writing the `.gitignore`,
+verifying it, making the first commit.
+
+**Week 7, Tuesday night.** You open **WA7** in Canvas — the arithmetic entry you were going to
+submit anyway — and instead of writing about your week, you write about this. In the text box:
+what you nearly committed and did not, plus your repo URL and the pasted `git check-ignore -v`
+output. Submit. **WA7 is now done.** You did not submit anything extra, and there is nothing
+else to hand in this week.
+
+**Weeks 9, 11 and 13.** Same thing for the other three M2 skills — code folder structure,
+reproducible environments, CLI agents — each one becoming that week's WA entry. They have to be
+different weeks; you cannot do all four in one.
+
+**Week 13, after the fourth.** *Now* you open the **M2 — Reproducible Code** assignment. It is
+an index, not new work. Four lines:
+
+```
+Git and GitHub            — WA7,  week of 6 Oct   — github.com/you/thesis
+Code folder structure     — WA9,  week of 20 Oct  — same repo
+Reproducible environments — WA11, week of 3 Nov   — run log attached
+CLI agents                — WA13, week of 17 Nov  — transcript in that entry
+```
+
+Plus one paragraph on which was hardest. Submit.
+
+**Then I grade it complete or redo.** Redo means one of the competency checks did not pass — I
+will say which, and you redo only that one skill, not the milestone. Once M2 is complete it is
+complete permanently.
+
+Every lesson ends with a **Turning it in** section that spells this out for that specific skill:
+which channel, what goes in the text box, what to attach.
+
 ### Two rules
 
 1. **Everything is done on your own work.** Your actual thesis repo, your actual draft, your

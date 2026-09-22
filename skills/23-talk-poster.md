@@ -49,6 +49,14 @@ Slides PDF, plus the three questions with your revised answers.
 - [ ] Three questions recorded verbatim
 - [ ] A revised answer for each, and a note on whether it implies a change to the paper
 
-## Log entry
+## Turning it in
 
-Writing. The question you could not answer.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** the question you could not answer.
+- **Include or attach:** slides PDF plus the three questions and revised answers
+
+You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
+an index saying which week each one went in.

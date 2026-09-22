@@ -55,6 +55,14 @@ The table, plus a link to the updated draft showing the corrections.
 - [ ] Any reference that failed is struck from the draft, and the draft link shows it
 - [ ] The count of failures is stated plainly
 
-## Log entry
+## Turning it in
 
-Reading. How many of the ten failed, and which kind of failure each was.
+**This replaces your reading entry for the week you do it.** Submit it to that week's
+**WR** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** how many of the ten failed, and which kind of failure each was.
+- **Include or attach:** table, PDF or text entry, plus the updated draft
+
+You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
+an index saying which week each one went in.

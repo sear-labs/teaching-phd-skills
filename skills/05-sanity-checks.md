@@ -79,6 +79,14 @@ and the extreme-case result.
 - [ ] One extreme case run and its behaviour described
 - [ ] If a solver was used: status word, achieved gap and residual all reported — or an explicit note that no solver was involved
 
-## Log entry
+## Turning it in
 
-Arithmetic. What you predicted, what you got, and which one was wrong.
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** what you predicted, what you got, and which one was wrong.
+- **Include or attach:** text entry in a WA entry
+
+You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
+an index saying which week each one went in.

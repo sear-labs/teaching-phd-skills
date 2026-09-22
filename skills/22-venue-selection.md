@@ -83,6 +83,14 @@ One-page memo plus the draft cover letter or outreach message.
 - [ ] If run on an employer: three named **groups**, not companies, each with the specific thing it builds
 - [ ] The recipient demonstrably works on the thing the message is about — or the ask is an introduction instead
 
-## Log entry
+## Turning it in
 
-Writing. Which venue you would have picked before doing this, and whether it changed.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** which venue you would have picked before doing this, and whether it changed.
+- **Include or attach:** one-page memo plus draft cover letter or outreach message
+
+You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
+an index saying which week each one went in.

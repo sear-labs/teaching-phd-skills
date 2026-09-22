@@ -63,6 +63,14 @@ retrieved from the remote machine.
 - [ ] A job that survived a disconnection, with evidence it did — the submission, then the output
 - [ ] The log read, with one line quoted that you had to look up
 
-## Log entry
+## Turning it in
 
-Arithmetic. What you ran remotely, and what broke the first time.
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** what you ran remotely, and what broke the first time.
+- **Include or attach:** terminal transcript plus retrieved output, in a WA entry
+
+You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
+an index saying which week each one went in.

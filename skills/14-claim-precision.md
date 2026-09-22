@@ -80,7 +80,15 @@ The audit table, plus a link to the revised draft.
 - [ ] The same audit run over every bullet of your own CV, with the revised CV attached
 - [ ] At least one CV verb downgraded to what the evidence actually supports
 
-## Log entry
+## Turning it in
 
-Writing. How many claims you were making that your evidence did not support — in the paper,
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** how many claims you were making that your evidence did not support — in the paper,
 and in the CV.
+- **Include or attach:** claim-verb audit of a draft and of your own CV, plus both revised
+
+You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
+an index saying which week each one went in.

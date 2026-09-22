@@ -67,6 +67,14 @@ link only you can open is the most common reason this comes back. Plus the verif
 - [ ] Every factual claim is a row, each naming a specific verification method
 - [ ] At least one claim identified as wrong or unverifiable
 
-## Log entry
+## Turning it in
 
-Arithmetic. Whether the notebook agreed with your hand result, and what the model got wrong.
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** whether the notebook agreed with your hand result, and what the model got wrong.
+- **Include or attach:** notebook link (view access) plus the verification table, in a WA entry
+
+You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
+an index saying which week each one went in.

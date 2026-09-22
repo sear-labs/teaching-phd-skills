@@ -70,7 +70,15 @@ The `.xlsx` plus the annotation and the prediction, in that week's WA entry.
 - [ ] An AI-generated formula, with every argument annotated in the student's own words
 - [ ] A deliberate break, with the prediction shown before the result
 
-## Log entry
+## Turning it in
 
-Arithmetic. What you could not have written yourself, whether your prediction held, and one
+**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
+**WA** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** what you could not have written yourself, whether your prediction held, and one
 error the structure caught.
+- **Include or attach:** .xlsx plus the annotation, in a WA entry
+
+You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
+an index saying which week each one went in.

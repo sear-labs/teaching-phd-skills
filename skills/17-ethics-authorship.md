@@ -55,6 +55,14 @@ The statement, plus evidence it was circulated — a timestamp, a thread, a forw
 - [ ] Corresponding author named
 - [ ] Evidence of circulation
 
-## Log entry
+## Turning it in
 
-Writing. Who you nearly left off, and why you nearly did.
+**This replaces your writing entry for the week you do it.** Submit it to that week's
+**WW** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** who you nearly left off, and why you nearly did.
+- **Include or attach:** text entry, CRediT-style, plus evidence it was circulated
+
+You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
+an index saying which week each one went in.

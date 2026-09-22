@@ -56,6 +56,14 @@ PDF containing the map, the fifteen citations, and the gap paragraph.
 - [ ] One sentence on **why** it is empty, distinguishing "not yet possible" from "not worth doing"
 - [ ] The three-part sentence, written out
 
-## Log entry
+## Turning it in
 
-Reading. The axis you chose, and what you would have seen through the two you rejected.
+**This replaces your reading entry for the week you do it.** Submit it to that week's
+**WR** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** the axis you chose, and what you would have seen through the two you rejected.
+- **Include or attach:** PDF: the map plus the gap paragraph
+
+You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
+an index saying which week each one went in.

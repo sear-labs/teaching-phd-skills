@@ -54,6 +54,14 @@ WR entry, 300–500 words.
 - [ ] The gap between what is claimed and what is shown is stated explicitly
 - [ ] A specific alternative is proposed, with its cost
 
-## Log entry
+## Turning it in
 
-Reading. This is the entry.
+**This replaces your reading entry for the week you do it.** Submit it to that week's
+**WR** assignment in Canvas — the same one you would have submitted anyway. It is not an
+extra piece of work on top of the log.
+
+- **In the text box:** this is the entry.
+- **Include or attach:** WR entry, 300-500 words
+
+You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
+an index saying which week each one went in.
