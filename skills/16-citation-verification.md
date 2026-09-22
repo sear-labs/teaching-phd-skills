@@ -6,6 +6,7 @@ milestone: M4
 time: 3 hours
 prerequisites: none
 submit_as: table, PDF or text entry, plus the updated draft
+artifact: A **ten-row table** — reference / does the DOI resolve / where the claim sits by page or figure / verdict — plus a link to the draft with the failures struck
 ---
 
 ## Why this exists
@@ -62,7 +63,7 @@ The table, plus a link to the updated draft showing the corrections.
 extra piece of work on top of the log.
 
 - **In the text box:** how many of the ten failed, and which kind of failure each was.
-- **Include or attach:** table, PDF or text entry, plus the updated draft
+- **You hand in:** A **ten-row table** — reference / does the DOI resolve / where the claim sits by page or figure / verdict — plus a link to the draft with the failures struck
 
 You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
 an index saying which week each one went in.

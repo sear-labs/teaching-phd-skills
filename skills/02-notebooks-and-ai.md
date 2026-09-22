@@ -6,6 +6,7 @@ milestone: M1
 time: 4 hours
 prerequisites: none
 submit_as: notebook link (view access) plus the verification table, in a WA entry
+artifact: A **notebook share link** (view access on) plus a **verification table** pasted in the text box: one row per factual claim — claim, verified / unverified / wrong, and how you checked it
 ---
 
 ## Why this exists
@@ -74,7 +75,7 @@ link only you can open is the most common reason this comes back. Plus the verif
 extra piece of work on top of the log.
 
 - **In the text box:** whether the notebook agreed with your hand result, and what the model got wrong.
-- **Include or attach:** notebook link (view access) plus the verification table, in a WA entry
+- **You hand in:** A **notebook share link** (view access on) plus a **verification table** pasted in the text box: one row per factual claim — claim, verified / unverified / wrong, and how you checked it
 
 You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
 an index saying which week each one went in.

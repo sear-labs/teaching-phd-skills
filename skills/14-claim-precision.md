@@ -6,6 +6,7 @@ milestone: M3
 time: 2 hours
 prerequisites: 13-claim-reason-evidence
 submit_as: claim-verb audit of a draft and of your own CV, plus both revised
+artifact: A **three-column table** — verb used / what the evidence licenses / the revision — covering both your draft and your CV, plus links to both revised documents
 ---
 
 ## Why this exists
@@ -88,7 +89,7 @@ extra piece of work on top of the log.
 
 - **In the text box:** how many claims you were making that your evidence did not support — in the paper,
 and in the CV.
-- **Include or attach:** claim-verb audit of a draft and of your own CV, plus both revised
+- **You hand in:** A **three-column table** — verb used / what the evidence licenses / the revision — covering both your draft and your CV, plus links to both revised documents
 
 You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
 an index saying which week each one went in.

@@ -6,6 +6,7 @@ milestone: M4
 time: 3 hours
 prerequisites: none
 submit_as: Overleaf link
+artifact: An **Overleaf link**: one contribution-claim sentence, and one topic sentence for every IMRAD section, each traceable to the claim in one step
 ---
 
 ## Why this exists
@@ -61,7 +62,7 @@ Overleaf link showing the claim sentence and the topic sentences, in the target 
 extra piece of work on top of the log.
 
 - **In the text box:** the claim sentence, and what you had to change after writing it.
-- **Include or attach:** Overleaf link
+- **You hand in:** An **Overleaf link**: one contribution-claim sentence, and one topic sentence for every IMRAD section, each traceable to the claim in one step
 
 You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
 an index saying which week each one went in.

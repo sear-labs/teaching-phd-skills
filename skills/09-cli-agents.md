@@ -6,6 +6,7 @@ milestone: M2
 time: 3 hours
 prerequisites: 06-git-github, 02-ai-prompting
 submit_as: transcript excerpt plus the accepted diff, in a WA entry
+artifact: A **transcript excerpt** plus the **diff you accepted**, with your one-sentence task statement timestamped before the session began
 ---
 
 ## Why this exists
@@ -59,7 +60,7 @@ Transcript excerpt plus the diff you accepted, in that week's WA entry.
 extra piece of work on top of the log.
 
 - **In the text box:** the one-sentence task, what it got wrong, and whether it actually saved time.
-- **Include or attach:** transcript excerpt plus the accepted diff, in a WA entry
+- **You hand in:** A **transcript excerpt** plus the **diff you accepted**, with your one-sentence task statement timestamped before the session began
 
 You do not submit anything to the milestone yet. When all four skills in **M2** are done, submit the **M2 — Reproducible Code** assignment, which is just
 an index saying which week each one went in.

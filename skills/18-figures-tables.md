@@ -6,6 +6,7 @@ milestone: M4
 time: 4 hours
 prerequisites: none
 submit_as: PDF showing before, after, and the standalone caption
+artifact: A **PDF** showing the figure before, after, and converted to greyscale, with a caption that makes sense to someone who has read no body text
 ---
 
 ## Why this exists
@@ -61,7 +62,7 @@ PDF showing before, after, and the caption.
 extra piece of work on top of the log.
 
 - **In the text box:** what the first version was hiding.
-- **Include or attach:** PDF showing before, after, and the standalone caption
+- **You hand in:** A **PDF** showing the figure before, after, and converted to greyscale, with a caption that makes sense to someone who has read no body text
 
 You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
 an index saying which week each one went in.

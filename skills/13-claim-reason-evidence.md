@@ -6,6 +6,7 @@ milestone: M3
 time: 3 hours
 prerequisites: none
 submit_as: text entry or PDF, one page
+artifact: **One page**: the claim sentence with all three slots filled, the warrant written out as a general principle, and three objections a competent person would actually raise
 ---
 
 ## Why this exists
@@ -70,7 +71,7 @@ One page: the claim sentence, the warrant stated explicitly, and three objection
 extra piece of work on top of the log.
 
 - **In the text box:** the warrant you did not know you were assuming.
-- **Include or attach:** text entry or PDF, one page
+- **You hand in:** **One page**: the claim sentence with all three slots filled, the warrant written out as a general principle, and three objections a competent person would actually raise
 
 You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
 an index saying which week each one went in.

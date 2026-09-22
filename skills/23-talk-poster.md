@@ -6,6 +6,7 @@ milestone: M5
 time: 6 hours
 prerequisites: 15-imrad, 18-figures-tables
 submit_as: slides PDF plus the three questions and revised answers
+artifact: A **slides PDF** plus the **three questions** you were actually asked and the answers you wish you had given
 ---
 
 ## Why this exists
@@ -56,7 +57,7 @@ Slides PDF, plus the three questions with your revised answers.
 extra piece of work on top of the log.
 
 - **In the text box:** the question you could not answer.
-- **Include or attach:** slides PDF plus the three questions and revised answers
+- **You hand in:** A **slides PDF** plus the **three questions** you were actually asked and the answers you wish you had given
 
 You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
 an index saying which week each one went in.

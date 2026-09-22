@@ -6,6 +6,7 @@ milestone: M5
 time: 4 hours
 prerequisites: 20-reviewing-papers
 submit_as: PDF response letter
+artifact: A **PDF letter** built on a table — reviewer point / your response / the change made / exactly where it is in the revision — with every point given a row
 ---
 
 ## Why this exists
@@ -67,7 +68,7 @@ PDF response letter.
 extra piece of work on top of the log.
 
 - **In the text box:** the point you disagreed with, and whether you still think you were right.
-- **Include or attach:** PDF response letter
+- **You hand in:** A **PDF letter** built on a table — reviewer point / your response / the change made / exactly where it is in the revision — with every point given a row
 
 You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
 an index saying which week each one went in.

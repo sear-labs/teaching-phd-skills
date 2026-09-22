@@ -176,9 +176,10 @@ def main():
         cards = []
         for f, s, b in group:
             num = f.stem.split("-", 1)[0]
-            why = first_sentences(section(b, "Why this exists"))
-            deliverable = first_sentences(section(b, "Deliverable"), 1) \
-                or s.get("submit_as", "")
+            why = first_sentences(section(b, "Why this exists"), 1)
+            artifact = s.get("artifact") or s.get("submit_as", "")
+            slot = {"reading": "WR", "writing": "WW",
+                    "arithmetic": "WA"}.get(s.get("channel", ""), "WA")
             checks = checklist(section(b, "Competency check"))
             items = "".join(f"<li>{c}</li>" for c in checks)
             cards.append(f"""      <article class="skill" id="s{num}">
@@ -188,9 +189,13 @@ def main():
           <p class="meta"><span class="ch ch-{s.get('channel','')}">{html.escape(s.get('channel',''))}</span>
             <span>{html.escape(s.get('time','') )}</span>
             <span>prereq: {inline_md(s.get('prerequisites','none'))}</span></p>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>{inline_md(artifact)}</p>
+            <p class="where">Submitted as that week's <strong>{slot}</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
           <p class="why">{inline_md(why)}</p>
-          <p class="deliv"><strong>Turn in</strong> {inline_md(s.get('submit_as',''))}</p>
-          <details><summary>Passes when &mdash; {len(checks)} checks</summary>
+          <details><summary>It passes when &mdash; all {len(checks)} of these are true</summary>
             <ul>{items}</ul></details>
         </div>
       </article>""")
@@ -300,7 +305,16 @@ TEMPLATE = """<title>The Whole Curriculum</title>
   .meta {{ display:flex; flex-wrap:wrap; gap:5px 12px; font-family:var(--mono);
            font-size:11px; color:var(--muted); margin:0 0 9px; }}
   .ch {{ text-transform:uppercase; letter-spacing:.08em; color:var(--signal); }}
-  .why {{ margin:0 0 7px; max-width:38rem; }}
+  /* The artifact is the thing people came to the page for, so it leads. */
+  .handin {{ background:var(--surface); border-left:3px solid var(--accent);
+             padding:10px 14px 11px; margin:0 0 9px; max-width:39rem; }}
+  .hlab {{ display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.13em;
+           text-transform:uppercase; color:var(--accent); margin-bottom:4px; }}
+  .handin p {{ margin:0; font-size:14.5px; color:var(--ink); }}
+  .handin .where {{ margin-top:6px; font-size:12.5px; color:var(--muted); }}
+  .handin .where strong {{ font-family:var(--mono); color:var(--signal); }}
+
+  .why {{ margin:0; font-size:14px; color:var(--muted); max-width:38rem; font-style:italic; }}
   .deliv {{ margin:0; font-size:14.5px; color:var(--muted); max-width:38rem; }}
   .deliv strong {{ color:var(--ink); font-weight:600; }}
 
@@ -353,9 +367,10 @@ TEMPLATE = """<title>The Whole Curriculum</title>
   <header>
     <p class="kicker">SEAR Lab &middot; UT Arlington</p>
     <h1>The whole curriculum, on one page</h1>
-    <p class="standfirst">All {count} skills with what each one is for, what you hand in, and the
-      checklist it is graded against. Built for choosing what to do this week without opening
-      {count} files. Every lesson exists in full in the handbook; this is the index.</p>
+    <p class="standfirst">All {count} skills, each showing <strong>the exact artifact you hand
+      in</strong> and the checklist it is graded against. A skill is done <em>as</em> one week's
+      research-log entry, never as an extra submission &mdash; the slot named on each card is the
+      assignment it replaces. Every lesson exists in full in the handbook; this is the index.</p>
   </header>
 
   <nav aria-label="Milestones">

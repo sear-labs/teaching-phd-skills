@@ -6,6 +6,7 @@ milestone: M3
 time: 3 hours
 prerequisites: none
 submit_as: WR entry, 300-500 words
+artifact: **300–500 words in the text box**: the paper's claim quoted verbatim with a locator, the load-bearing assumption named, the gap between claimed and shown, and one alternative with its cost
 ---
 
 ## Why this exists
@@ -61,7 +62,7 @@ WR entry, 300–500 words.
 extra piece of work on top of the log.
 
 - **In the text box:** this is the entry.
-- **Include or attach:** WR entry, 300-500 words
+- **You hand in:** **300–500 words in the text box**: the paper's claim quoted verbatim with a locator, the load-bearing assumption named, the gap between claimed and shown, and one alternative with its cost
 
 You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
 an index saying which week each one went in.

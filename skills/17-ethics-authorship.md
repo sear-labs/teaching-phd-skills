@@ -6,6 +6,7 @@ milestone: M4
 time: 2 hours
 prerequisites: none
 submit_as: text entry, CRediT-style, plus evidence it was circulated
+artifact: **~200 words in the text box**: everyone who touched the paper, CRediT roles per person, author vs. acknowledgement with reasons, the order, the corresponding author — plus proof you circulated it
 ---
 
 ## Why this exists
@@ -62,7 +63,7 @@ The statement, plus evidence it was circulated — a timestamp, a thread, a forw
 extra piece of work on top of the log.
 
 - **In the text box:** who you nearly left off, and why you nearly did.
-- **Include or attach:** text entry, CRediT-style, plus evidence it was circulated
+- **You hand in:** **~200 words in the text box**: everyone who touched the paper, CRediT roles per person, author vs. acknowledgement with reasons, the order, the corresponding author — plus proof you circulated it
 
 You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
 an index saying which week each one went in.

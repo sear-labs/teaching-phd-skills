@@ -6,6 +6,7 @@ milestone: M5
 time: 4 hours
 prerequisites: 10-critiquing-papers
 submit_as: structured referee report, PDF
+artifact: A **PDF referee report**: the paper summarised in your words, two or more specific strengths, two or more weaknesses with line numbers split into must-fix and would-improve, and an explicit recommendation
 ---
 
 ## Why this exists
@@ -61,7 +62,7 @@ Structured referee report as PDF: summary, strengths, weaknesses, recommendation
 extra piece of work on top of the log.
 
 - **In the text box:** what you found that the author will not want to hear, and how you phrased it.
-- **Include or attach:** structured referee report, PDF
+- **You hand in:** A **PDF referee report**: the paper summarised in your words, two or more specific strengths, two or more weaknesses with line numbers split into must-fix and would-improve, and an explicit recommendation
 
 You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
 an index saying which week each one went in.

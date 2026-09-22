@@ -6,6 +6,7 @@ milestone: M3
 time: 3 hours
 prerequisites: 13-claim-reason-evidence
 submit_as: text entry, three worked examples
+artifact: **~400 words in the text box**: three quoted passages — one from a published paper, one from your own draft, one from AI output — each with the failure named and a concrete repair
 ---
 
 ## Why this exists
@@ -74,7 +75,7 @@ Text entry: three quoted passages, each with the fallacy named and a repair prop
 extra piece of work on top of the log.
 
 - **In the text box:** the fallacy you found in your own writing.
-- **Include or attach:** text entry, three worked examples
+- **You hand in:** **~400 words in the text box**: three quoted passages — one from a published paper, one from your own draft, one from AI output — each with the failure named and a concrete repair
 
 You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
 an index saying which week each one went in.

@@ -6,6 +6,7 @@ milestone: M6
 time: 2 hours
 prerequisites: 06-git-github, 07-code-folder-structure
 submit_as: Zenodo record URL
+artifact: A **Zenodo record URL** — a tagged release archived, both DOIs placed where the standard says, and a `CITATION.cff` that parses
 ---
 
 ## Why this exists
@@ -59,7 +60,7 @@ Zenodo record URL.
 extra piece of work on top of the log.
 
 - **In the text box:** which DOI you would have used in the paper before reading the standard.
-- **Include or attach:** Zenodo record URL
+- **You hand in:** A **Zenodo record URL** — a tagged release archived, both DOIs placed where the standard says, and a `CITATION.cff` that parses
 
 You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
 an index saying which week each one went in.

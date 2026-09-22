@@ -6,6 +6,7 @@ milestone: M2
 time: 4 hours (plus your partner's 1 hour)
 prerequisites: 07-code-folder-structure
 submit_as: repo URL plus your partner's signed run log
+artifact: A **repo URL** plus your partner's **run log, signed by them** — what they ran, what broke, what they had to guess, and whether the figure reproduced
 ---
 
 ## Why this exists
@@ -60,7 +61,7 @@ Repo URL plus your partner's signed run log.
 extra piece of work on top of the log.
 
 - **In the text box:** what your partner could not do without asking you.
-- **Include or attach:** repo URL plus your partner's signed run log
+- **You hand in:** A **repo URL** plus your partner's **run log, signed by them** — what they ran, what broke, what they had to guess, and whether the figure reproduced
 
 You do not submit anything to the milestone yet. When all four skills in **M2** are done, submit the **M2 — Reproducible Code** assignment, which is just
 an index saying which week each one went in.

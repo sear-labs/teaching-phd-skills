@@ -6,6 +6,7 @@ milestone: M3
 time: 8 hours
 prerequisites: 10-critiquing-papers
 submit_as: PDF: the map plus the gap paragraph
+artifact: A **PDF**: your three candidate axes with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence
 ---
 
 ## Why this exists
@@ -63,7 +64,7 @@ PDF containing the map, the fifteen citations, and the gap paragraph.
 extra piece of work on top of the log.
 
 - **In the text box:** the axis you chose, and what you would have seen through the two you rejected.
-- **Include or attach:** PDF: the map plus the gap paragraph
+- **You hand in:** A **PDF**: your three candidate axes with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence
 
 You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
 an index saying which week each one went in.

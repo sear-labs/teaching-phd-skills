@@ -6,6 +6,7 @@ milestone: M2
 time: 4 hours
 prerequisites: 06-git-github
 submit_as: repo URL plus one paragraph on what moved where
+artifact: A **repo URL** plus **one paragraph** on what moved where, plus the **two places** you found the standard stricter than Wilson et al. and why
 ---
 
 ## Why this exists
@@ -57,7 +58,7 @@ Repo URL, plus one paragraph on what moved where, plus the two stricter-points.
 extra piece of work on top of the log.
 
 - **In the text box:** what moved, and what you found in the old layout that you had forgotten was there.
-- **Include or attach:** repo URL plus one paragraph on what moved where
+- **You hand in:** A **repo URL** plus **one paragraph** on what moved where, plus the **two places** you found the standard stricter than Wilson et al. and why
 
 You do not submit anything to the milestone yet. When all four skills in **M2** are done, submit the **M2 — Reproducible Code** assignment, which is just
 an index saying which week each one went in.

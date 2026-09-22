@@ -6,6 +6,7 @@ milestone: M1
 time: 5 hours
 prerequisites: none
 submit_as: terminal transcript plus retrieved output, in a WA entry
+artifact: A **pasted terminal transcript** (not a screenshot — it must be searchable) plus the **output file** you pulled back off the remote machine
 ---
 
 ## Why this exists
@@ -70,7 +71,7 @@ retrieved from the remote machine.
 extra piece of work on top of the log.
 
 - **In the text box:** what you ran remotely, and what broke the first time.
-- **Include or attach:** terminal transcript plus retrieved output, in a WA entry
+- **You hand in:** A **pasted terminal transcript** (not a screenshot — it must be searchable) plus the **output file** you pulled back off the remote machine
 
 You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
 an index saying which week each one went in.

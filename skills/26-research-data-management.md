@@ -6,6 +6,7 @@ milestone: M6
 time: 3 hours
 prerequisites: 25-zenodo
 submit_as: one-page data statement
+artifact: A **one-page PDF data statement** — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, and what is withheld and where it lives
 ---
 
 ## Why this exists
@@ -61,7 +62,7 @@ One-page data statement, PDF.
 extra piece of work on top of the log.
 
 - **In the text box:** which dataset's terms you could not find, and what you did about it.
-- **Include or attach:** one-page data statement
+- **You hand in:** A **one-page PDF data statement** — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, and what is withheld and where it lives
 
 You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
 an index saying which week each one went in.

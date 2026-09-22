@@ -6,6 +6,7 @@ milestone: M6
 time: ongoing, plus 2 hours to write up
 prerequisites: 07-code-folder-structure
 submit_as: task brief plus retrospective
+artifact: The **task brief** (definition of done, input and output paths, checkpoint date) plus your **retrospective** naming at least two things you left underspecified, with the mentee's output linked
 ---
 
 ## Why this exists
@@ -66,7 +67,7 @@ The task brief plus the retrospective, with the mentee's output linked.
 extra piece of work on top of the log.
 
 - **In the text box:** what you thought was obvious and was not.
-- **Include or attach:** task brief plus retrospective
+- **You hand in:** The **task brief** (definition of done, input and output paths, checkpoint date) plus your **retrospective** naming at least two things you left underspecified, with the mentee's output linked
 
 You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
 an index saying which week each one went in.

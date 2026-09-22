@@ -61,7 +61,16 @@
   .meta { display:flex; flex-wrap:wrap; gap:5px 12px; font-family:var(--mono);
            font-size:11px; color:var(--muted); margin:0 0 9px; }
   .ch { text-transform:uppercase; letter-spacing:.08em; color:var(--signal); }
-  .why { margin:0 0 7px; max-width:38rem; }
+  /* The artifact is the thing people came to the page for, so it leads. */
+  .handin { background:var(--surface); border-left:3px solid var(--accent);
+             padding:10px 14px 11px; margin:0 0 9px; max-width:39rem; }
+  .hlab { display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.13em;
+           text-transform:uppercase; color:var(--accent); margin-bottom:4px; }
+  .handin p { margin:0; font-size:14.5px; color:var(--ink); }
+  .handin .where { margin-top:6px; font-size:12.5px; color:var(--muted); }
+  .handin .where strong { font-family:var(--mono); color:var(--signal); }
+
+  .why { margin:0; font-size:14px; color:var(--muted); max-width:38rem; font-style:italic; }
   .deliv { margin:0; font-size:14.5px; color:var(--muted); max-width:38rem; }
   .deliv strong { color:var(--ink); font-weight:600; }
 
@@ -114,9 +123,10 @@
   <header>
     <p class="kicker">SEAR Lab &middot; UT Arlington</p>
     <h1>The whole curriculum, on one page</h1>
-    <p class="standfirst">All 28 skills with what each one is for, what you hand in, and the
-      checklist it is graded against. Built for choosing what to do this week without opening
-      28 files. Every lesson exists in full in the handbook; this is the index.</p>
+    <p class="standfirst">All 28 skills, each showing <strong>the exact artifact you hand
+      in</strong> and the checklist it is graded against. A skill is done <em>as</em> one week's
+      research-log entry, never as an extra submission &mdash; the slot named on each card is the
+      assignment it replaces. Every lesson exists in full in the handbook; this is the index.</p>
   </header>
 
   <nav aria-label="Milestones">
@@ -143,9 +153,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>3 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">Spreadsheets are where most lab data first lands and where most silent errors are born: a formula dragged one row short, a sort that moved one column and not its neighbours, a constant typed into a cell six months ago that nobody can now explain. Reviewers never see the spreadsheet — they see the number it produced.</p>
-          <p class="deliv"><strong>Turn in</strong> .xlsx plus the annotation, in a WA entry</p>
-          <details><summary>Passes when &mdash; 6 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>An <strong>.xlsx</strong> attached to the entry, plus ~150 words in the text box: raw sheet nothing writes to, transform sheet, one pivot, one chart with units, and your line-by-line annotation of the AI-written formula</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Spreadsheets are where most lab data first lands and where most silent errors are born: a formula dragged one row short, a sort that moved one column and not its neighbours, a constant typed into a cell six months ago that nobody can now explain.</p>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
             <ul><li>Raw sheet exists and no formula writes to it</li><li>At least one named range used in a formula</li><li>No bare numeric constant inside a formula except 0, 1, and documented unit conversions</li><li>One pivot answering a stated question; one chart with axes labelled and units given</li><li>An AI-generated formula, with every argument annotated in the student&#x27;s own words</li><li>A deliberate break, with the prediction shown before the result</li></ul></details>
         </div>
       </article>
@@ -156,9 +170,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>4 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">The failure mode is not a bad answer. It is a plausible one.</p>
-          <p class="deliv"><strong>Turn in</strong> notebook link (view access) plus the verification table, in a WA entry</p>
-          <details><summary>Passes when &mdash; 7 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>notebook share link</strong> (view access on) plus a <strong>verification table</strong> pasted in the text box: one row per factual claim — claim, verified / unverified / wrong, and how you checked it</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">The failure mode is not a bad answer.</p>
+          <details><summary>It passes when &mdash; all 7 of these are true</summary>
             <ul><li>Link opens for someone who is not the author</li><li>First cell shows interpreter version and pinned package versions; seed set</li><li>The hand-computed answer appears before the code that recomputes it</li><li>Any divergence reconciled in writing, not removed</li><li>Three structurally different prompts, not rewordings</li><li>Every factual claim is a row, each naming a specific verification method</li><li>At least one claim identified as wrong or unverifiable</li></ul></details>
         </div>
       </article>
@@ -169,9 +187,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>5 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">This lab runs Linux servers alongside Windows workstations, and the jobs that matter — a ReEDS run, a large MILP, a parameter sweep — do not belong on your laptop. They outlive your battery, your commute, and the moment your machine decides to install an update.</p>
-          <p class="deliv"><strong>Turn in</strong> terminal transcript plus retrieved output, in a WA entry</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>pasted terminal transcript</strong> (not a screenshot — it must be searchable) plus the <strong>output file</strong> you pulled back off the remote machine</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">This lab runs Linux servers alongside Windows workstations, and the jobs that matter — a ReEDS run, a large MILP, a parameter sweep — do not belong on your laptop.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Local: navigation, a pipe, a redirect, and a recursive search, all shown</li><li><code>ssh</code> to a lab server or HPC node, shown</li><li>A file moved to the remote machine <strong>and</strong> a result moved back</li><li>A job that survived a disconnection, with evidence it did — the submission, then the output</li><li>The log read, with one line quoted that you had to look up</li></ul></details>
         </div>
       </article>
@@ -182,9 +204,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>4 hours</span>
             <span>prereq: 15-imrad, 16-citation-verification</span></p>
-          <p class="why">Submissions stall on formatting, and they stall late — at the point where the science is done and the only thing between you and a submitted paper is a template you have never opened. The second failure is quieter: a journal template is a <strong>contract about length</strong>, and a draft written in Word at 1.15 spacing has no idea whether it fits.</p>
-          <p class="deliv"><strong>Turn in</strong> Overleaf link plus compiled PDF</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>An <strong>Overleaf share link</strong> plus the <strong>compiled PDF</strong>, in the target journal&#x27;s own template, zero errors</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Submissions stall on formatting, and they stall late — at the point where the science is done and the only thing between you and a submitted paper is a template you have never opened.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>The template is the journal&#x27;s official one, named</li><li>Compiles with zero errors</li><li>Warnings read, and any overfull box in a figure or table resolved</li><li>Bibliography generated from a <code>.bib</code> file, not hand-written</li><li>Page count stated against the journal&#x27;s limit</li></ul></details>
         </div>
       </article>
@@ -195,9 +221,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>3 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">The errors that survive code review are the ones where <strong>the code is correct and the number is wrong.</strong> A diff will not catch a capacity in MW that should have been GW, a price in $/tonne read as $/kg, or a discount rate entered as 7 instead of 0.07. The model runs, converges, reports a clean objective, and the answer is off by a thousand.</p>
-          <p class="deliv"><strong>Turn in</strong> text entry in a WA entry</p>
-          <details><summary>Passes when &mdash; 6 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p><strong>~300 words in the text box</strong>: the magnitude you predicted before running, the actual, a unit audit of every input and output, one published reference value with its source, and one extreme case</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">The errors that survive code review are the ones where <strong>the code is correct and the number is wrong.</strong> A diff will not catch a capacity in MW that should have been GW, a price in $/tonne read as $/kg, or a discount rate entered as 7 instead of 0.07.</p>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
             <ul><li>Predicted magnitude written before the run, with a timestamp or commit that proves it</li><li>Units stated for every input and output involved</li><li>One published reference value, cited with a source, and the comparison</li><li>Any discrepancy over a factor of two explained, not waved through</li><li>One extreme case run and its behaviour described</li><li>If a solver was used: status word, achieved gap and residual all reported — or an explicit note that no solver was involved</li></ul></details>
         </div>
       </article>
@@ -215,9 +245,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>4 hours</span>
             <span>prereq: none</span></p>
-          <p class="why"><strong>Do this one before anything else in M2.</strong> Git history is permanent. A credential committed once is compromised even if the next commit removes it, even if you force-push, even if the repo was private at the time — and the fix is rotating the credential, not amending the commit.</p>
-          <p class="deliv"><strong>Turn in</strong> repo URL plus pasted git check-ignore -v output</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>repo URL</strong> plus <strong>pasted <code>git check-ignore -v</code> output</strong> — one line per data file and credential path, each showing the rule that matched</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why"><strong>Do this one before anything else in M2.</strong> Git history is permanent.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Repo URL resolves</li><li><code>git check-ignore -v</code> output pasted, showing a matched rule for every data and credential path</li><li>Searching the full history for your own credential variable names returns nothing</li><li>At least five commits whose messages state a reason</li><li><code>git status</code> on a clean checkout is empty</li></ul></details>
         </div>
       </article>
@@ -228,9 +262,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>4 hours</span>
             <span>prereq: 06-git-github</span></p>
-          <p class="why">&quot;I cannot reproduce my own Chapter 3&quot; is the concrete failure this prevents, and it has a specific mechanism: processed data overwrote raw data, or a script&#x27;s output became its own input, and now there is no path back to the numbers in the draft. It surfaces at the worst possible moment — during revisions, under a deadline, when the person who could explain the directory is you eight months ago.</p>
-          <p class="deliv"><strong>Turn in</strong> repo URL plus one paragraph on what moved where</p>
-          <details><summary>Passes when &mdash; 4 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>repo URL</strong> plus <strong>one paragraph</strong> on what moved where, plus the <strong>two places</strong> you found the standard stricter than Wilson et al. and why</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">&quot;I cannot reproduce my own Chapter 3&quot; is the concrete failure this prevents, and it has a specific mechanism: processed data overwrote raw data, or a script&#x27;s output became its own input, and now there is no path back to the numbers in the draft.</p>
+          <details><summary>It passes when &mdash; all 4 of these are true</summary>
             <ul><li>Repo layout matches the archetype</li><li>Nothing under the raw tier is written by any script (verify, do not assert)</li><li>README is usable by someone who has never seen the project</li><li>Two places the standard is stricter than Wilson et al., identified and explained</li></ul></details>
         </div>
       </article>
@@ -241,9 +279,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>4 hours (plus your partner&#x27;s 1 hour)</span>
             <span>prereq: 07-code-folder-structure</span></p>
-          <p class="why">There is exactly one test of whether an environment is reproducible, and it is not a file listing. It is: <strong>a labmate ran it and got your number.</strong> Everything else is a proxy.</p>
-          <p class="deliv"><strong>Turn in</strong> repo URL plus your partner&#x27;s signed run log</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>repo URL</strong> plus your partner&#x27;s <strong>run log, signed by them</strong> — what they ran, what broke, what they had to guess, and whether the figure reproduced</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">There is exactly one test of whether an environment is reproducible, and it is not a file listing.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Partner reproduced the named figure on their own machine, or the divergence is explained</li><li>Stated tolerance appears before the comparison, not after</li><li>Solver version and interpreter version both recorded in the repo</li><li>Every question the partner had to ask is listed as a README defect</li><li>README updated in response</li></ul></details>
         </div>
       </article>
@@ -254,9 +296,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>3 hours</span>
             <span>prereq: 06-git-github, 02-ai-prompting</span></p>
-          <p class="why">An agent with filesystem access is fast, confident, and wrong often enough to matter — and a research repo is the most expensive place for that combination, because a plausible edit to an analysis script produces plausible numbers. The skill being assessed is not prompting.</p>
-          <p class="deliv"><strong>Turn in</strong> transcript excerpt plus the accepted diff, in a WA entry</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>transcript excerpt</strong> plus the <strong>diff you accepted</strong>, with your one-sentence task statement timestamped before the session began</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">An agent with filesystem access is fast, confident, and wrong often enough to matter — and a research repo is the most expensive place for that combination, because a plausible edit to an analysis script produces plausible numbers.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Task stated in one sentence, timestamped before the session</li><li>Work done on a branch, not the default branch</li><li>The full diff is shown and was reviewed line by line</li><li>At least one thing the agent got wrong is recorded</li><li>Whatever check the repo already has (tests, an agreement assertion) still passes after the merge</li></ul></details>
         </div>
       </article>
@@ -274,9 +320,13 @@
           <p class="meta"><span class="ch ch-reading">reading</span>
             <span>3 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">Summarising is not critiquing, and the weekly log makes the difference easy to hide. A summary restates what the authors claim.</p>
-          <p class="deliv"><strong>Turn in</strong> WR entry, 300-500 words</p>
-          <details><summary>Passes when &mdash; 4 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p><strong>300–500 words in the text box</strong>: the paper&#x27;s claim quoted verbatim with a locator, the load-bearing assumption named, the gap between claimed and shown, and one alternative with its cost</p>
+            <p class="where">Submitted as that week's <strong>WR</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Summarising is not critiquing, and the weekly log makes the difference easy to hide.</p>
+          <details><summary>It passes when &mdash; all 4 of these are true</summary>
             <ul><li>The central claim is quoted verbatim, with a location</li><li>One load-bearing assumption is named</li><li>The gap between what is claimed and what is shown is stated explicitly</li><li>A specific alternative is proposed, with its cost</li></ul></details>
         </div>
       </article>
@@ -287,9 +337,13 @@
           <p class="meta"><span class="ch ch-reading">reading</span>
             <span>8 hours</span>
             <span>prereq: 10-critiquing-papers</span></p>
-          <p class="why">&quot;No one has done X&quot; is not a gap. It is frequently evidence that X is not worth doing, and a committee will say so.</p>
-          <p class="deliv"><strong>Turn in</strong> PDF: the map plus the gap paragraph</p>
-          <details><summary>Passes when &mdash; 7 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>PDF</strong>: your three candidate axes with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence</p>
+            <p class="where">Submitted as that week's <strong>WR</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">&quot;No one has done X&quot; is not a gap.</p>
+          <details><summary>It passes when &mdash; all 7 of these are true</summary>
             <ul><li>Fifteen papers, cited</li><li><strong>Three candidate axes written down before one was chosen</strong>, each rejected one with a stated reason</li><li>One named axis, with units or categories stated</li><li>Every paper positioned on it</li><li>The empty region identified</li><li>One sentence on <strong>why</strong> it is empty, distinguishing &quot;not yet possible&quot; from &quot;not worth doing&quot;</li><li>The three-part sentence, written out</li></ul></details>
         </div>
       </article>
@@ -300,9 +354,13 @@
           <p class="meta"><span class="ch ch-reading">reading</span>
             <span>3 hours</span>
             <span>prereq: 13-claim-reason-evidence</span></p>
-          <p class="why">An argument can be perfectly valid and completely false, or true in every part and still invalid. Keeping those apart is the content of a first-semester logic course, and it is the tool you use to say <em>why</em> a paper&#x27;s conclusion does not follow rather than just feeling that it does not.</p>
-          <p class="deliv"><strong>Turn in</strong> text entry, three worked examples</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p><strong>~400 words in the text box</strong>: three quoted passages — one from a published paper, one from your own draft, one from AI output — each with the failure named and a concrete repair</p>
+            <p class="where">Submitted as that week's <strong>WR</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">An argument can be perfectly valid and completely false, or true in every part and still invalid.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Three examples, one from each of the three sources</li><li>Each passage quoted, with a locator</li><li>The specific failure named, not just &quot;this is weak&quot;</li><li>A concrete repair for each — what evidence or qualifier would fix it</li><li>The one from your own draft is actually fixed, and the draft link shows it</li></ul></details>
         </div>
       </article>
@@ -313,9 +371,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>3 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">Most students arrive with a <strong>topic</strong> and believe it is a claim. &quot;My research is about lithium supply chains&quot; is a topic.</p>
-          <p class="deliv"><strong>Turn in</strong> text entry or PDF, one page</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p><strong>One page</strong>: the claim sentence with all three slots filled, the warrant written out as a general principle, and three objections a competent person would actually raise</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Most students arrive with a <strong>topic</strong> and believe it is a claim.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>A single claim sentence with all three slots filled</li><li>The claim is contestable — someone competent could disagree with it</li><li>The warrant is stated as a general principle, not restated as the evidence</li><li>Three objections, none of them trivial</li><li>For each objection, one line on whether the paper currently answers it</li></ul></details>
         </div>
       </article>
@@ -326,9 +388,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>2 hours</span>
             <span>prereq: 13-claim-reason-evidence</span></p>
-          <p class="why">Reviewers reject papers for overclaiming more often than for bad work. The sentence <em>&quot;our model proves that recycling reduces import dependence&quot;</em> will be attacked, and correctly, because a model does not prove anything about the world — it shows what follows from its assumptions.</p>
-          <p class="deliv"><strong>Turn in</strong> claim-verb audit of a draft and of your own CV, plus both revised</p>
-          <details><summary>Passes when &mdash; 7 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>three-column table</strong> — verb used / what the evidence licenses / the revision — covering both your draft and your CV, plus links to both revised documents</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Reviewers reject papers for overclaiming more often than for bad work.</p>
+          <details><summary>It passes when &mdash; all 7 of these are true</summary>
             <ul><li>Every claim-making sentence in the draft appears as a row</li><li>Each row states what the evidence licenses, not just whether the verb &quot;sounds strong&quot;</li><li>Every instance of <em>proves</em> is either removed or justified as genuine mathematics</li><li>At least one claim gains an explicit scope condition</li><li>The revised draft is linked and the changes are in it</li><li>The same audit run over every bullet of your own CV, with the revised CV attached</li><li>At least one CV verb downgraded to what the evidence actually supports</li></ul></details>
         </div>
       </article>
@@ -346,9 +412,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>3 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">Most rejected drafts in this lab are not rejected for the research. They are rejected because the reader cannot find the contribution — it is implied by the results section and stated nowhere.</p>
-          <p class="deliv"><strong>Turn in</strong> Overleaf link</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>An <strong>Overleaf link</strong>: one contribution-claim sentence, and one topic sentence for every IMRAD section, each traceable to the claim in one step</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Most rejected drafts in this lab are not rejected for the research.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>The claim sentence exists, with both blanks filled</li><li>&quot;Matters because&quot; gives a reason other than novelty</li><li>One topic sentence per IMRAD section</li><li>Each topic sentence traceable to the claim in one step</li><li>Any section that failed the test is named, with the resolution stated</li></ul></details>
         </div>
       </article>
@@ -359,9 +429,13 @@
           <p class="meta"><span class="ch ch-reading">reading</span>
             <span>3 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">Fabricated references are a live failure mode, not a hypothetical one — a language model will produce a plausible author list, a plausible title, a plausible year, and a DOI that resolves to something else entirely. The subtler and more common failure is worse: a <strong>real</strong> paper cited for a claim it does not make.</p>
-          <p class="deliv"><strong>Turn in</strong> table, PDF or text entry, plus the updated draft</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>ten-row table</strong> — reference / does the DOI resolve / where the claim sits by page or figure / verdict — plus a link to the draft with the failures struck</p>
+            <p class="where">Submitted as that week's <strong>WR</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Fabricated references are a live failure mode, not a hypothetical one — a language model will produce a plausible author list, a plausible title, a plausible year, and a DOI that resolves to something else entirely.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Ten rows</li><li>Every row has a resolving DOI or a stable URL</li><li>Every row locates the claim by page, section, or figure</li><li>Any reference that failed is struck from the draft, and the draft link shows it</li><li>The count of failures is stated plainly</li></ul></details>
         </div>
       </article>
@@ -372,9 +446,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>2 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">Authorship disputes happen at submission, which is the one moment when they cannot be resolved calmly. Everyone has been working for a year on an assumption nobody stated, and the assumptions do not match.</p>
-          <p class="deliv"><strong>Turn in</strong> text entry, CRediT-style, plus evidence it was circulated</p>
-          <details><summary>Passes when &mdash; 6 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p><strong>~200 words in the text box</strong>: everyone who touched the paper, CRediT roles per person, author vs. acknowledgement with reasons, the order, the corresponding author — plus proof you circulated it</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Authorship disputes happen at submission, which is the one moment when they cannot be resolved calmly.</p>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
             <ul><li>Every contributor named, including students at other tiers</li><li>CRediT roles assigned per person</li><li>Author versus acknowledgement decided with a stated reason</li><li>Order justified in one sentence</li><li>Corresponding author named</li><li>Evidence of circulation</li></ul></details>
         </div>
       </article>
@@ -385,9 +463,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>4 hours</span>
             <span>prereq: none</span></p>
-          <p class="why">Figures are read first and often alone. Yours will be screenshotted into someone else&#x27;s slide deck, printed in greyscale by a reviewer, and looked at for four seconds by a programme committee member deciding whether to read the abstract.</p>
-          <p class="deliv"><strong>Turn in</strong> PDF showing before, after, and the standalone caption</p>
-          <details><summary>Passes when &mdash; 6 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>PDF</strong> showing the figure before, after, and converted to greyscale, with a caption that makes sense to someone who has read no body text</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Figures are read first and often alone.</p>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
             <ul><li>Before and after both shown</li><li>Caption comprehensible with no body text — test it on someone outside your subfield</li><li>Units on both axes</li><li>Greyscale conversion shown, series still distinguishable</li><li>Colour is never the only channel carrying meaning</li><li>Every plotted series is named in the caption</li></ul></details>
         </div>
       </article>
@@ -398,9 +480,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>3 hours</span>
             <span>prereq: 18-figures-tables</span></p>
-          <p class="why">This one has a date. The DOJ&#x27;s 2024 Title II rule makes <strong>WCAG 2.1 Level AA</strong> the standard for web content a covered entity makes available, and a public university is a covered entity.</p>
-          <p class="deliv"><strong>Turn in</strong> repo URL</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>repo URL</strong> — alt text naming the trend on every figure, no skipped heading levels, nothing encoded by colour alone, and a measured contrast ratio</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">This one has a date.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Every figure has alt text naming the trend or takeaway, not the chart type</li><li>No heading level is skipped anywhere in the notebook</li><li>Greyscale check passed</li><li>Tables have header rows and are not images</li><li>Body text contrast measured at 4.5:1 or better, with the measurement stated</li></ul></details>
         </div>
       </article>
@@ -418,9 +504,13 @@
           <p class="meta"><span class="ch ch-reading">reading</span>
             <span>4 hours</span>
             <span>prereq: 10-critiquing-papers</span></p>
-          <p class="why">You will be asked to review before anyone teaches you how, and the default is to produce something either useless (&quot;interesting paper, minor comments&quot;) or destructive. Reviewing is also the fastest way to learn what editors are looking for, which makes you better at submitting.</p>
-          <p class="deliv"><strong>Turn in</strong> structured referee report, PDF</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>PDF referee report</strong>: the paper summarised in your words, two or more specific strengths, two or more weaknesses with line numbers split into must-fix and would-improve, and an explicit recommendation</p>
+            <p class="where">Submitted as that week's <strong>WR</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">You will be asked to review before anyone teaches you how, and the default is to produce something either useless (&quot;interesting paper, minor comments&quot;) or destructive.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Summary written in the reviewer&#x27;s own words</li><li>At least two strengths, each pointing at a specific section</li><li>At least two weaknesses, each tied to a line or section number</li><li>Must-fix and would-improve separated into distinct lists</li><li>An explicit recommendation</li></ul></details>
         </div>
       </article>
@@ -431,9 +521,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>4 hours</span>
             <span>prereq: 20-reviewing-papers</span></p>
-          <p class="why">Rebuttals fail in two directions and both lose the paper. Defensive letters argue with the reviewer and get rejected by an editor who reads tone before substance.</p>
-          <p class="deliv"><strong>Turn in</strong> PDF response letter</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>PDF letter</strong> built on a table — reviewer point / your response / the change made / exactly where it is in the revision — with every point given a row</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Rebuttals fail in two directions and both lose the paper.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Every reviewer point has a row</li><li>Every claimed change is located by section or line</li><li>At least one point respectfully declined, with a reason rather than an apology</li><li>The revised draft actually contains the changes claimed — spot-checked against three rows</li><li>No unattached apologies</li></ul></details>
         </div>
       </article>
@@ -444,9 +538,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>3 hours</span>
             <span>prereq: 15-imrad</span></p>
-          <p class="why">A paper sent to the wrong venue does not get rejected quickly — it gets desk-rejected after six weeks, or sent to reviewers who evaluate it against criteria it was never trying to meet. That is a lost semester.</p>
-          <p class="deliv"><strong>Turn in</strong> one-page memo plus draft cover letter or outreach message</p>
-          <details><summary>Passes when &mdash; 7 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>one-page memo</strong> (three venues or three named groups × four attributes, and your choice justified against the two you rejected) plus the <strong>draft cover letter or outreach message</strong></p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">A paper sent to the wrong venue does not get rejected quickly — it gets desk-rejected after six weeks, or sent to reviewers who evaluate it against criteria it was never trying to meet.</p>
+          <details><summary>It passes when &mdash; all 7 of these are true</summary>
             <ul><li>Three named venues</li><li>All four attributes present for each, with sources</li><li>Choice justified against the two rejected, on grounds specific to this paper</li><li>Cover letter states the contribution in its first paragraph</li><li>AI-disclosure requirement identified and a draft disclosure written</li><li>If run on an employer: three named <strong>groups</strong>, not companies, each with the specific thing it builds</li><li>The recipient demonstrably works on the thing the message is about — or the ask is an introduction instead</li></ul></details>
         </div>
       </article>
@@ -457,9 +555,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>6 hours</span>
             <span>prereq: 15-imrad, 18-figures-tables</span></p>
-          <p class="why">A conference talk is twelve minutes and you will be asked three questions you did not anticipate. The failure is not nerves; it is that most students have never once said their contribution out loud in a single sentence, so the talk becomes a tour of the methodology and the contribution never lands.</p>
-          <p class="deliv"><strong>Turn in</strong> slides PDF plus the three questions and revised answers</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>slides PDF</strong> plus the <strong>three questions</strong> you were actually asked and the answers you wish you had given</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">A conference talk is twelve minutes and you will be asked three questions you did not anticipate.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Delivered within twelve minutes, plus or minus one</li><li>A slide carries the contribution claim, matching the manuscript word for word</li><li>Figures meet the skill 15 checks</li><li>Three questions recorded verbatim</li><li>A revised answer for each, and a note on whether it implies a change to the paper</li></ul></details>
         </div>
       </article>
@@ -470,9 +572,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>4 hours</span>
             <span>prereq: 13-claim-reason-evidence</span></p>
-          <p class="why">A defence fails in two directions and both lose the room. You can dig in and argue with the question, which reads as defensiveness and makes the committee press harder.</p>
-          <p class="deliv"><strong>Turn in</strong> three steelmanned objections with responses, delivered live to the lab</p>
-          <details><summary>Passes when &mdash; 6 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>two-to-three-page PDF</strong>: three objections written in the critic&#x27;s voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">A defence fails in two directions and both lose the room.</p>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
             <ul><li>Three objections, each written in the critic&#x27;s voice at full strength</li><li>Each steelman would be recognised as fair by someone who holds that view</li><li>Each response classified as one of the three types above</li><li>At least one objection conceded — if none are, the steelmen are too weak</li><li>At least one objection is the kind an employer raises, not a reviewer</li><li>Delivered live, with a note on which question the lab asked that you had not anticipated</li></ul></details>
         </div>
       </article>
@@ -490,9 +596,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>2 hours</span>
             <span>prereq: 06-git-github, 07-code-folder-structure</span></p>
-          <p class="why">A paper that says &quot;code available on request&quot; is a paper whose code will not be available in four years, because the student has graduated and the laptop is gone. A deposit makes it citable and permanent.</p>
-          <p class="deliv"><strong>Turn in</strong> Zenodo record URL</p>
-          <details><summary>Passes when &mdash; 4 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>Zenodo record URL</strong> — a tagged release archived, both DOIs placed where the standard says, and a <code>CITATION.cff</code> that parses</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">A paper that says &quot;code available on request&quot; is a paper whose code will not be available in four years, because the student has graduated and the laptop is gone.</p>
+          <details><summary>It passes when &mdash; all 4 of these are true</summary>
             <ul><li>Record URL resolves and the archive contains the tagged release</li><li>Both DOIs present and placed per the standard</li><li><code>CITATION.cff</code> parses — the GitHub &quot;Cite this repository&quot; button appears</li><li>The paper&#x27;s data-availability statement cites the correct one of the two</li></ul></details>
         </div>
       </article>
@@ -503,9 +613,13 @@
           <p class="meta"><span class="ch ch-arithmetic">arithmetic</span>
             <span>3 hours</span>
             <span>prereq: 25-zenodo</span></p>
-          <p class="why">&quot;Can this be deposited?&quot; has to be answered <strong>before</strong> the deposit, because a deposit is public and permanent and the undo button does not fully exist. This lab&#x27;s data makes the question live rather than theoretical: ERCOT data arrives under use agreements, industry partners supply material flows under NDA, and DOE-funded work can carry its own handling requirements.</p>
-          <p class="deliv"><strong>Turn in</strong> one-page data statement</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>one-page PDF data statement</strong> — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, and what is withheld and where it lives</p>
+            <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">&quot;Can this be deposited?&quot; has to be answered <strong>before</strong> the deposit, because a deposit is public and permanent and the undo button does not fully exist.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>Every dataset used in your work appears</li><li>Source named with the instrument it arrived under</li><li>Licence named explicitly per dataset</li><li>Any restriction quoted from the agreement, with the agreement located</li><li>Withheld items named, with a reason and a location</li></ul></details>
         </div>
       </article>
@@ -516,9 +630,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>6 hours</span>
             <span>prereq: 11-lit-review-gap, 15-imrad</span></p>
-          <p class="why">Writing a full proposal is not a course assignment — it is a months-long effort with a real deadline attached to somebody&#x27;s salary. But the two fragments that decide most proposals are each about a page, and both are learnable in isolation.</p>
-          <p class="deliv"><strong>Turn in</strong> PDF, to the call&#x27;s stated page limits</p>
-          <details><summary>Passes when &mdash; 5 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>A <strong>PDF within the call&#x27;s stated page limit</strong>: project summary under the headings the call requires, and a broader-impacts section naming an activity, an audience, and how you would measure it</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">Writing a full proposal is not a course assignment — it is a months-long effort with a real deadline attached to somebody&#x27;s salary.</p>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
             <ul><li>A real call is named, with its deadline</li><li>Within the stated page limit — verified, not estimated</li><li>Required headings present exactly as the call words them</li><li>Broader impacts names an activity, an audience, and a measure</li><li>Intellectual merit traceable to the skill 10 gap statement</li></ul></details>
         </div>
       </article>
@@ -529,9 +647,13 @@
           <p class="meta"><span class="ch ch-writing">writing</span>
             <span>ongoing, plus 2 hours to write up</span>
             <span>prereq: 07-code-folder-structure</span></p>
-          <p class="why">This lab runs three tiers, so PhD students supervise before anyone has asked whether they can. The characteristic failure is handing an REU student an <strong>unbounded</strong> task — &quot;look into battery degradation models&quot; — and reading it as the student&#x27;s failure ten weeks later when nothing is finished.</p>
-          <p class="deliv"><strong>Turn in</strong> task brief plus retrospective</p>
-          <details><summary>Passes when &mdash; 6 checks</summary>
+          <div class="handin">
+            <span class="hlab">You hand in</span>
+            <p>The <strong>task brief</strong> (definition of done, input and output paths, checkpoint date) plus your <strong>retrospective</strong> naming at least two things you left underspecified, with the mentee&#x27;s output linked</p>
+            <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
+          </div>
+          <p class="why">This lab runs three tiers, so PhD students supervise before anyone has asked whether they can.</p>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
             <ul><li>Task brief contains a definition of done that names an artifact</li><li>Input and output paths specified, consistent with the repo archetype</li><li>A checkpoint date, before the deadline</li><li>Retrospective names at least two underspecified items</li><li>The mentee&#x27;s actual output is linked</li><li>If they used git, their <code>.gitignore</code> was verified before their first commit</li></ul></details>
         </div>
       </article>

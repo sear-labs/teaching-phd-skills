@@ -6,6 +6,7 @@ milestone: M5
 time: 3 hours
 prerequisites: 15-imrad
 submit_as: one-page memo plus draft cover letter or outreach message
+artifact: A **one-page memo** (three venues or three named groups × four attributes, and your choice justified against the two you rejected) plus the **draft cover letter or outreach message**
 ---
 
 ## Why this exists
@@ -90,7 +91,7 @@ One-page memo plus the draft cover letter or outreach message.
 extra piece of work on top of the log.
 
 - **In the text box:** which venue you would have picked before doing this, and whether it changed.
-- **Include or attach:** one-page memo plus draft cover letter or outreach message
+- **You hand in:** A **one-page memo** (three venues or three named groups × four attributes, and your choice justified against the two you rejected) plus the **draft cover letter or outreach message**
 
 You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
 an index saying which week each one went in.

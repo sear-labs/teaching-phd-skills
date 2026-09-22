@@ -6,6 +6,7 @@ milestone: M2
 time: 4 hours
 prerequisites: none
 submit_as: repo URL plus pasted git check-ignore -v output
+artifact: A **repo URL** plus **pasted `git check-ignore -v` output** — one line per data file and credential path, each showing the rule that matched
 ---
 
 ## Why this exists
@@ -63,7 +64,7 @@ Repo URL plus the pasted `git check-ignore -v` output.
 extra piece of work on top of the log.
 
 - **In the text box:** what you nearly committed and did not.
-- **Include or attach:** repo URL plus pasted git check-ignore -v output
+- **You hand in:** A **repo URL** plus **pasted `git check-ignore -v` output** — one line per data file and credential path, each showing the rule that matched
 
 You do not submit anything to the milestone yet. When all four skills in **M2** are done, submit the **M2 — Reproducible Code** assignment, which is just
 an index saying which week each one went in.

@@ -6,6 +6,7 @@ milestone: M1
 time: 4 hours
 prerequisites: 15-imrad, 16-citation-verification
 submit_as: Overleaf link plus compiled PDF
+artifact: An **Overleaf share link** plus the **compiled PDF**, in the target journal's own template, zero errors
 ---
 
 ## Why this exists
@@ -60,7 +61,7 @@ Overleaf link plus the compiled PDF.
 extra piece of work on top of the log.
 
 - **In the text box:** which journal's template, and how far over or under the limit you landed.
-- **Include or attach:** Overleaf link plus compiled PDF
+- **You hand in:** An **Overleaf share link** plus the **compiled PDF**, in the target journal's own template, zero errors
 
 You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
 an index saying which week each one went in.

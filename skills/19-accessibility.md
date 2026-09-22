@@ -6,6 +6,7 @@ milestone: M4
 time: 3 hours
 prerequisites: 18-figures-tables
 submit_as: repo URL
+artifact: A **repo URL** — alt text naming the trend on every figure, no skipped heading levels, nothing encoded by colour alone, and a measured contrast ratio
 ---
 
 ## Why this exists
@@ -70,7 +71,7 @@ extra piece of work on top of the log.
 
 - **In the text box:** how long the alt text actually took, and your estimate of what retrofitting your whole
 repo would cost.
-- **Include or attach:** repo URL
+- **You hand in:** A **repo URL** — alt text naming the trend on every figure, no skipped heading levels, nothing encoded by colour alone, and a measured contrast ratio
 
 You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
 an index saying which week each one went in.

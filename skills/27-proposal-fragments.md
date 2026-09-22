@@ -6,6 +6,7 @@ milestone: M6
 time: 6 hours
 prerequisites: 11-lit-review-gap, 15-imrad
 submit_as: PDF, to the call's stated page limits
+artifact: A **PDF within the call's stated page limit**: project summary under the headings the call requires, and a broader-impacts section naming an activity, an audience, and how you would measure it
 ---
 
 ## Why this exists
@@ -63,7 +64,7 @@ PDF, within the call's stated page limits.
 extra piece of work on top of the log.
 
 - **In the text box:** which call, and what you had to cut to fit the limit.
-- **Include or attach:** PDF, to the call's stated page limits
+- **You hand in:** A **PDF within the call's stated page limit**: project summary under the headings the call requires, and a broader-impacts section naming an activity, an audience, and how you would measure it
 
 You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
 an index saying which week each one went in.
