@@ -6,7 +6,7 @@ milestone: M5
 time: 4 hours
 prerequisites: 13-claim-reason-evidence
 submit_as: three steelmanned objections with responses, delivered live to the lab
-artifact: A **two-to-three-page PDF**: three objections written in the critic's voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable
+artifact: A **PDF**: three objections written in the critic's voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable
 ---
 
 ## Why this exists
@@ -94,7 +94,7 @@ The three steelmanned objections with responses, plus delivery to the lab group.
 extra piece of work on top of the log.
 
 - **In the text box:** the objection you could not answer, and what you are going to do about it.
-- **You hand in:** A **two-to-three-page PDF**: three objections written in the critic's voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable
+- **You hand in:** A **PDF**: three objections written in the critic's voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable
 
 You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
 an index saying which week each one went in.

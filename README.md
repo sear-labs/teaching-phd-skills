@@ -61,7 +61,7 @@ docs/          design brief and background notes
 
 ## Two skimmable HTML pages, both generated or hand-built in `handbook/`
 
-- [`curriculum.html`](handbook/curriculum.html) — **all 28 skills on one page**: purpose,
+- [`curriculum.html`](https://sear-labs.github.io/teaching-phd-skills/handbook/curriculum.html) — **all 28 skills on one page**: purpose,
   deliverable and grading checklist for each. For a student choosing what to do this week
   without opening 28 files. **Generated** by `scripts/build_curriculum_page.py`; regenerate
   after editing any lesson, and never edit it by hand.

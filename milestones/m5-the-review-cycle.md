@@ -49,26 +49,44 @@ prerequisite is *claim, reason, evidence* in M3. **If you are proposing next sem
 now** — it is the one skill with a hard external deadline attached, and rehearsing after the
 defence is worth nothing.
 
-## How you submit this
+## How you turn this in
 
-This submission is an **index, not new work.** Every skill was already submitted as an ordinary
-weekly log entry. Here you are telling me where to find them.
+**Nothing new gets made for this.** All five skills were already submitted as ordinary
+weekly log entries, each one replacing that week's WR, WW or WA. This submission just tells me
+where to find them.
 
-For each skill, one line:
+**Paste this straight into the text box of this assignment.** No attachment is needed — the
+artifacts are already sitting in the weekly entries you link to.
+
+One line per skill: the skill, which entry it went in, the week, and where the artifact is.
 
 ```
-<skill name> — submitted in <WR/WW/WA number>, week of <date> — <link or "attached to that entry">
+Reviewing papers              WR3   week of 8 Sep   github.com/you/thesis
+Response to reviewers         WW5   week of 22 Sep  same repo, see README
+Venue and audience selection  WW7   week of 6 Oct   attached to that entry
+Conference talk and poster    WW9   week of 20 Oct  Overleaf link in that entry
+Defending your work           WW11  week of 3 Nov   PDF attached to that entry
 ```
 
-Then one paragraph, no more than 150 words: **which was hardest, and why.**
+Then **one paragraph, 150 words maximum**: which of the five was hardest, and why. Not
+what you did — you already wrote that. What was hard about it.
 
-Graded **complete / redo**. Redo means one or more competency checks did not pass; I will name
-which, and you resubmit only that skill. A milestone you have completed is completed
-permanently — it does not repeat in a later semester.
+That is the whole submission. It should take ten minutes.
+
+### How it is graded
+
+**Complete / redo.** Redo means one or more competency checks did not pass. I will name which
+skill and which check, and **you redo only that skill** — not the milestone, and not the others.
+A milestone marked complete is complete permanently; it does not repeat in a later semester.
+
+### Where to check what each skill needed
+
+[**The whole curriculum on one page**](https://sear-labs.github.io/teaching-phd-skills/handbook/curriculum.html) — every skill with the exact artifact it wanted
+and the checklist it was graded against. Use it to confirm you have everything before submitting.
 
 ## Gate
 
-- [ ] Every skill submitted, each in a **different week**
+- [ ] All five skills submitted, each in a **different week**
 - [ ] Every competency check on every skill passes
-- [ ] The index lists a locatable submission for each
-- [ ] The reflection paragraph is present
+- [ ] The index gives a locatable entry and artifact for each
+- [ ] The reflection paragraph is present, and is about difficulty rather than activity

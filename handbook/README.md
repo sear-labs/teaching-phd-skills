@@ -72,7 +72,7 @@ which channel, what goes in the text box, what to attach.
 **Nothing is gated.** The tiers below are advice about a sensible order, not locks. If your
 research needs M5 in year one, take M5 in year one.
 
-**Choosing what to do this week?** [`curriculum.html`](curriculum.html) puts all twenty-eight on
+**Choosing what to do this week?** [**the whole curriculum on one page**](https://sear-labs.github.io/teaching-phd-skills/handbook/curriculum.html) puts all twenty-eight on
 one scrollable page — what each is for, what you hand in, and the checklist it is graded
 against — so you can compare them without opening twenty-eight files. It is generated from the
 lessons, so it cannot go stale.

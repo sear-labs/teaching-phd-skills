@@ -6,7 +6,7 @@ milestone: M1
 time: 3 hours
 prerequisites: none
 submit_as: .xlsx plus the annotation, in a WA entry
-artifact: An **.xlsx** attached to the entry, plus ~150 words in the text box: raw sheet nothing writes to, transform sheet, one pivot, one chart with units, and your line-by-line annotation of the AI-written formula
+artifact: An **.xlsx** attached to the entry, plus a text-box write-up: raw sheet nothing writes to, transform sheet, one pivot, one chart with units, and your line-by-line annotation of the AI-written formula
 ---
 
 ## Why this exists
@@ -79,7 +79,7 @@ extra piece of work on top of the log.
 
 - **In the text box:** what you could not have written yourself, whether your prediction held, and one
 error the structure caught.
-- **You hand in:** An **.xlsx** attached to the entry, plus ~150 words in the text box: raw sheet nothing writes to, transform sheet, one pivot, one chart with units, and your line-by-line annotation of the AI-written formula
+- **You hand in:** An **.xlsx** attached to the entry, plus a text-box write-up: raw sheet nothing writes to, transform sheet, one pivot, one chart with units, and your line-by-line annotation of the AI-written formula
 
 You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
 an index saying which week each one went in.
