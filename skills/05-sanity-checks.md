@@ -6,7 +6,7 @@ milestone: M1
 time: 3 hours
 prerequisites: none
 submit_as: text entry in a WA entry
-artifact: **~300 words in the text box**: the magnitude you predicted before running, the actual, a unit audit of every input and output, one published reference value with its source, and one extreme case
+artifact: **A text-box entry**: the magnitude you predicted before running, the actual, a unit audit of every input and output, one published reference value with its source, and one extreme case
 ---
 
 ## Why this exists
@@ -87,7 +87,7 @@ and the extreme-case result.
 extra piece of work on top of the log.
 
 - **In the text box:** what you predicted, what you got, and which one was wrong.
-- **You hand in:** **~300 words in the text box**: the magnitude you predicted before running, the actual, a unit audit of every input and output, one published reference value with its source, and one extreme case
+- **You hand in:** **A text-box entry**: the magnitude you predicted before running, the actual, a unit audit of every input and output, one published reference value with its source, and one extreme case
 
 You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit the **M1 — The Workbench** assignment, which is just
 an index saying which week each one went in.
