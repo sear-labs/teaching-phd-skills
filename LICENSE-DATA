@@ -1,0 +1,38 @@
+Prose and materials licence
+===========================
+
+The MIT licence in `LICENSE` covers "the Software" -- the scripts. Most of this repository
+is not software: it is a curriculum, written to be adopted and adapted by other labs. This
+file states the terms for that part, by path.
+
+Covered by CC BY 4.0 (Creative Commons Attribution 4.0 International)
+---------------------------------------------------------------------
+
+    README.md
+    skills/**                       the 24 skills
+    milestones/**                   the six competency milestones
+    handbook/**                     including the rendered .html pages
+    docs/**
+    recruiting/**                   the code-trial templates
+
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You may reuse and adapt these with attribution. Attribute as:
+"PhD research skills curriculum, SEAR Lab, University of Texas at Arlington
+(Erick C. Jones, Jr.), https://github.com/sear-labs/teaching-phd-skills, CC BY 4.0."
+
+Covered by the MIT licence in `LICENSE`
+---------------------------------------
+
+    scripts/**                      the page builder and the Canvas tooling
+
+What this file does NOT cover
+-----------------------------
+
+    exemplars/**                    Student work, if any is ever added here, stays the
+                                    copyright of the student who wrote it and is shown
+                                    with their permission. It is NOT licensed for reuse
+                                    by this file, whatever its path.
+    records/**                      Must never hold anything. See .gitignore.
+
+This repository is public. Nothing in it is, or should become, a student record.
