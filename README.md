@@ -112,6 +112,13 @@ Two things to check before opening a PR that adds an exemplar:
   [`skills/26-research-data-management.md`](skills/26-research-data-management.md) — that
   skill's whole subject is answering this question before rather than after.
 
+## Licence
+
+The curriculum -- prose, skills, milestones, handbook and templates -- is **CC BY 4.0**:
+adopt and adapt it with attribution. The scripts are **MIT**. Stated by path in
+[LICENSE-DATA](LICENSE-DATA); [LICENSE](LICENSE) covers the scripts. Student work in
+`exemplars/` is excluded and stays the student's.
+
 ## Accessibility
 
 This is a public repository belonging to a Title II entity, so it is in scope for
