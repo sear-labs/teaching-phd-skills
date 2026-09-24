@@ -42,7 +42,7 @@ Then pick one and **justify it against the two you rejected** — not in the abs
 this paper. "Higher impact factor" is not a justification.
 
 Finally, draft the cover letter. First paragraph names the contribution, in the words from
-skill 13.
+*IMRAD structure*.
 
 ## The same skill, pointed at an employer
 
@@ -62,7 +62,7 @@ your record looks like the records of people they hire.
 
 Then pick one, justify it against the two you rejected — for your work, not in the abstract —
 and draft the message. **It is a cover letter with the labels changed:** the first paragraph
-names your contribution in the words from skill 13, and names the specific thing of theirs it
+names your contribution in the words from *IMRAD structure*, and names the specific thing of theirs it
 connects to.
 
 **One check this exercise exists to catch.** Confirm the person you are writing to actually works

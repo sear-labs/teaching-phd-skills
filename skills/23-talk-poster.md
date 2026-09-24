@@ -29,9 +29,9 @@ None.
 ## The mechanic
 
 - **Twelve minutes.** Rehearse against a clock, not against a feeling.
-- **One slide states the contribution claim from skill 13, verbatim.** The same sentence that is
+- **One slide states the contribution claim from *IMRAD structure*, verbatim.** The same sentence that is
   in the manuscript. If the talk's version and the paper's version differ, one of them is wrong.
-- Figures come from skill 15 — they already pass greyscale and already have standalone captions,
+- Figures come from *Figure and table design* — they already pass greyscale and already have standalone captions,
   which means they survive a projector with bad contrast.
 - **Deliver it to the lab.** Not to a mirror.
 - **Write down the three questions you got, and the answers you wish you had given.** This is the
@@ -46,7 +46,7 @@ Slides PDF, plus the three questions with your revised answers.
 
 - [ ] Delivered within twelve minutes, plus or minus one
 - [ ] A slide carries the contribution claim, matching the manuscript word for word
-- [ ] Figures meet the skill 15 checks
+- [ ] Figures meet the *Figure and table design* checks
 - [ ] Three questions recorded verbatim
 - [ ] A revised answer for each, and a note on whether it implies a change to the paper
 

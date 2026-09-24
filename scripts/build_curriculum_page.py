@@ -152,7 +152,33 @@ def load(kind):
     return out
 
 
+def validate():
+    """Fail loudly on the two faults a renumber introduces silently.
+
+    Numeric cross-references ("skill 13") survive a renumber pointing at a real but
+    WRONG lesson, so no link checker catches them. Thirteen of these went live in the
+    24->28 renumber. Refer to a lesson by name instead; names do not renumber.
+    """
+    problems = []
+    for f in sorted((REPO / "skills").glob("*.md")):
+        for m in re.finditer(r"skill \d{1,2}\b", f.read_text(encoding="utf-8")):
+            problems.append(f"{f.name}: numeric cross-reference '{m.group(0)}' "
+                            f"-- use the lesson's name")
+
+    for f in list(REPO.rglob("*.md")):
+        if "resumes" in f.parts or ".git" in f.parts:
+            continue
+        for m in re.finditer(r"\[([^\]]+)\]\((?!https?:|#|mailto:)([^)]+)\)",
+                             f.read_text(encoding="utf-8")):
+            if not (f.parent / m.group(2).split("#")[0]).resolve().exists():
+                problems.append(f"{f.relative_to(REPO)}: broken link -> {m.group(2)}")
+
+    if problems:
+        sys.exit("validation failed:\n  " + "\n  ".join(problems))
+
+
 def main():
+    validate()
     skills = load("skills")
     milestones = load("milestones")
     if not skills or not milestones:

@@ -109,11 +109,11 @@ Two things to check before opening a PR that adds an exemplar:
 
 - The student whose work it is has given written permission.
 - It contains no unpublished results and no data under a restriction. See
-  [`skills/22-research-data-management.md`](skills/22-research-data-management.md) — that
+  [`skills/26-research-data-management.md`](skills/26-research-data-management.md) — that
   skill's whole subject is answering this question before rather than after.
 
 ## Accessibility
 
 This is a public repository belonging to a Title II entity, so it is in scope for
-[`skills/16-accessibility.md`](skills/16-accessibility.md) — WCAG 2.1 AA from 26 April 2027.
+[`skills/19-accessibility.md`](skills/19-accessibility.md) — WCAG 2.1 AA from 26 April 2027.
 It is a legitimate target for a student taking that skill, and is the intended first one.

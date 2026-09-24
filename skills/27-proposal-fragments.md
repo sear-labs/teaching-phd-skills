@@ -42,7 +42,7 @@ teaches nothing, because every constraint that makes proposal writing hard comes
    recruited through the UTA McNair programme, each producing a conference poster, tracked to
    graduate school application" passes.
 
-Your gap statement from skill 10 is the raw material for the intellectual merit paragraph. If it
+Your gap statement from *Literature review and gap-finding* is the raw material for the intellectual merit paragraph. If it
 does not fit, the gap was not specific enough — go back to it.
 
 ## Deliverable
@@ -55,7 +55,7 @@ PDF, within the call's stated page limits.
 - [ ] Within the stated page limit — verified, not estimated
 - [ ] Required headings present exactly as the call words them
 - [ ] Broader impacts names an activity, an audience, and a measure
-- [ ] Intellectual merit traceable to the skill 10 gap statement
+- [ ] Intellectual merit traceable to the *Literature review and gap-finding* gap statement
 
 ## Turning it in
 

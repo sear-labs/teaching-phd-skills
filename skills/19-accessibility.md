@@ -45,7 +45,7 @@ do not yet have a public notebook.
   high-recycling case 40% below baseline by 2040" is alt text. Write the takeaway.
 - **Heading order with no skipped levels.** `#` then `##` then `###`. A screen reader user
   navigates by heading; a skipped level reads as a missing section.
-- **No colour-only encoding** — this is the same requirement as skill 15, arriving from a
+- **No colour-only encoding** — this is the same requirement as *Figure and table design*, arriving from a
   different direction. Do both at once.
 - **Tables get real header rows.** A markdown table with a header separator row is fine; an image
   of a table is not.

@@ -15,7 +15,7 @@ You will be asked to review before anyone teaches you how, and the default is to
 something either useless ("interesting paper, minor comments") or destructive. Reviewing is
 also the fastest way to learn what editors are looking for, which makes you better at
 submitting. Do this one on a **labmate's Report Draft** — it is real, it is at the right stage
-to still be fixable, and the reciprocal version of it is skill 18.
+to still be fixable, and the reciprocal version of it is *Response to reviewers*.
 
 ## External material
 

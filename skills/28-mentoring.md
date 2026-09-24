@@ -27,7 +27,7 @@ where this specific failure lives.
 
 ## Governing part
 
-**Part 1** governs the repo the mentee will be working in — including the ordering in skill 05,
+**Part 1** governs the repo the mentee will be working in — including the ordering in *Git and GitHub*,
 which now applies to somebody who has never used git. Their first commit is your responsibility.
 
 ## The mechanic
@@ -37,7 +37,7 @@ Before the handoff, write:
 1. **A definition of done.** Not "understand X" — a thing that exists when it is finished, which
    you would recognise on sight.
 2. **A data path.** Exactly where the input is, and where output goes. This is where the
-   archetype from skill 06 earns its keep.
+   archetype from *Code folder structure* earns its keep.
 3. **A checkpoint date** before the work is due, at which being off track is still recoverable.
 
 Hand it off. Let them work.

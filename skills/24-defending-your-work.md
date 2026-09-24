@@ -40,7 +40,7 @@ None.
 
 **Steelman before you answer.**
 
-Take the three objections from skill 25. For each one, write the **strongest possible version of
+Take the three objections from *Claim, reason, evidence*. For each one, write the **strongest possible version of
 the criticism, in the critic's voice, put better than they would put it.** Better. If your
 version of the objection is weaker than what a committee member would say, you have built a
 strawman and you are rehearsing against nothing.

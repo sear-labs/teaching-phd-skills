@@ -26,7 +26,7 @@ principles. It does not know your data.
 
 ## Governing part
 
-None. Note that skill 16 in this same milestone adds requirements to the same figure — read them
+None. Note that *Accessibility* in this same milestone adds requirements to the same figure — read them
 together and rebuild once.
 
 ## The mechanic
