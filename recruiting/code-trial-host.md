@@ -81,6 +81,13 @@ If you are reasoning toward "it is probably fine," ask Jones instead.
 
 The folder, the expected output, and `code-trial-candidate.md`.
 
+**Writing your own brief instead is fine, with two things kept exactly:** the **one-page
+limit** (12-point Times New Roman, single spaced, one-inch margins, figures count) and the
+**four-hour cap**. Those are what let Jones read the result himself. And resist explaining:
+missing files, thin instructions and things the candidate has to work out alone are the test,
+not flaws to fix. A brief that tells them what to notice stops showing whether they would have
+noticed.
+
 Something like this — adjust it to sound like you:
 
 > Hi [name],
