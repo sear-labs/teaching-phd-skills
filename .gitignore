@@ -30,3 +30,7 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
+
+# Code-trial handoffs and candidate responses. A labmate's unpublished research
+# code and a candidate's work: neither belongs in a PUBLIC repository.
+recruiting/*Version/
