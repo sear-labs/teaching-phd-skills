@@ -20,19 +20,24 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "handbook" / "curriculum.html"
 
-# (anchor, file stem, title, when to read it, one-line blurb)
+# (anchor, file stem, title, when to read it, one-line blurb, label)
 COMPANIONS = [
     ("lab", "sear-lab-domain-knowledge", "SEAR Lab Domain Knowledge",
      "read in week one",
      "What this lab actually studies. Infrastructure has three layers &mdash; physical, digital, "
      "institutional &mdash; and a study that addresses only one of them gets the answer wrong. "
-     "Surface level on purpose: each area names the course that goes deep."),
+     "Surface level on purpose: each area names the course that goes deep.", "ungraded"),
     ("discipline", "engineering-research-domain-knowledge",
      "Engineering Research Domain Knowledge",
      "read later, once the domain is familiar",
      "The questions behind the methods rather than inside them. What counts as evidence when you "
      "cannot run an experiment, and why a discount rate is a claim about how much future people "
-     "matter."),
+     "matter.", "ungraded"),
+    ("hierarchy", "bonus-model-hierarchy", "The Model Hierarchy",
+     "optional, best before you build anything large",
+     "Pencil, spreadsheet, simulation. Solve the smallest version of your problem by hand, "
+     "reproduce it numerically, then switch the full model down until it must agree. It is how "
+     "the lab checks a model, including one an AI wrote.", "bonus"),
 ]
 
 
@@ -235,9 +240,9 @@ def main():
 {chr(10).join(cards)}
     </section>""")
 
-    # The two ungraded pages. Listed after the milestones, marked as ungraded, in the
-    # order a student should meet them: this lab first, the wider discipline second.
-    for anchor, stem, title, when, blurb in COMPANIONS:
+    # The companion pages, listed after the milestones and labelled outside the grading:
+    # this lab first, the wider discipline second, then the optional bonus lesson.
+    for anchor, stem, title, when, blurb, label in COMPANIONS:
         f = REPO / "handbook" / f"{stem}.md"
         if not f.exists():
             continue
@@ -249,7 +254,7 @@ def main():
             for t, g in companion_topics(body))
         sections.append(f"""    <section id="{anchor}" class="companion">
       <div class="mshead">
-        <h2><span class="ungraded">ungraded</span> {html.escape(title)}</h2>
+        <h2><span class="ungraded">{label}</span> {html.escape(title)}</h2>
         <p class="tier">{html.escape(when)}</p>
       </div>
       <p class="blurb">{blurb}</p>
@@ -351,7 +356,7 @@ TEMPLATE = """<title>The Whole Curriculum</title>
   details ul {{ margin:8px 0 2px; padding-left:1.1rem; }}
   details li {{ font-size:14px; margin-bottom:4px; color:var(--body); }}
 
-  /* --- the two ungraded pages --- */
+  /* --- the companion pages --- */
   .companion {{ background:var(--surface); padding:2px 22px 24px; margin-top:52px;
                 border-top:2px solid var(--signal); }}
   .companion .mshead {{ border-bottom:1px solid var(--rule); }}

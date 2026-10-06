@@ -202,6 +202,14 @@ has stopped feeling new. Philosophy of science, the normative content of modelli
 policy literacy, the history of your field, the economics underneath it. A discount rate is a
 claim about how much future people matter; this is the page about that sort of thing.
 
+### And one bonus lesson
+
+[**The model hierarchy: pencil, spreadsheet, simulation**](bonus-model-hierarchy.md) is
+optional and belongs to no milestone. Solve the smallest version of your problem by hand,
+reproduce it in a spreadsheet, then switch your full model down until it has to agree. It is how
+this lab checks a model, including one an AI wrote for you. Best done before you build anything
+large; if you do it, it is one week's WA entry.
+
 ## If you are brand new
 
 1. Read [**SEAR Lab Domain Knowledge**](sear-lab-domain-knowledge.md). Half an hour, and everything else lands better.

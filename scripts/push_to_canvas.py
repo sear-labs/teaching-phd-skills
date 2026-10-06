@@ -10,7 +10,8 @@ What it creates
     1 overview page   the 28-skill tracking table, generated from skills/ and
                       milestones/ so it cannot drift out of sync with them
     28 skill pages    one lesson package each
-    2 companion pages the ungraded domain-knowledge pages, lab then discipline
+    3 companion pages the ungraded domain-knowledge pages, lab then discipline,
+                      then the optional bonus lesson
     6 assignments     the milestone gates, pass_fail, in their own group, no due dates
     7 modules         Start Here + M1..M6, each holding its skill pages and its
                       milestone assignment
@@ -56,10 +57,12 @@ MILESTONE_POINTS = 5
 OVERVIEW_TITLE = "Research Competency Milestones"
 
 # Ungraded companion pages, in the order a student should meet them: the lab's own
-# domain first, the wider discipline second. (file stem, Canvas title)
+# domain first, the wider discipline second, the optional bonus lesson last.
+# (file stem, Canvas title)
 COMPANION_PAGES = [
     ("sear-lab-domain-knowledge", "SEAR Lab Domain Knowledge"),
     ("engineering-research-domain-knowledge", "Engineering Research Domain Knowledge"),
+    ("bonus-model-hierarchy", "Bonus: The Model Hierarchy"),
 ]
 
 # Titles this curriculum used to publish. Unpublished on every run so a rename does

@@ -81,7 +81,7 @@
   details ul { margin:8px 0 2px; padding-left:1.1rem; }
   details li { font-size:14px; margin-bottom:4px; color:var(--body); }
 
-  /* --- the two ungraded pages --- */
+  /* --- the companion pages --- */
   .companion { background:var(--surface); padding:2px 22px 24px; margin-top:52px;
                 border-top:2px solid var(--signal); }
   .companion .mshead { border-bottom:1px solid var(--rule); }
@@ -138,6 +138,7 @@
       <a href="#m6"><span class="nc">M6</span>Stewardship</a>
       <a href="#lab" class="nu"><span class="nc">&mdash;</span>SEAR Lab</a>
       <a href="#discipline" class="nu"><span class="nc">&mdash;</span>Engineering Research</a>
+      <a href="#hierarchy" class="nu"><span class="nc">&mdash;</span>The Model Hierarchy</a>
   </nav>
 
     <section id="m1">
@@ -677,6 +678,16 @@
       
       <ul class="topics"><li><h4>Philosophy of science</h4><p>You build models of systems you cannot run experiments on. You will never have a control group for the Texas grid.</p></li><li><h4>The normative content of your modelling choices</h4><p>A discount rate is a claim about how much future people matter. Three percent and seven percent are different moral positions, and the choice between them was argued out by economists and philosophers, not engineers.</p></li><li><h4>Policy and institutional literacy</h4><p>You model ERCOT. Somebody decided ERCOT would be an energy-only market with no capacity payment, and that decision was political, recent, and revisable.</p></li><li><h4>History of your own field</h4><p>The grid looks the way it does for reasons, and most of them are historical accidents that hardened. Rural electrification, PUHCA in 1935, the 1978 PURPA opening, restructuring in the 1990s, and Texas&#x27;s decision to stay outside the interconnections.</p></li><li><h4>The economics of what you model</h4><p>Externalities, market failure, and why a carbon price is a policy instrument rather than a moral statement. If your optimisation minimises cost, you have adopted a welfare framework — worth knowing which one, and what it does not capture.</p></li></ul>
       <p class="deliv"><a href="engineering-research-domain-knowledge.md">Read the full page &rarr;</a></p>
+    </section>
+    <section id="hierarchy" class="companion">
+      <div class="mshead">
+        <h2><span class="ungraded">bonus</span> The Model Hierarchy</h2>
+        <p class="tier">optional, best before you build anything large</p>
+      </div>
+      <p class="blurb">Pencil, spreadsheet, simulation. Solve the smallest version of your problem by hand, reproduce it numerically, then switch the full model down until it must agree. It is how the lab checks a model, including one an AI wrote.</p>
+      
+      <ul class="topics"><li><h4>Why this exists</h4><p>A large model that returns a number has not explained anything. It has produced a number, and the number is only as trustworthy as your ability to say <strong>why</strong> it came out that way.</p></li><li><h4>Governing part</h4><p>None.</p></li><li><h4>A worked example</h4><p>From Jones&#x27;s own carbon research. Two equations: atmospheric carbon <em>C</em>, a reservoir <em>R</em> that the atmosphere drains into, emissions <em>E</em>, and pre-industrial level <em>C₀</em>.</p></li><li><h4>The mechanic</h4><p>Do this on <strong>your own</strong> dissertation problem. It works for optimization as well as dynamics; most of this lab&#x27;s problems are optimization, so there are examples of both below.</p></li><li><h4>Deliverable</h4><p>A one-page PDF: the pencil derivation, the spreadsheet or notebook link, the degenerate-case comparison table (pencil / spreadsheet / simulation, same inputs, three outputs), and the two sentences from step 4.</p></li><li><h4>Turning it in</h4><p><strong>If you do it, do it as one week&#x27;s arithmetic entry.</strong> Submit it to that week&#x27;s <strong>WA</strong> assignment in Canvas, the same one you would have submitted anyway, with the one-page PDF attached and, in the text box, the pencil result in one line and whether the three rungs agreed.</p></li></ul>
+      <p class="deliv"><a href="bonus-model-hierarchy.md">Read the full page &rarr;</a></p>
     </section>
 
   <footer>

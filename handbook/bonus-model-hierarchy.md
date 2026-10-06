@@ -1,13 +1,8 @@
----
-title: The model hierarchy — pencil, spreadsheet, simulation
-channel: arithmetic
-tier: year 1
-milestone: M1
-time: 4 hours
-prerequisites: Spreadsheet discipline; Sanity checks and orders of magnitude
-submit_as: one-page PDF in a WA entry
-artifact: A **one-page PDF** attached to the entry: your problem at three rungs (the pencil result, the spreadsheet that reproduces it, the full model set to the case where it must agree), a table showing the rungs agree, and one sentence on what each rung showed that the others could not
----
+# Bonus: The model hierarchy
+
+**Pencil, spreadsheet, simulation.** *Optional.* It belongs to no milestone and is not required.
+Best taken after *Spreadsheet discipline* and *Sanity checks and orders of magnitude*, and before
+you build anything large. About four hours.
 
 ## Why this exists
 
@@ -133,12 +128,11 @@ sentences from step 4.
 
 ## Turning it in
 
-**This replaces your arithmetic entry for the week you do it.** Submit it to that week's
-**WA** assignment in Canvas, the same one you would have submitted anyway. It is not an
-extra piece of work on top of the log.
+**If you do it, do it as one week's arithmetic entry.** Submit it to that week's **WA**
+assignment in Canvas, the same one you would have submitted anyway, with the one-page PDF
+attached and, in the text box, the pencil result in one line and whether the three rungs agreed.
 
-- **In the text box:** the pencil result in one line, and whether the three rungs agreed.
-- **You hand in:** A **one-page PDF** attached to the entry: your problem at three rungs (the pencil result, the spreadsheet that reproduces it, the full model set to the case where it must agree), a table showing the rungs agree, and one sentence on what each rung showed that the others could not
-
-You do not submit anything to the milestone yet. When all five skills in **M1** are done, submit
-the **M1 — The Workbench** assignment, which is just an index saying which week each one went in.
+It does not count toward a milestone and nothing else needs submitting. It is here because it
+is how this lab checks a model, including one an AI wrote for you: if the full model, switched
+down to the simple case, does not reproduce the hand result, something is wrong, and you now
+know where to look.

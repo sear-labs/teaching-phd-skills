@@ -47,6 +47,10 @@ pages with no assignment attached.
   behind the methods. Philosophy of science, the normative content of modelling choices, policy
   literacy, field history, economics. **Read later**, once the domain is familiar.
 
+**One optional bonus lesson**, shipped the same way:
+[`handbook/bonus-model-hierarchy.md`](handbook/bonus-model-hierarchy.md) — pencil, spreadsheet,
+simulation. It belongs to no milestone, so the count stays at twenty-eight.
+
 ## Layout
 
 ```
