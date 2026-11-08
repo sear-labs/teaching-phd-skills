@@ -13,12 +13,14 @@ where you actually learn this material. What follows is the map, not the territo
 Societies thrive or struggle on the infrastructure they build, and that infrastructure is never
 only physical. It spans three inseparable layers:
 
-- **Physical** — the systems and hardware that move energy and materials. Plants, lines, cells,
-  readers, the experiments that tell you how they behave.
-- **Digital** — the models and data that make those flows visible and optimizable. Capacity
-  expansion models, supply chain optimisation, surrogates, analytics.
-- **Institutional** — the policy, incentives, programs and alignment that decide what actually
-  gets built. Markets, standards, tariffs, municipal programs.
+- **Physical** — the systems that move people, energy and materials.
+- **Digital** — the records and models that make those flows visible, accountable and
+  optimizable.
+- **Institutional** — the law and policy that protect people, enforce agreements and decide who
+  benefits.
+
+The physical layer does the work, the digital layer records and models it, and the institutional
+layer decides what it is for and who it serves.
 
 **This is the single most useful idea in the lab, and it is a claim, not a taxonomy.** The claim
 is that a study which addresses only one layer gets the answer wrong. A battery recovery process
