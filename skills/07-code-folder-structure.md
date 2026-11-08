@@ -50,6 +50,7 @@ Repo URL, plus one paragraph on what moved where, plus the two stricter-points.
 - [ ] Nothing under the raw tier is written by any script (verify, do not assert)
 - [ ] README is usable by someone who has never seen the project
 - [ ] Two places the standard is stricter than Wilson et al., identified and explained
+- [ ] One file whose tier was a judgement call (raw or derived? `src/` or notebook?), with the reason you put it where you did
 
 ## Turning it in
 

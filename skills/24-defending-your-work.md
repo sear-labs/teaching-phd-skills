@@ -6,7 +6,7 @@ milestone: M5
 time: 4 hours
 prerequisites: 13-claim-reason-evidence
 submit_as: three steelmanned objections with responses, delivered live to the lab
-artifact: A **PDF**: three objections written in the critic's voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable
+artifact: A **PDF**: three objections written in the critic's voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable, plus a paragraph on how far your findings moved from what you predicted, and why
 ---
 
 ## Why this exists
@@ -61,6 +61,15 @@ Then answer each one, and **classify your answer honestly**:
 
 **Then deliver it live to the lab** and let them push back.
 
+### Predicted versus found
+
+Go back to what you expected before the work: the answers your proposal predicted, or, if you
+have not proposed yet, what you expected when you started. Say how far your findings so far moved
+from that prediction, and why. A
+committee trusts a result more from someone who can say exactly where it surprised them. If
+nothing moved, say whether that is because the prediction was good or because the work never
+tested it.
+
 ### One objection must come from outside the academy
 
 At least one of the three should be the kind an employer or programme manager raises rather than
@@ -86,6 +95,7 @@ The three steelmanned objections with responses, plus delivery to the lab group.
 - [ ] At least one objection conceded — if none are, the steelmen are too weak
 - [ ] At least one objection is the kind an employer raises, not a reviewer
 - [ ] Delivered live, with a note on which question the lab asked that you had not anticipated
+- [ ] Predicted versus found: how far the findings moved from what you expected beforehand, and why
 
 ## Turning it in
 
@@ -94,7 +104,7 @@ The three steelmanned objections with responses, plus delivery to the lab group.
 extra piece of work on top of the log.
 
 - **In the text box:** the objection you could not answer, and what you are going to do about it.
-- **You hand in:** A **PDF**: three objections written in the critic's voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable
+- **You hand in:** A **PDF**: three objections written in the critic's voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable, plus a paragraph on how far your findings moved from what you predicted, and why
 
 You do not submit anything to the milestone yet. When all five skills in **M5** are done, submit the **M5 — The Review Cycle** assignment, which is just
 an index saying which week each one went in.

@@ -6,7 +6,7 @@ milestone: M6
 time: 3 hours
 prerequisites: 25-zenodo
 submit_as: one-page data statement
-artifact: A **one-page PDF data statement** — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, and what is withheld and where it lives
+artifact: A **one-page PDF data statement** — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, what is withheld and where it lives, and whether it may go into an AI tool
 ---
 
 ## Why this exists
@@ -40,6 +40,9 @@ Write a one-page data statement for your own datasets. For each:
   the agreement, that is the finding, and locating it is the assignment.
 - **What is deposited and what is withheld**, and why.
 - **Where the withheld version lives**, so that it is findable after you graduate.
+- **Which AI tools may see it.** Pasting a dataset into a chat or an agent session sends it to a
+  third party. Say, per dataset, whether that is allowed under its instrument, and quote the clause
+  that decides it.
 
 The last line is the one that matters to the lab and the one students skip.
 
@@ -54,6 +57,7 @@ One-page data statement, PDF.
 - [ ] Licence named explicitly per dataset
 - [ ] Any restriction quoted from the agreement, with the agreement located
 - [ ] Withheld items named, with a reason and a location
+- [ ] Per dataset, whether it may go into an AI tool, decided from the agreement rather than assumed
 
 ## Turning it in
 
@@ -62,7 +66,7 @@ One-page data statement, PDF.
 extra piece of work on top of the log.
 
 - **In the text box:** which dataset's terms you could not find, and what you did about it.
-- **You hand in:** A **one-page PDF data statement** — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, and what is withheld and where it lives
+- **You hand in:** A **one-page PDF data statement** — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, what is withheld and where it lives, and whether it may go into an AI tool
 
 You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
 an index saying which week each one went in.

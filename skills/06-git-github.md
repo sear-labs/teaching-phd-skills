@@ -6,7 +6,7 @@ milestone: M2
 time: 4 hours
 prerequisites: none
 submit_as: repo URL plus pasted git check-ignore -v output
-artifact: A **repo URL** plus **pasted `git check-ignore -v` output** — one line per data file and credential path, each showing the rule that matched
+artifact: A **repo URL** plus **pasted `git check-ignore -v` output** — one line per data file and credential path, each showing the rule that matched, and a one-line reason why that path must stay out
 ---
 
 ## Why this exists
@@ -43,7 +43,8 @@ On your actual dissertation code, in this order and no other:
 4. Only now, the first commit.
 
 Then work normally for at least five commits, with messages that say **why**, not what. `git
-diff` already says what.
+diff` already says what. If an agent drafts a message, check that the reason it gives is the real one: a plausible
+wrong reason is worse than none.
 
 ## Deliverable
 
@@ -56,6 +57,7 @@ Repo URL plus the pasted `git check-ignore -v` output.
 - [ ] Searching the full history for your own credential variable names returns nothing
 - [ ] At least five commits whose messages state a reason
 - [ ] `git status` on a clean checkout is empty
+- [ ] For each ignored path, one line on **why** it must stay out (licensed, personal, a credential, regenerable). An agent can write a `.gitignore`; deciding what is sensitive is yours
 
 ## Turning it in
 
@@ -64,7 +66,7 @@ Repo URL plus the pasted `git check-ignore -v` output.
 extra piece of work on top of the log.
 
 - **In the text box:** what you nearly committed and did not.
-- **You hand in:** A **repo URL** plus **pasted `git check-ignore -v` output** — one line per data file and credential path, each showing the rule that matched
+- **You hand in:** A **repo URL** plus **pasted `git check-ignore -v` output** — one line per data file and credential path, each showing the rule that matched, and a one-line reason why that path must stay out
 
 You do not submit anything to the milestone yet. When all four skills in **M2** are done, submit the **M2 — Reproducible Code** assignment, which is just
 an index saying which week each one went in.

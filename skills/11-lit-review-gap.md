@@ -6,7 +6,7 @@ milestone: M3
 time: 8 hours
 prerequisites: 10-critiquing-papers
 submit_as: PDF: the map plus the gap paragraph
-artifact: A **PDF**: your three candidate axes with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence
+artifact: A **PDF**: your three candidate axes (dated, written before asking any AI) with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence
 ---
 
 ## Why this exists
@@ -31,7 +31,9 @@ None.
 1. **Fifteen papers.** Fewer and the empty regions are artefacts of your sample.
 2. **Generate three candidate axes, then choose one.** Spatial resolution. System boundary.
    Time horizon. Whether storage is co-optimised. Write all three down *before* you commit to
-   one, and write a sentence on why you rejected each of the other two.
+   one, and write a sentence on why you rejected each of the other two. **Write them before you
+   ask an AI for axes.** It will happily suggest some; it cannot tell you which matter in your
+   field, and if it goes first its list becomes yours.
 
    The discarded two are not waste. **Choosing between framings is the creative half of critical
    thinking**, and a student who only ever saw one framing did not choose it — they defaulted to
@@ -51,6 +53,7 @@ PDF containing the map, the fifteen citations, and the gap paragraph.
 
 - [ ] Fifteen papers, cited
 - [ ] **Three candidate axes written down before one was chosen**, each rejected one with a stated reason
+- [ ] The axes are dated before any AI suggestion was asked for, or you state that none was
 - [ ] One named axis, with units or categories stated
 - [ ] Every paper positioned on it
 - [ ] The empty region identified
@@ -64,7 +67,7 @@ PDF containing the map, the fifteen citations, and the gap paragraph.
 extra piece of work on top of the log.
 
 - **In the text box:** the axis you chose, and what you would have seen through the two you rejected.
-- **You hand in:** A **PDF**: your three candidate axes with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence
+- **You hand in:** A **PDF**: your three candidate axes (dated, written before asking any AI) with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence
 
 You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
 an index saying which week each one went in.

@@ -53,6 +53,7 @@ Repo URL plus your partner's signed run log.
 - [ ] Solver version and interpreter version both recorded in the repo
 - [ ] Every question the partner had to ask is listed as a README defect
 - [ ] README updated in response
+- [ ] One sentence on why the tolerance is the right size for **this** result: what decision would change if the number moved by more than that
 
 ## Turning it in
 

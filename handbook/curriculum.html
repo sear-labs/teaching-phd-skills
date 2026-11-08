@@ -248,12 +248,12 @@
             <span>prereq: none</span></p>
           <div class="handin">
             <span class="hlab">You hand in</span>
-            <p>A <strong>repo URL</strong> plus <strong>pasted <code>git check-ignore -v</code> output</strong> — one line per data file and credential path, each showing the rule that matched</p>
+            <p>A <strong>repo URL</strong> plus <strong>pasted <code>git check-ignore -v</code> output</strong> — one line per data file and credential path, each showing the rule that matched, and a one-line reason why that path must stay out</p>
             <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
           </div>
           <p class="why"><strong>Do this one before anything else in M2.</strong> Git history is permanent.</p>
-          <details><summary>It passes when &mdash; all 5 of these are true</summary>
-            <ul><li>Repo URL resolves</li><li><code>git check-ignore -v</code> output pasted, showing a matched rule for every data and credential path</li><li>Searching the full history for your own credential variable names returns nothing</li><li>At least five commits whose messages state a reason</li><li><code>git status</code> on a clean checkout is empty</li></ul></details>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
+            <ul><li>Repo URL resolves</li><li><code>git check-ignore -v</code> output pasted, showing a matched rule for every data and credential path</li><li>Searching the full history for your own credential variable names returns nothing</li><li>At least five commits whose messages state a reason</li><li><code>git status</code> on a clean checkout is empty</li><li>For each ignored path, one line on <strong>why</strong> it must stay out (licensed, personal, a credential, regenerable). An agent can write a <code>.gitignore</code>; deciding what is sensitive is yours</li></ul></details>
         </div>
       </article>
       <article class="skill" id="s07">
@@ -269,8 +269,8 @@
             <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
           </div>
           <p class="why">&quot;I cannot reproduce my own Chapter 3&quot; is the concrete failure this prevents, and it has a specific mechanism: processed data overwrote raw data, or a script&#x27;s output became its own input, and now there is no path back to the numbers in the draft.</p>
-          <details><summary>It passes when &mdash; all 4 of these are true</summary>
-            <ul><li>Repo layout matches the archetype</li><li>Nothing under the raw tier is written by any script (verify, do not assert)</li><li>README is usable by someone who has never seen the project</li><li>Two places the standard is stricter than Wilson et al., identified and explained</li></ul></details>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
+            <ul><li>Repo layout matches the archetype</li><li>Nothing under the raw tier is written by any script (verify, do not assert)</li><li>README is usable by someone who has never seen the project</li><li>Two places the standard is stricter than Wilson et al., identified and explained</li><li>One file whose tier was a judgement call (raw or derived? <code>src/</code> or notebook?), with the reason you put it where you did</li></ul></details>
         </div>
       </article>
       <article class="skill" id="s08">
@@ -286,8 +286,8 @@
             <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
           </div>
           <p class="why">There is exactly one test of whether an environment is reproducible, and it is not a file listing.</p>
-          <details><summary>It passes when &mdash; all 5 of these are true</summary>
-            <ul><li>Partner reproduced the named figure on their own machine, or the divergence is explained</li><li>Stated tolerance appears before the comparison, not after</li><li>Solver version and interpreter version both recorded in the repo</li><li>Every question the partner had to ask is listed as a README defect</li><li>README updated in response</li></ul></details>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
+            <ul><li>Partner reproduced the named figure on their own machine, or the divergence is explained</li><li>Stated tolerance appears before the comparison, not after</li><li>Solver version and interpreter version both recorded in the repo</li><li>Every question the partner had to ask is listed as a README defect</li><li>README updated in response</li><li>One sentence on why the tolerance is the right size for <strong>this</strong> result: what decision would change if the number moved by more than that</li></ul></details>
         </div>
       </article>
       <article class="skill" id="s09">
@@ -340,12 +340,12 @@
             <span>prereq: 10-critiquing-papers</span></p>
           <div class="handin">
             <span class="hlab">You hand in</span>
-            <p>A <strong>PDF</strong>: your three candidate axes with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence</p>
+            <p>A <strong>PDF</strong>: your three candidate axes (dated, written before asking any AI) with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence</p>
             <p class="where">Submitted as that week's <strong>WR</strong> entry &mdash; not as an extra assignment.</p>
           </div>
           <p class="why">&quot;No one has done X&quot; is not a gap.</p>
-          <details><summary>It passes when &mdash; all 7 of these are true</summary>
-            <ul><li>Fifteen papers, cited</li><li><strong>Three candidate axes written down before one was chosen</strong>, each rejected one with a stated reason</li><li>One named axis, with units or categories stated</li><li>Every paper positioned on it</li><li>The empty region identified</li><li>One sentence on <strong>why</strong> it is empty, distinguishing &quot;not yet possible&quot; from &quot;not worth doing&quot;</li><li>The three-part sentence, written out</li></ul></details>
+          <details><summary>It passes when &mdash; all 8 of these are true</summary>
+            <ul><li>Fifteen papers, cited</li><li><strong>Three candidate axes written down before one was chosen</strong>, each rejected one with a stated reason</li><li>The axes are dated before any AI suggestion was asked for, or you state that none was</li><li>One named axis, with units or categories stated</li><li>Every paper positioned on it</li><li>The empty region identified</li><li>One sentence on <strong>why</strong> it is empty, distinguishing &quot;not yet possible&quot; from &quot;not worth doing&quot;</li><li>The three-part sentence, written out</li></ul></details>
         </div>
       </article>
       <article class="skill" id="s12">
@@ -575,12 +575,12 @@
             <span>prereq: 13-claim-reason-evidence</span></p>
           <div class="handin">
             <span class="hlab">You hand in</span>
-            <p>A <strong>PDF</strong>: three objections written in the critic&#x27;s voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable</p>
+            <p>A <strong>PDF</strong>: three objections written in the critic&#x27;s voice at full strength, your response to each, and each response classified as wrong / right-and-costly / right-and-unfixable, plus a paragraph on how far your findings moved from what you predicted, and why</p>
             <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
           </div>
           <p class="why">A defence fails in two directions and both lose the room.</p>
-          <details><summary>It passes when &mdash; all 6 of these are true</summary>
-            <ul><li>Three objections, each written in the critic&#x27;s voice at full strength</li><li>Each steelman would be recognised as fair by someone who holds that view</li><li>Each response classified as one of the three types above</li><li>At least one objection conceded — if none are, the steelmen are too weak</li><li>At least one objection is the kind an employer raises, not a reviewer</li><li>Delivered live, with a note on which question the lab asked that you had not anticipated</li></ul></details>
+          <details><summary>It passes when &mdash; all 7 of these are true</summary>
+            <ul><li>Three objections, each written in the critic&#x27;s voice at full strength</li><li>Each steelman would be recognised as fair by someone who holds that view</li><li>Each response classified as one of the three types above</li><li>At least one objection conceded — if none are, the steelmen are too weak</li><li>At least one objection is the kind an employer raises, not a reviewer</li><li>Delivered live, with a note on which question the lab asked that you had not anticipated</li><li>Predicted versus found: how far the findings moved from what you expected beforehand, and why</li></ul></details>
         </div>
       </article>
     </section>
@@ -603,8 +603,8 @@
             <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
           </div>
           <p class="why">A paper that says &quot;code available on request&quot; is a paper whose code will not be available in four years, because the student has graduated and the laptop is gone.</p>
-          <details><summary>It passes when &mdash; all 4 of these are true</summary>
-            <ul><li>Record URL resolves and the archive contains the tagged release</li><li>Both DOIs present and placed per the standard</li><li><code>CITATION.cff</code> parses — the GitHub &quot;Cite this repository&quot; button appears</li><li>The paper&#x27;s data-availability statement cites the correct one of the two</li></ul></details>
+          <details><summary>It passes when &mdash; all 5 of these are true</summary>
+            <ul><li>Record URL resolves and the archive contains the tagged release</li><li>Both DOIs present and placed per the standard</li><li><code>CITATION.cff</code> parses — the GitHub &quot;Cite this repository&quot; button appears</li><li>The paper&#x27;s data-availability statement cites the correct one of the two</li><li>One sentence on why the tagged release is the one a stranger should run, and what you left out of it</li></ul></details>
         </div>
       </article>
       <article class="skill" id="s26">
@@ -616,12 +616,12 @@
             <span>prereq: 25-zenodo</span></p>
           <div class="handin">
             <span class="hlab">You hand in</span>
-            <p>A <strong>one-page PDF data statement</strong> — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, and what is withheld and where it lives</p>
+            <p>A <strong>one-page PDF data statement</strong> — per dataset: source, the instrument it arrived under, licence, any restriction quoted from the actual agreement, what is withheld and where it lives, and whether it may go into an AI tool</p>
             <p class="where">Submitted as that week's <strong>WA</strong> entry &mdash; not as an extra assignment.</p>
           </div>
           <p class="why">&quot;Can this be deposited?&quot; has to be answered <strong>before</strong> the deposit, because a deposit is public and permanent and the undo button does not fully exist.</p>
-          <details><summary>It passes when &mdash; all 5 of these are true</summary>
-            <ul><li>Every dataset used in your work appears</li><li>Source named with the instrument it arrived under</li><li>Licence named explicitly per dataset</li><li>Any restriction quoted from the agreement, with the agreement located</li><li>Withheld items named, with a reason and a location</li></ul></details>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
+            <ul><li>Every dataset used in your work appears</li><li>Source named with the instrument it arrived under</li><li>Licence named explicitly per dataset</li><li>Any restriction quoted from the agreement, with the agreement located</li><li>Withheld items named, with a reason and a location</li><li>Per dataset, whether it may go into an AI tool, decided from the agreement rather than assumed</li></ul></details>
         </div>
       </article>
       <article class="skill" id="s27">
@@ -633,12 +633,12 @@
             <span>prereq: 11-lit-review-gap, 15-imrad</span></p>
           <div class="handin">
             <span class="hlab">You hand in</span>
-            <p>A <strong>PDF within the call&#x27;s stated page limit</strong>: project summary under the headings the call requires, and a broader-impacts section naming an activity, an audience, and how you would measure it</p>
+            <p>A <strong>PDF within the call&#x27;s stated page limit</strong>: project summary under the headings the call requires with each research question and the answer you expect, and a broader-impacts section naming an activity, an audience, and how you would measure it</p>
             <p class="where">Submitted as that week's <strong>WW</strong> entry &mdash; not as an extra assignment.</p>
           </div>
           <p class="why">Writing a full proposal is not a course assignment — it is a months-long effort with a real deadline attached to somebody&#x27;s salary.</p>
-          <details><summary>It passes when &mdash; all 5 of these are true</summary>
-            <ul><li>A real call is named, with its deadline</li><li>Within the stated page limit — verified, not estimated</li><li>Required headings present exactly as the call words them</li><li>Broader impacts names an activity, an audience, and a measure</li><li>Intellectual merit traceable to the <em>Literature review and gap-finding</em> gap statement</li></ul></details>
+          <details><summary>It passes when &mdash; all 6 of these are true</summary>
+            <ul><li>A real call is named, with its deadline</li><li>Within the stated page limit — verified, not estimated</li><li>Required headings present exactly as the call words them</li><li>Broader impacts names an activity, an audience, and a measure</li><li>Intellectual merit traceable to the <em>Literature review and gap-finding</em> gap statement</li><li>Each research question stated with the answer you expect, before any result supports it</li></ul></details>
         </div>
       </article>
       <article class="skill" id="s28">

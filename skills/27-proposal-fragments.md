@@ -6,7 +6,7 @@ milestone: M6
 time: 6 hours
 prerequisites: 11-lit-review-gap, 15-imrad
 submit_as: PDF, to the call's stated page limits
-artifact: A **PDF within the call's stated page limit**: project summary under the headings the call requires, and a broader-impacts section naming an activity, an audience, and how you would measure it
+artifact: A **PDF within the call's stated page limit**: project summary under the headings the call requires with each research question and the answer you expect, and a broader-impacts section naming an activity, an audience, and how you would measure it
 ---
 
 ## Why this exists
@@ -41,6 +41,9 @@ teaches nothing, because every constraint that makes proposal writing hard comes
    you would know it worked. "Will broaden participation" fails all three. "Two REU students
    recruited through the UTA McNair programme, each producing a conference poster, tracked to
    graduate school application" passes.
+3. **State the research questions with the answers you expect.** A question with no predicted
+   answer cannot be surprised, and a question written after the results is a summary, not a
+   question. The prediction is what your defence will later measure the findings against.
 
 Your gap statement from *Literature review and gap-finding* is the raw material for the intellectual merit paragraph. If it
 does not fit, the gap was not specific enough — go back to it.
@@ -56,6 +59,7 @@ PDF, within the call's stated page limits.
 - [ ] Required headings present exactly as the call words them
 - [ ] Broader impacts names an activity, an audience, and a measure
 - [ ] Intellectual merit traceable to the *Literature review and gap-finding* gap statement
+- [ ] Each research question stated with the answer you expect, before any result supports it
 
 ## Turning it in
 
@@ -64,7 +68,7 @@ PDF, within the call's stated page limits.
 extra piece of work on top of the log.
 
 - **In the text box:** which call, and what you had to cut to fit the limit.
-- **You hand in:** A **PDF within the call's stated page limit**: project summary under the headings the call requires, and a broader-impacts section naming an activity, an audience, and how you would measure it
+- **You hand in:** A **PDF within the call's stated page limit**: project summary under the headings the call requires with each research question and the answer you expect, and a broader-impacts section naming an activity, an audience, and how you would measure it
 
 You do not submit anything to the milestone yet. When all four skills in **M6** are done, submit the **M6 — Stewardship** assignment, which is just
 an index saying which week each one went in.

@@ -52,6 +52,7 @@ Zenodo record URL.
 - [ ] Both DOIs present and placed per the standard
 - [ ] `CITATION.cff` parses — the GitHub "Cite this repository" button appears
 - [ ] The paper's data-availability statement cites the correct one of the two
+- [ ] One sentence on why the tagged release is the one a stranger should run, and what you left out of it
 
 ## Turning it in
 
