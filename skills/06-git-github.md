@@ -14,6 +14,10 @@ artifact: A **repo URL** plus **pasted `git check-ignore -v` output** — one li
 **Do this one before anything else in M2.** Git history is permanent. A credential committed
 once is compromised even if the next commit removes it, even if you force-push, even if the
 repo was private at the time — and the fix is rotating the credential, not amending the commit.
+The same holds for anything else you commit: a labmate's unpublished code, data under an
+agreement, a draft you would rather nobody saw. Deleting it later removes it from the files, not
+from the history, and making a repository public later publishes the whole history, not just
+what is in it today.
 This lab keeps Gurobi WLS credentials and ERCOT data under use agreements in the same
 directories as code. It is the only mistake on this list of twenty-four that cannot be undone
 afterwards, which is why the ordering below is not a suggestion.

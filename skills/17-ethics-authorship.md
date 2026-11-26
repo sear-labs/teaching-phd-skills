@@ -6,7 +6,7 @@ milestone: M4
 time: 2 hours
 prerequisites: none
 submit_as: text entry, CRediT-style, plus evidence it was circulated
-artifact: **A text-box entry**: everyone who touched the paper, CRediT roles per person, author vs. acknowledgement with reasons, the order, the corresponding author — plus proof you circulated it
+artifact: **A text-box entry**: everyone who touched the paper, what it builds on and whose that is, CRediT roles per person, author vs. acknowledgement with reasons, the order, the corresponding author — plus proof you circulated it
 ---
 
 ## Why this exists
@@ -36,11 +36,15 @@ For a paper you are actually working on:
 
 1. List **everyone who has touched it.** Including the undergraduate who ran the sweeps.
    Including the labmate who fixed your solver configuration. The list is longer than you think.
-2. Map each person to CRediT roles.
-3. Apply the ICMJE test to decide author versus acknowledgement. Write the reason.
-4. State the order, and justify it in one sentence.
-5. Name the corresponding author.
-6. **Send it to all of them.** This step is the assignment. A contribution statement nobody
+2. **List what the paper builds on.** A model, code or dataset someone else made. Starting from
+   someone else's validated model is normal, and your contribution is what you do with it, but
+   that is only clear if you have both said, in writing, what is theirs and what is yours.
+   Nobody says it early, so both people assume it, and the two assumptions rarely match.
+3. Map each person to CRediT roles.
+4. Apply the ICMJE test to decide author versus acknowledgement. Write the reason.
+5. State the order, and justify it in one sentence.
+6. Name the corresponding author.
+7. **Send it to all of them.** This step is the assignment. A contribution statement nobody
    has seen is a private opinion.
 
 ## Deliverable
@@ -50,6 +54,7 @@ The statement, plus evidence it was circulated — a timestamp, a thread, a forw
 ## Competency check
 
 - [ ] Every contributor named, including students at other tiers
+- [ ] Anything the paper builds on (model, code, data) named, with what is theirs and what is yours
 - [ ] CRediT roles assigned per person
 - [ ] Author versus acknowledgement decided with a stated reason
 - [ ] Order justified in one sentence
@@ -63,7 +68,7 @@ The statement, plus evidence it was circulated — a timestamp, a thread, a forw
 extra piece of work on top of the log.
 
 - **In the text box:** who you nearly left off, and why you nearly did.
-- **You hand in:** **A text-box entry**: everyone who touched the paper, CRediT roles per person, author vs. acknowledgement with reasons, the order, the corresponding author — plus proof you circulated it
+- **You hand in:** **A text-box entry**: everyone who touched the paper, what it builds on and whose that is, CRediT roles per person, author vs. acknowledgement with reasons, the order, the corresponding author — plus proof you circulated it
 
 You do not submit anything to the milestone yet. When all five skills in **M4** are done, submit the **M4 — The Manuscript** assignment, which is just
 an index saying which week each one went in.

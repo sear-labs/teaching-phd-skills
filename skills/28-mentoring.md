@@ -39,6 +39,9 @@ Before the handoff, write:
 2. **A data path.** Exactly where the input is, and where output goes. This is where the
    archetype from *Code folder structure* earns its keep.
 3. **A checkpoint date** before the work is due, at which being off track is still recoverable.
+   One is the minimum. On anything longer than a few weeks, agree a visible result at short
+   intervals: a project that stalls quietly for months costs far more than one that fails early,
+   and you are the one who has to notice.
 
 Hand it off. Let them work.
 
