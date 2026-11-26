@@ -6,7 +6,7 @@ milestone: M3
 time: 8 hours
 prerequisites: 10-critiquing-papers
 submit_as: PDF: the map plus the gap paragraph
-artifact: A **PDF**: your three candidate axes (dated, written before asking any AI) with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence
+artifact: A **PDF**: your three candidate axes (dated, written before asking any AI) with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, the three-part gap sentence, and who else could close it first
 ---
 
 ## Why this exists
@@ -16,6 +16,12 @@ committee will say so. A gap is a specific thing that is **now possible and prev
 not** — because data became available, because a solver got faster, because a policy changed.
 Students who cannot tell those apart write proposals that get rejected for a reason nobody
 articulates clearly enough to fix.
+
+**A real gap also carries a clock.** If the data or the solver became available to you this
+year, it became available to everyone, and other groups are probably looking at the same empty
+region now. Ideas are cheap and they arrive in parallel; what counts is who executes, and how
+well, and how soon. Finding the gap is half the plan. The other half is how fast you can get a
+result on the record.
 
 ## External material
 
@@ -59,6 +65,7 @@ PDF containing the map, the fifteen citations, and the gap paragraph.
 - [ ] The empty region identified
 - [ ] One sentence on **why** it is empty, distinguishing "not yet possible" from "not worth doing"
 - [ ] The three-part sentence, written out
+- [ ] One sentence on who else could be closing the same gap, and how soon you can get a result
 
 ## Turning it in
 
@@ -67,7 +74,7 @@ PDF containing the map, the fifteen citations, and the gap paragraph.
 extra piece of work on top of the log.
 
 - **In the text box:** the axis you chose, and what you would have seen through the two you rejected.
-- **You hand in:** A **PDF**: your three candidate axes (dated, written before asking any AI) with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, and the three-part gap sentence
+- **You hand in:** A **PDF**: your three candidate axes (dated, written before asking any AI) with a reason for rejecting two, fifteen cited papers positioned on the one you chose, the empty region, the three-part gap sentence, and who else could close it first
 
 You do not submit anything to the milestone yet. When all five skills in **M3** are done, submit the **M3 — Reading and Reasoning** assignment, which is just
 an index saying which week each one went in.

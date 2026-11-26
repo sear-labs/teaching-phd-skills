@@ -13,7 +13,15 @@ artifact: A **Zenodo record URL** — a tagged release archived, both DOIs place
 
 A paper that says "code available on request" is a paper whose code will not be available in
 four years, because the student has graduated and the laptop is gone. A deposit makes it
-citable and permanent. The part students get wrong is not the deposit — Zenodo's GitHub
+citable and permanent.
+
+It is also the cheapest proof of priority you will ever get: a dated, citable record of what you
+built and when. Students often want to keep code private until the paper is out, in case someone
+takes the idea. Ideas are rarely what gets taken; other groups have them in parallel anyway. What
+a timestamped release shows is that you **executed** first, which usually protects the work
+better than hiding it.
+
+The part students get wrong is not the deposit — Zenodo's GitHub
 integration is close to one click — it is which of the two DOIs goes where, and getting that
 backwards means your paper cites a moving target or your citation file pins a snapshot nobody
 should be citing.
@@ -41,6 +49,9 @@ restated here — go and read it before you deposit, not after.
 4. Put each in the place the standard specifies.
 5. Verify `CITATION.cff` parses — GitHub shows a "Cite this repository" button when it does, and
    silently shows nothing when it does not, which is how a broken file goes unnoticed for a year.
+   **The licence does not make anyone cite you.** An MIT licence only requires keeping your
+   copyright notice in copies of the code. What gets you cited is this file, the DOI, and the
+   norm that using someone's work without citing it is plagiarism.
 
 ## Deliverable
 
@@ -53,6 +64,7 @@ Zenodo record URL.
 - [ ] `CITATION.cff` parses — the GitHub "Cite this repository" button appears
 - [ ] The paper's data-availability statement cites the correct one of the two
 - [ ] One sentence on why the tagged release is the one a stranger should run, and what you left out of it
+- [ ] One sentence on when you are releasing relative to the paper, and why then
 
 ## Turning it in
 
